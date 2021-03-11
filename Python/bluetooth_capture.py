@@ -3,7 +3,7 @@ import serial
 import requests
 
 # constants
-SERIALPORT = "COM5"
+SERIALPORT = "COM4"
 TOKEN = "c5a36fae88b8defe5b6d8ced9de943b579dda47996f6006550f5079a3d7b3ef2"
 
 def increaseBrightness(brightness):
@@ -26,7 +26,7 @@ print('Setting bulb to max brightness...')
 response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
 print(response.content)
 
-ser=serial.Serial(SERIALPORT, 9600, timeout=1)
+ser=serial.Serial(SERIALPORT, 115200, timeout=1)
 
 while True:
     s = ser.readline()
@@ -39,8 +39,22 @@ while True:
             }
             response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
             print(response.content)
-        if "CENTER" in s.decode():
+        elif "DOWN" in s.decode():
             brightness = decreaseBrightness(brightness)
+            payload = {
+                "brightness": brightness,
+            }
+            response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
+            print(response.content)
+        elif "OFF" in s.decode():
+            brightness = 0
+            payload = {
+                "brightness": brightness,
+            }
+            response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
+            print(response.content)
+        elif "ON" in s.decode():
+            brightness = 1
             payload = {
                 "brightness": brightness,
             }
