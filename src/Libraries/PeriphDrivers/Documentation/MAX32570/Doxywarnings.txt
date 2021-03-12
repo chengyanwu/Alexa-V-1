@@ -1,0 +1,41 @@
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/CMSIS/Device/Maxim/MAX32570/Include/adc9_regs.h:107: warning: missing title after \defgroup CFG_Register
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/CMSIS/Device/Maxim/MAX32570/Include/adc9_regs.h:158: warning: missing title after \defgroup CMD_Register
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/CMSIS/Device/Maxim/MAX32570/Include/adc9_regs.h:225: warning: missing title after \defgroup FIFO_Register
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/CMSIS/Device/Maxim/MAX32570/Include/adc9_regs.h:255: warning: missing title after \defgroup INT_Register
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/CMSIS/Device/Maxim/MAX32570/Include/adc9_regs.h:317: warning: missing title after \defgroup STAT_Register
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/CMSIS/Device/Maxim/MAX32570/Include/pcif_regs.h:79: warning: group cameraif_registers: ignoring title "PCIF_Registers" that does not match old title "CAMERAIF_Registers"
+
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/PeriphDrivers/Include/MAX32570/htmr.h:138: warning: unable to resolve reference to `MXC_ERROR_CODES' for \ref command
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/PeriphDrivers/Include/MAX32570/htmr.h:156: warning: unable to resolve reference to `MXC_ERROR_CODES' for \ref command
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/PeriphDrivers/Include/MAX32570/htmr.h:92: warning: unable to resolve reference to `MXC_ERROR_CODES' for \ref command
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/PeriphDrivers/Include/MAX32570/htmr.h:83: warning: unable to resolve reference to `MXC_ERROR_CODES' for \ref command
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/PeriphDrivers/Include/MAX32570/htmr.h:131: warning: unable to resolve reference to `MXC_ERROR_CODES' for \ref command
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/PeriphDrivers/Include/MAX32570/htmr.h:100: warning: unable to resolve reference to `MXC_ERROR_CODES' for \ref command
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/PeriphDrivers/Include/MAX32570/htmr.h:108: warning: unable to resolve reference to `MXC_ERROR_CODES' for \ref command
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/PeriphDrivers/Include/MAX32570/htmr.h:115: warning: unable to resolve reference to `MXC_ERROR_CODES' for \ref command
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/PeriphDrivers/Include/MAX32570/htmr.h:122: warning: unable to resolve reference to `MXC_ERROR_CODES' for \ref command
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/PeriphDrivers/Include/MAX32570/i2c.h:502: warning: The following parameters of MXC_I2C_ClearFlags(mxc_i2c_regs_t *i2c, unsigned int flags0, unsigned int flags1) are not documented:
+  parameter 'flags0'
+  parameter 'flags1'
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/PeriphDrivers/Include/MAX32570/i2c.h:495: warning: The following parameters of MXC_I2C_GetFlags(mxc_i2c_regs_t *i2c, unsigned int *flags0, unsigned int *flags1) are not documented:
+  parameter 'flags0'
+  parameter 'flags1'
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/PeriphDrivers/Include/MAX32570/sdhc.h:190: warning: unable to resolve reference to `SDHC_INTFL' for \ref command
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/CMSIS/Device/Maxim/MAX32570/Include/adc9_regs.h:53: warning: Found unknown command `\description'
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/CMSIS/Device/Maxim/MAX32570/Include/adc9_regs.h:84: warning: Found unknown command `\tt'
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/CMSIS/Device/Maxim/MAX32570/Include/adc9_regs.h:85: warning: end of comment block while expecting command </code>
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/CMSIS/Device/Maxim/MAX32570/Include/adc9_regs.h:85: warning: Found unknown command `\tt'
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/CMSIS/Device/Maxim/MAX32570/Include/adc9_regs.h:86: warning: end of comment block while expecting command </code>
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/CMSIS/Device/Maxim/MAX32570/Include/adc9_regs.h:86: warning: Found unknown command `\tt'
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/CMSIS/Device/Maxim/MAX32570/Include/adc9_regs.h:87: warning: end of comment block while expecting command </code>
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/CMSIS/Device/Maxim/MAX32570/Include/adc9_regs.h:87: warning: Found unknown command `\tt'
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/CMSIS/Device/Maxim/MAX32570/Include/adc9_regs.h:88: warning: end of comment block while expecting command </code>
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/CMSIS/Device/Maxim/MAX32570/Include/adc9_regs.h:88: warning: Found unknown command `\tt'
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/CMSIS/Device/Maxim/MAX32570/Include/adc9_regs.h:89: warning: end of comment block while expecting command </code>
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/CMSIS/Device/Maxim/MAX32570/Include/adc9_regs.h:99: warning: end of comment block while expecting command </code>
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/CMSIS/Device/Maxim/MAX32570/Include/adc9_regs.h:100: warning: end of comment block while expecting command </code>
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/CMSIS/Device/Maxim/MAX32570/Include/adc9_regs.h:101: warning: end of comment block while expecting command </code>
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/CMSIS/Device/Maxim/MAX32570/Include/adc9_regs.h:102: warning: end of comment block while expecting command </code>
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/CMSIS/Device/Maxim/MAX32570/Include/adc9_regs.h:103: warning: end of comment block while expecting command </code>
+/home/lparm/JenkinsTest/workspace/MnS/MSDK/Devices/ME13/MAX32570/Libraries/CMSIS/Device/Maxim/MAX32570/Include/adc9_regs.h:53: warning: Found unknown command `\description'
+error: Project logo './MI_Logo_Small_Pos_RGB_150dpi.png' specified by PROJECT_LOGO does not exist!
