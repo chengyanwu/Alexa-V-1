@@ -1,0 +1,5 @@
+00:58:28 **** Incremental Build of configuration Debug for project kws20 ****
+make ECLIPSE=1 -j 8 all 
+
+00:58:30 Build Finished. 0 errors, 0 warnings. (took 2s.321ms)
+

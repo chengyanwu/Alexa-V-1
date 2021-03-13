@@ -1,0 +1,5 @@
+21:51:52 **** Incremental Build of configuration Debug for project test ****
+make ECLIPSE=1 -j 8 all 
+
+21:51:54 Build Finished. 0 errors, 0 warnings. (took 2s.46ms)
+

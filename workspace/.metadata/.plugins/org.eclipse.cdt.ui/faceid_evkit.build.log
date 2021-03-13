@@ -1,0 +1,5 @@
+16:30:52 **** Incremental Build of configuration Debug for project faceid_evkit ****
+make ECLIPSE=1 all 
+
+16:31:01 Build Finished. 0 errors, 0 warnings. (took 8s.273ms)
+

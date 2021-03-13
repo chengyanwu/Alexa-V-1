@@ -1,0 +1,5 @@
+18:45:52 **** Incremental Build of configuration Debug for project Alexa V-1 ****
+make ECLIPSE=1 all 
+
+18:46:00 Build Finished. 0 errors, 0 warnings. (took 8s.228ms)
+

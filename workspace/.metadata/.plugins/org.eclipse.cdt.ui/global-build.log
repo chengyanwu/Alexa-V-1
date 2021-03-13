@@ -1,0 +1,74 @@
+20:44:21 **** Incremental Build of configuration Debug for project Alexa_V-1 ****
+make ECLIPSE=1 -j 8 all 
+20:45:22 **** Incremental Build of configuration Debug for project Alexa_V-1 ****
+make ECLIPSE=1 -j 8 all 
+20:47:51 **** Incremental Build of configuration Debug for project Alexa_V-1 ****
+make ECLIPSE=1 -j 8 all 
+Makefile:151: Librariess/Boards/MAX78000/EvKit_V1/board.mk: No such file or directory
+Makefile:155: Librariess/PeriphDrivers/periphdriver.mk: No such file or directory
+Makefile:161: Librariess/CMSIS/Device/Maxim/MAX78000/Source/GCC/max78000.mk: No such file or directory
+make: *** No rule to make target `Librariess/CMSIS/Device/Maxim/MAX78000/Source/GCC/max78000.mk'.  Stop.
+"make ECLIPSE=1 -j 8 all" terminated with exit code 2. Build might be incomplete.
+20:51:40 **** Incremental Build of configuration Debug for project Alexa_V-1 ****
+make ECLIPSE=1 -j 8 all 
+20:52:26 **** Incremental Build of configuration Debug for project Alexa_V-1 ****
+make ECLIPSE=1 -j 8 all 
+20:58:27 **** Incremental Build of configuration Debug for project Alexa_V-1 ****
+make ECLIPSE=1 -j 8 all 
+20:58:39 **** Incremental Build of configuration Debug for project faceid_evkit ****
+make ECLIPSE=1 all 
+20:58:54 **** Incremental Build of configuration Debug for project faceid_evkit ****
+make ECLIPSE=1 all 
+22:29:24 **** Incremental Build of configuration Debug for project faceid_evkit ****
+make ECLIPSE=1 all 
+23:17:09 **** Incremental Build of configuration Debug for project faceid_evkit ****
+make ECLIPSE=1 all 
+23:17:22 **** Incremental Build of configuration Debug for project kws20_demo ****
+make -r ECLIPSE=1 -j 8  
+23:17:55 **** Incremental Build of configuration Debug for project kws20_demo ****
+make -r ECLIPSE=1 -j 8  
+16:12:58 **** Incremental Build of configuration Debug for project faceid_evkit ****
+make ECLIPSE=1 all 
+16:13:59 **** Incremental Build of configuration Debug for project faceid_evkit ****
+make ECLIPSE=1 all 
+16:30:52 **** Incremental Build of configuration Debug for project faceid_evkit ****
+make ECLIPSE=1 all 
+17:02:39 **** Incremental Build of configuration Debug for project Alexa_V-1 ****
+make ECLIPSE=1 -j 8 all 
+arm-none-eabi-gcc -mthumb -mcpu=cortex-m4 -mfloat-abi=softfp -mfpu=fpv4-sp-d16 -Wa,-mimplicit-it=thumb -O2 -ffunction-sections -fdata-sections -MD -Wall -Wno-format -c -fno-isolate-erroneous-paths-dereference -DTARGET=MAX78000 -DTARGET_REV=0x4131 -g3 -ggdb -DDEBUG -DMXC_ASSERT_ENABLE -DARM_MATH_CM4 -DROTATE_SCREEN=1 -DTFT_ENABLE -DTS_ENABLE -Wall -I. -I./TFT/evkit/resources -I./include -I../../../../Examples/MAX78000/CNN/Common -ILibraries/Boards/MAX78000/EvKit_V1/Include -ILibraries/Boards/MAX78000/EvKit_V1/../Include -ILibraries/PeriphDrivers/Include/MAX78000/ -ILibraries/PeriphDrivers/Source/ADC -ILibraries/PeriphDrivers/Source/AES -ILibraries/PeriphDrivers/Source/CAMERAIF -ILibraries/PeriphDrivers/Source/DMA -ILibraries/PeriphDrivers/Source/CRC -ILibraries/PeriphDrivers/Source/LP -ILibraries/PeriphDrivers/Source/FLC -ILibraries/PeriphDrivers/Source/GPIO -ILibraries/PeriphDrivers/Source/I2C -ILibraries/PeriphDrivers/Source/I2S -ILibraries/PeriphDrivers/Source/ICC -ILibraries/PeriphDrivers/Source/OWM -ILibraries/PeriphDrivers/Source/PT -ILibraries/PeriphDrivers/Source/RTC -ILibraries/PeriphDrivers/Source/SEMA -ILibraries/PeriphDrivers/Source/SPI -ILibraries/PeriphDrivers/Source/TRNG -ILibraries/PeriphDrivers/Source/TMR -ILibraries/PeriphDrivers/Source/UART -ILibraries/PeriphDrivers/Source/WDT -ILibraries/PeriphDrivers/Source/WUT -ILibraries/CMSIS/Device/Maxim/MAX78000/Include -ILibraries/CMSIS/Include -o /c/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/main.o main.c
+main.c: In function 'main':
+main.c:342:23: warning: unused variable 'procState' [-Wunused-variable]
+  342 |  mic_processing_state procState = STOP;
+      |                       ^~~~~~~~~
+main.c:340:11: warning: unused variable 'avgSilenceCounter' [-Wunused-variable]
+  340 |  uint16_t avgSilenceCounter = 0;
+      |           ^~~~~~~~~~~~~~~~~
+main.c:338:11: warning: unused variable 'wordCounter' [-Wunused-variable]
+  338 |  uint16_t wordCounter = 0;
+      |           ^~~~~~~~~~~
+main.c:337:11: warning: unused variable 'ai85Counter' [-Wunused-variable]
+  337 |  uint16_t ai85Counter = 0;
+      |           ^~~~~~~~~~~
+main.c:336:11: warning: unused variable 'preambleCounter' [-Wunused-variable]
+  336 |  uint16_t preambleCounter = 0;
+      |           ^~~~~~~~~~~~~~~
+main.c:335:11: warning: unused variable 'avg' [-Wunused-variable]
+  335 |  uint16_t avg = 0;
+      |           ^~~
+main.c:333:10: warning: unused variable 'pChunkBuff' [-Wunused-variable]
+  333 |  uint8_t pChunkBuff[CHUNK];
+      |          ^~~~~~~~~~
+main.c:331:17: warning: unused variable 'units' [-Wunused-variable]
+  331 |  mxc_tmr_unit_t units;
+      |                 ^~~~~
+main.c:330:11: warning: unused variable 'sampleCounter' [-Wunused-variable]
+  330 |  uint32_t sampleCounter = 0;
+      |           ^~~~~~~~~~~~~
+At top level:
+main.c:129:14: warning: 'ml_softmax' defined but not used [-Wunused-variable]
+  129 | static q15_t ml_softmax[NUM_OUTPUTS];
+      |              ^~~~~~~~~~
+main.c:128:16: warning: 'ml_data' defined but not used [-Wunused-variable]
+  128 | static int32_t ml_data[NUM_OUTPUTS];
+      |                ^~~~~~~
+  LD    /c/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/Alexa_V-1.elf 
