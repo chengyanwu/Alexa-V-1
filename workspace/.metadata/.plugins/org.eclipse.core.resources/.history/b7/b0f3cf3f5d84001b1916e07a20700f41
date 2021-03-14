@@ -193,6 +193,7 @@ int font_2 = urw_gothic_13_white_bg_grey;
 #endif
 /* **************************************************************************** */
 
+
 // ------------KWS Set Ups end -----------------------------------------------------//
 
 static const uint8_t camera_settings[][2] = {
@@ -320,33 +321,6 @@ static const uint8_t camera_settings[][2] = {
 
 // *****************************************************************************
 
-// ---------------------- Function for KWS start-----------------------------------------------------//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ---------------------- Function for KWS end-----------------------------------------------------//
-
-
-
-
-
-
-
-
 int main(void)
 {
 	// --------- setting variable values for KWS start ----------//
@@ -354,6 +328,7 @@ int main(void)
 	mxc_tmr_unit_t units;
 
 	uint8_t pChunkBuff[CHUNK];
+
 	uint16_t avg = 0;
 	uint16_t preambleCounter = 0;
 	uint16_t ai85Counter = 0;

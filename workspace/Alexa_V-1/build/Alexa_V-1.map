@@ -4979,7 +4979,7 @@ LOAD c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+f
  *(.rom_vector)
  *(.rom_handlers*)
 
-.text           0x10000000    0x3d444
+.text           0x10000000    0x3d44c
                 0x10000000                _text = .
  *(.isr_vector)
  .isr_vector    0x10000000      0x1e0 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/startup_max78000.o
@@ -4987,930 +4987,930 @@ LOAD c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+f
  *(.text*)
  .text          0x100001e0       0x40 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
  .text.startup.main
-                0x10000220      0x1b4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/main.o
+                0x10000220      0x1bc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/main.o
                 0x10000220                main
  .text.utils_get_time_ms
-                0x100003d4       0x3c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/utils.o
-                0x100003d4                utils_get_time_ms
+                0x100003dc       0x3c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/utils.o
+                0x100003dc                utils_get_time_ms
  .text.state_init
-                0x10000410       0x18 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state.o
-                0x10000410                state_init
+                0x10000418       0x18 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state.o
+                0x10000418                state_init
  .text.state_set_current
-                0x10000428       0x14 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state.o
-                0x10000428                state_set_current
+                0x10000430       0x14 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state.o
+                0x10000430                state_set_current
  .text.state_get_current
-                0x1000043c        0xc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state.o
-                0x1000043c                state_get_current
- .text.init     0x10000448       0xa8 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_home.o
+                0x10000444        0xc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state.o
+                0x10000444                state_get_current
+ .text.init     0x10000450       0xa8 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_home.o
  .text.key_process
-                0x100004f0       0x18 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_home.o
+                0x100004f8       0x18 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_home.o
  .text.get_home_state
-                0x10000508        0x8 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_home.o
-                0x10000508                get_home_state
- .text.run_cnn  0x10000510      0x2a8 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_faceID.o
+                0x10000510        0x8 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_home.o
+                0x10000510                get_home_state
+ .text.run_cnn  0x10000518      0x2a8 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_faceID.o
  .text.key_process
-                0x100007b8       0x18 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_faceID.o
- .text.init     0x100007d0      0x190 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_faceID.o
+                0x100007c0       0x18 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_faceID.o
+ .text.init     0x100007d8      0x190 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_faceID.o
  .text.get_faceID_state
-                0x10000960        0x8 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_faceID.o
-                0x10000960                get_faceID_state
- .text.CNN_ISR  0x10000968       0x54 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
-                0x10000968                CNN_ISR
+                0x10000968        0x8 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_faceID.o
+                0x10000968                get_faceID_state
+ .text.CNN_ISR  0x10000970       0x54 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10000970                CNN_ISR
  .text.cnn_stop
-                0x100009bc       0x14 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
-                0x100009bc                cnn_stop
+                0x100009c4       0x14 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x100009c4                cnn_stop
  .text.cnn_load_weights
-                0x100009d0      0xc08 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
-                0x100009d0                cnn_load_weights
+                0x100009d8      0xc08 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x100009d8                cnn_load_weights
  .text.cnn_init
-                0x100015d8       0x74 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
-                0x100015d8                cnn_init
+                0x100015e0       0x74 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x100015e0                cnn_init
  .text.cnn_configure
-                0x1000164c     0x1328 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
-                0x1000164c                cnn_configure
+                0x10001654     0x1328 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10001654                cnn_configure
  .text.cnn_start
-                0x10002974       0x50 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
-                0x10002974                cnn_start
+                0x1000297c       0x50 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1000297c                cnn_start
  .text.cnn_unload
-                0x100029c4      0xde4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
-                0x100029c4                cnn_unload
+                0x100029cc      0xde4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x100029cc                cnn_unload
  .text.cnn_enable
-                0x100037a8       0x3c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
-                0x100037a8                cnn_enable
+                0x100037b0       0x3c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x100037b0                cnn_enable
  .text.cnn_boost_enable
-                0x100037e4       0x24 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
-                0x100037e4                cnn_boost_enable
+                0x100037ec       0x24 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x100037ec                cnn_boost_enable
  .text.init_database
-                0x10003808       0x94 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/embedding_process.o
-                0x10003808                init_database
+                0x10003810       0x94 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/embedding_process.o
+                0x10003810                init_database
  .text.get_subject
-                0x1000389c       0x44 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/embedding_process.o
-                0x1000389c                get_subject
+                0x100038a4       0x44 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/embedding_process.o
+                0x100038a4                get_subject
  .text.get_min_dist_counter
-                0x100038e0       0x18 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/embedding_process.o
-                0x100038e0                get_min_dist_counter
+                0x100038e8       0x18 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/embedding_process.o
+                0x100038e8                get_min_dist_counter
  .text.calculate_minDistance
-                0x100038f8      0x350 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/embedding_process.o
-                0x100038f8                calculate_minDistance
+                0x10003900      0x350 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/embedding_process.o
+                0x10003900                calculate_minDistance
  .text.mxc_assert
-                0x10003c48       0x10 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/board.o
-                0x10003c48                mxc_assert
+                0x10003c50       0x10 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/board.o
+                0x10003c50                mxc_assert
  .text.Board_Init
-                0x10003c58       0x70 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/board.o
-                0x10003c58                Board_Init
+                0x10003c60       0x70 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/board.o
+                0x10003c60                Board_Init
  .text.NMI_Handler
-                0x10003cc8        0x4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/board.o
-                0x10003cc8                NMI_Handler
+                0x10003cd0        0x4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/board.o
+                0x10003cd0                NMI_Handler
  .text.Camera_Power
-                0x10003ccc        0x8 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/board.o
-                0x10003ccc                Camera_Power
- .text._close   0x10003cd4        0x8 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/stdio.o
-                0x10003cd4                _close
- .text._isatty  0x10003cdc        0x8 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/stdio.o
-                0x10003cdc                _isatty
- .text._lseek   0x10003ce4        0x8 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/stdio.o
-                0x10003ce4                _lseek
- .text._fstat   0x10003cec        0x8 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/stdio.o
-                0x10003cec                _fstat
- .text._read    0x10003cf4       0x50 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/stdio.o
-                0x10003cf4                _read
- .text._write   0x10003d44       0x4c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/stdio.o
-                0x10003d44                _write
- .text.LED_On   0x10003d90       0x40 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/led.o
-                0x10003d90                LED_On
- .text.LED_Off  0x10003dd0       0x40 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/led.o
-                0x10003dd0                LED_Off
+                0x10003cd4        0x8 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/board.o
+                0x10003cd4                Camera_Power
+ .text._close   0x10003cdc        0x8 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/stdio.o
+                0x10003cdc                _close
+ .text._isatty  0x10003ce4        0x8 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/stdio.o
+                0x10003ce4                _isatty
+ .text._lseek   0x10003cec        0x8 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/stdio.o
+                0x10003cec                _lseek
+ .text._fstat   0x10003cf4        0x8 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/stdio.o
+                0x10003cf4                _fstat
+ .text._read    0x10003cfc       0x50 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/stdio.o
+                0x10003cfc                _read
+ .text._write   0x10003d4c       0x4c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/stdio.o
+                0x10003d4c                _write
+ .text.LED_On   0x10003d98       0x40 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/led.o
+                0x10003d98                LED_On
+ .text.LED_Off  0x10003dd8       0x40 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/led.o
+                0x10003dd8                LED_Off
  .text.LED_Init
-                0x10003e10       0x40 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/led.o
-                0x10003e10                LED_Init
- .text.PB_Init  0x10003e50       0x34 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/pb.o
-                0x10003e50                PB_Init
+                0x10003e18       0x40 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/led.o
+                0x10003e18                LED_Init
+ .text.PB_Init  0x10003e58       0x34 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/pb.o
+                0x10003e58                PB_Init
  .text.GPIO0_IRQHandler
-                0x10003e84        0x8 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/pb.o
-                0x10003e84                GPIO0_IRQHandler
- .text.GPIO1_IRQHandler
                 0x10003e8c        0x8 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/pb.o
-                0x10003e8c                GPIO1_IRQHandler
- .text.GPIO2_IRQHandler
+                0x10003e8c                GPIO0_IRQHandler
+ .text.GPIO1_IRQHandler
                 0x10003e94        0x8 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/pb.o
-                0x10003e94                GPIO2_IRQHandler
+                0x10003e94                GPIO1_IRQHandler
+ .text.GPIO2_IRQHandler
+                0x10003e9c        0x8 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/pb.o
+                0x10003e9c                GPIO2_IRQHandler
  .text.get_font_info
-                0x10003e9c       0x40 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+                0x10003ea4       0x40 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
  .text.setPalette
-                0x10003edc       0xcc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+                0x10003ee4       0xcc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
  .text.spi_transmit
-                0x10003fa8       0xc4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+                0x10003fb0       0xc4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
  .text.write_data
-                0x1000406c       0x34 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+                0x10004074       0x34 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
  .text.displaySub
-                0x100040a0       0xac c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+                0x100040a8       0xac c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
  .text.displaySub_Rotated
-                0x1000414c       0xbc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+                0x10004154       0xbc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
  .text.write_color
-                0x10004208       0x28 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+                0x10004210       0x28 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
  .text.print_line
-                0x10004230       0x74 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+                0x10004238       0x74 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
  .text.RLE_decode
-                0x100042a4      0x1a4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+                0x100042ac      0x1a4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
  .text.print_line_rgb565
-                0x10004448       0xc0 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+                0x10004450       0xc0 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
  .text.writeSubBitmap
-                0x10004508       0xf4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+                0x10004510       0xf4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
  .text.get_bitmap_info
-                0x100045fc       0x50 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+                0x10004604       0x50 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
  .text.MXC_TFT_PrintFont.part.0
-                0x1000464c      0x1e0 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+                0x10004654      0x1e0 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
  .text.MXC_TFT_SetRotation
-                0x1000482c       0x30 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
-                0x1000482c                MXC_TFT_SetRotation
+                0x10004834       0x30 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+                0x10004834                MXC_TFT_SetRotation
  .text.MXC_TFT_SetBackGroundColor
-                0x1000485c       0xd0 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
-                0x1000485c                MXC_TFT_SetBackGroundColor
+                0x10004864       0xd0 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+                0x10004864                MXC_TFT_SetBackGroundColor
  .text.MXC_TFT_SetPalette
-                0x1000492c       0x30 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
-                0x1000492c                MXC_TFT_SetPalette
+                0x10004934       0x30 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+                0x10004934                MXC_TFT_SetPalette
  .text.MXC_TFT_Backlight
-                0x1000495c       0x1c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
-                0x1000495c                MXC_TFT_Backlight
+                0x10004964       0x1c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+                0x10004964                MXC_TFT_Backlight
  .text.MXC_TFT_Init
-                0x10004978      0x40c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
-                0x10004978                MXC_TFT_Init
+                0x10004980      0x40c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+                0x10004980                MXC_TFT_Init
  .text.MXC_TFT_ShowImage
-                0x10004d84       0xcc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
-                0x10004d84                MXC_TFT_ShowImage
+                0x10004d8c       0xcc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+                0x10004d8c                MXC_TFT_ShowImage
  .text.MXC_TFT_ShowImageCameraRGB565
-                0x10004e50      0x180 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
-                0x10004e50                MXC_TFT_ShowImageCameraRGB565
+                0x10004e58      0x180 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+                0x10004e58                MXC_TFT_ShowImageCameraRGB565
  .text.MXC_TFT_PrintFont
-                0x10004fd0       0x1c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
-                0x10004fd0                MXC_TFT_PrintFont
+                0x10004fd8       0x1c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+                0x10004fd8                MXC_TFT_PrintFont
  .text.MXC_TFT_ClearArea
-                0x10004fec       0xdc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
-                0x10004fec                MXC_TFT_ClearArea
+                0x10004ff4       0xdc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+                0x10004ff4                MXC_TFT_ClearArea
  .text.MXC_TFT_WriteReg
-                0x100050c8       0x20 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
-                0x100050c8                MXC_TFT_WriteReg
+                0x100050d0       0x20 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+                0x100050d0                MXC_TFT_WriteReg
  .text.spi_transmit_tsc2046
-                0x100050e8       0x80 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/touchscreen.o
+                0x100050f0       0x80 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/touchscreen.o
  .text.MXC_TS_Start
-                0x10005168       0x20 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/touchscreen.o
-                0x10005168                MXC_TS_Start
+                0x10005170       0x20 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/touchscreen.o
+                0x10005170                MXC_TS_Start
  .text.MXC_TS_Stop
-                0x10005188       0x20 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/touchscreen.o
-                0x10005188                MXC_TS_Stop
+                0x10005190       0x20 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/touchscreen.o
+                0x10005190                MXC_TS_Stop
  .text.tsHandler
-                0x100051a8       0xd8 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/touchscreen.o
+                0x100051b0       0xd8 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/touchscreen.o
  .text.MXC_TS_Init
-                0x10005280      0x120 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/touchscreen.o
-                0x10005280                MXC_TS_Init
+                0x10005288      0x120 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/touchscreen.o
+                0x10005288                MXC_TS_Init
  .text.MXC_TS_AddButton
-                0x100053a0       0x3c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/touchscreen.o
-                0x100053a0                MXC_TS_AddButton
+                0x100053a8       0x3c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/touchscreen.o
+                0x100053a8                MXC_TS_AddButton
  .text.MXC_TS_RemoveAllButton
-                0x100053dc       0x18 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/touchscreen.o
-                0x100053dc                MXC_TS_RemoveAllButton
+                0x100053e4       0x18 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/touchscreen.o
+                0x100053e4                MXC_TS_RemoveAllButton
  .text.MXC_TS_GetKey
-                0x100053f4       0x10 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/touchscreen.o
-                0x100053f4                MXC_TS_GetKey
+                0x100053fc       0x10 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/touchscreen.o
+                0x100053fc                MXC_TS_GetKey
  .text.camera_irq_handler
-                0x10005404      0x13c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/camera.o
-                0x10005404                camera_irq_handler
+                0x1000540c      0x13c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/camera.o
+                0x1000540c                camera_irq_handler
  .text.camera_init
-                0x10005540      0x148 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/camera.o
-                0x10005540                camera_init
+                0x10005548      0x148 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/camera.o
+                0x10005548                camera_init
  .text.camera_setup
-                0x10005688      0x16c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/camera.o
-                0x10005688                camera_setup
+                0x10005690      0x16c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/camera.o
+                0x10005690                camera_setup
  .text.camera_write_reg
-                0x100057f4        0xc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/camera.o
-                0x100057f4                camera_write_reg
+                0x100057fc        0xc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/camera.o
+                0x100057fc                camera_write_reg
  .text.camera_get_slave_address
-                0x10005800        0xc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/camera.o
-                0x10005800                camera_get_slave_address
+                0x10005808        0xc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/camera.o
+                0x10005808                camera_get_slave_address
  .text.camera_get_product_id
-                0x1000580c        0xc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/camera.o
-                0x1000580c                camera_get_product_id
+                0x10005814        0xc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/camera.o
+                0x10005814                camera_get_product_id
  .text.camera_get_manufacture_id
-                0x10005818        0xc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/camera.o
-                0x10005818                camera_get_manufacture_id
+                0x10005820        0xc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/camera.o
+                0x10005820                camera_get_manufacture_id
  .text.camera_start_capture_image
-                0x10005824       0x80 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/camera.o
-                0x10005824                camera_start_capture_image
+                0x1000582c       0x80 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/camera.o
+                0x1000582c                camera_start_capture_image
  .text.camera_is_image_rcv
-                0x100058a4       0x10 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/camera.o
-                0x100058a4                camera_is_image_rcv
+                0x100058ac       0x10 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/camera.o
+                0x100058ac                camera_is_image_rcv
  .text.camera_get_image
-                0x100058b4       0xac c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/camera.o
-                0x100058b4                camera_get_image
+                0x100058bc       0xac c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/camera.o
+                0x100058bc                camera_get_image
  .text.get_slave_address
-                0x10005960        0xc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+                0x10005968        0xc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
  .text.get_pixformat
-                0x1000596c       0x10 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+                0x10005974       0x10 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
  .text.set_contrast
-                0x1000597c        0x4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+                0x10005984        0x4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
  .text.set_gainceiling
-                0x10005980        0x4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+                0x10005988        0x4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
  .text.set_windowing
-                0x10005984      0x150 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+                0x1000598c      0x150 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
  .text.set_framesize
-                0x10005ad4       0xc0 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+                0x10005adc       0xc0 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
  .text.write_reg
-                0x10005b94       0x10 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+                0x10005b9c       0x10 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
  .text.set_vflip
-                0x10005ba4       0x3c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+                0x10005bac       0x3c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
  .text.set_hmirror
-                0x10005be0       0x3c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+                0x10005be8       0x3c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
  .text.read_reg
-                0x10005c1c       0x20 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
- .text.sleep    0x10005c3c       0x3c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+                0x10005c24       0x20 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+ .text.sleep    0x10005c44       0x3c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
  .text.get_manufacture_id
-                0x10005c78       0x3c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+                0x10005c80       0x3c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
  .text.get_product_id
-                0x10005cb4       0x3c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
- .text.reset    0x10005cf0       0x6c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+                0x10005cbc       0x3c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+ .text.reset    0x10005cf8       0x6c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
  .text.dump_registers
-                0x10005d5c       0xa4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
- .text.init     0x10005e00       0x1c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+                0x10005d64       0xa4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+ .text.init     0x10005e08       0x1c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
  .text.set_negateimage
-                0x10005e1c       0x98 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+                0x10005e24       0x98 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
  .text.set_pixformat
-                0x10005eb4       0x54 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+                0x10005ebc       0x54 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
  .text.set_saturation
-                0x10005f08        0x4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
- .text.set_colorbar
-                0x10005f0c        0x4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
- .text.set_brightness
                 0x10005f10        0x4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+ .text.set_colorbar
+                0x10005f14        0x4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+ .text.set_brightness
+                0x10005f18        0x4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
  .text.sensor_register
-                0x10005f14       0xb0 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
-                0x10005f14                sensor_register
- .text.start    0x10005fc4       0x40 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/sccb.o
+                0x10005f1c       0xb0 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+                0x10005f1c                sensor_register
+ .text.start    0x10005fcc       0x40 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/sccb.o
  .text.send_byte
-                0x10006004       0x78 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/sccb.o
- .text.stop     0x1000607c       0x38 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/sccb.o
+                0x1000600c       0x78 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/sccb.o
+ .text.stop     0x10006084       0x38 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/sccb.o
  .text.sccb_init
-                0x100060b4       0x2c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/sccb.o
-                0x100060b4                sccb_init
+                0x100060bc       0x2c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/sccb.o
+                0x100060bc                sccb_init
  .text.sccb_scan
-                0x100060e0       0x30 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/sccb.o
-                0x100060e0                sccb_scan
+                0x100060e8       0x30 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/sccb.o
+                0x100060e8                sccb_scan
  .text.sccb_read_byt
-                0x10006110       0xe4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/sccb.o
-                0x10006110                sccb_read_byt
+                0x10006118       0xe4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/sccb.o
+                0x10006118                sccb_read_byt
  .text.sccb_write_byt
-                0x100061f4       0x5c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/sccb.o
-                0x100061f4                sccb_write_byt
- .text          0x10006250      0x148 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/startup_max78000.o
-                0x10006250                Reset_Handler
-                0x1000628e                HardFault_Handler
-                0x10006290                MemManage_Handler
-                0x10006292                BusFault_Handler
-                0x10006294                UsageFault_Handler
-                0x10006296                SVC_Handler
-                0x10006298                DebugMon_Handler
-                0x1000629a                PendSV_Handler
-                0x1000629c                SysTick_Handler
-                0x1000629e                Default_Handler
-                0x100062a0                PF_IRQHandler
-                0x100062a2                WDT0_IRQHandler
-                0x100062a4                RSV02_IRQHandler
-                0x100062a6                RTC_IRQHandler
-                0x100062a8                TRNG_IRQHandler
-                0x100062aa                TMR0_IRQHandler
-                0x100062ac                TMR1_IRQHandler
-                0x100062ae                TMR2_IRQHandler
-                0x100062b0                TMR3_IRQHandler
-                0x100062b2                TMR4_IRQHandler
-                0x100062b4                TMR5_IRQHandler
-                0x100062b6                RSV11_IRQHandler
-                0x100062b8                RSV12_IRQHandler
-                0x100062ba                I2C0_IRQHandler
-                0x100062bc                UART0_IRQHandler
-                0x100062be                UART1_IRQHandler
-                0x100062c0                SPI1_IRQHandler
-                0x100062c2                RSV17_IRQHandler
-                0x100062c4                RSV18_IRQHandler
-                0x100062c6                RSV19_IRQHandler
-                0x100062c8                ADC_IRQHandler
-                0x100062ca                RSV21_IRQHandler
-                0x100062cc                RSV22_IRQHandler
-                0x100062ce                FLC0_IRQHandler
-                0x100062d6                RSV27_IRQHandler
-                0x100062d8                DMA0_IRQHandler
-                0x100062da                DMA1_IRQHandler
-                0x100062dc                DMA2_IRQHandler
-                0x100062de                DMA3_IRQHandler
-                0x100062e0                RSV32_IRQHandler
-                0x100062e2                RSV33_IRQHandler
-                0x100062e4                UART2_IRQHandler
-                0x100062e6                RSV35_IRQHandler
-                0x100062e8                I2C1_IRQHandler
-                0x100062ea                RSV37_IRQHandler
-                0x100062ec                RSV38_IRQHandler
-                0x100062ee                RSV39_IRQHandler
-                0x100062f0                RSV40_IRQHandler
-                0x100062f2                RSV41_IRQHandler
-                0x100062f4                RSV42_IRQHandler
-                0x100062f6                RSV43_IRQHandler
-                0x100062f8                RSV44_IRQHandler
-                0x100062fa                RSV45_IRQHandler
-                0x100062fc                RSV46_IRQHandler
-                0x100062fe                RSV47_IRQHandler
-                0x10006300                RSV48_IRQHandler
-                0x10006302                RSV49_IRQHandler
-                0x10006304                RSV50_IRQHandler
-                0x10006306                RSV51_IRQHandler
-                0x10006308                RSV52_IRQHandler
-                0x1000630a                WUT_IRQHandler
-                0x1000630c                GPIOWAKE_IRQHandler
-                0x1000630e                RSV55_IRQHandler
-                0x10006310                SPI0_IRQHandler
-                0x10006312                WDT1_IRQHandler
-                0x10006314                RSV58_IRQHandler
-                0x10006316                PT_IRQHandler
-                0x10006318                RSV60_IRQHandler
-                0x1000631a                RSV61_IRQHandler
-                0x1000631c                I2C2_IRQHandler
-                0x1000631e                RISCV_IRQHandler
-                0x10006320                RSV64_IRQHandler
-                0x10006322                RSV65_IRQHandler
-                0x10006324                RSV66_IRQHandler
-                0x10006326                OWM_IRQHandler
-                0x10006328                RSV68_IRQHandler
-                0x1000632a                RSV69_IRQHandler
-                0x1000632c                RSV70_IRQHandler
-                0x1000632e                RSV71_IRQHandler
-                0x10006330                RSV72_IRQHandler
-                0x10006332                RSV73_IRQHandler
-                0x10006334                RSV74_IRQHandler
-                0x10006336                RSV75_IRQHandler
-                0x10006338                RSV76_IRQHandler
-                0x1000633a                RSV77_IRQHandler
-                0x1000633c                RSV78_IRQHandler
-                0x1000633e                RSV79_IRQHandler
-                0x10006340                RSV80_IRQHandler
-                0x10006342                RSV81_IRQHandler
-                0x10006344                ECC_IRQHandler
-                0x10006346                DVS_IRQHandler
-                0x10006348                SIMO_IRQHandler
-                0x1000634a                RSV85_IRQHandler
-                0x1000634c                RSV86_IRQHandler
-                0x1000634e                RSV87_IRQHandler
-                0x10006350                UART3_IRQHandler
-                0x10006352                RSV89_IRQHandler
-                0x10006354                RSV90_IRQHandler
-                0x10006356                PCIF_IRQHandler
-                0x10006358                RSV92_IRQHandler
-                0x1000635a                RSV93_IRQHandler
-                0x1000635c                RSV94_IRQHandler
-                0x1000635e                RSV95_IRQHandler
-                0x10006360                RSV96_IRQHandler
-                0x10006362                AES_IRQHandler
-                0x10006364                RSV98_IRQHandler
-                0x10006366                I2S_IRQHandler
-                0x10006368                CNN_FIFO_IRQHandler
-                0x1000636a                CNN_IRQHandler
-                0x1000636c                RSV102_IRQHandler
-                0x1000636e                LPCMP_IRQHandler
- .text._sbrk    0x10006398       0x40 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/heap.o
-                0x10006398                _sbrk
+                0x100061fc       0x5c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/sccb.o
+                0x100061fc                sccb_write_byt
+ .text          0x10006258      0x148 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/startup_max78000.o
+                0x10006258                Reset_Handler
+                0x10006296                HardFault_Handler
+                0x10006298                MemManage_Handler
+                0x1000629a                BusFault_Handler
+                0x1000629c                UsageFault_Handler
+                0x1000629e                SVC_Handler
+                0x100062a0                DebugMon_Handler
+                0x100062a2                PendSV_Handler
+                0x100062a4                SysTick_Handler
+                0x100062a6                Default_Handler
+                0x100062a8                PF_IRQHandler
+                0x100062aa                WDT0_IRQHandler
+                0x100062ac                RSV02_IRQHandler
+                0x100062ae                RTC_IRQHandler
+                0x100062b0                TRNG_IRQHandler
+                0x100062b2                TMR0_IRQHandler
+                0x100062b4                TMR1_IRQHandler
+                0x100062b6                TMR2_IRQHandler
+                0x100062b8                TMR3_IRQHandler
+                0x100062ba                TMR4_IRQHandler
+                0x100062bc                TMR5_IRQHandler
+                0x100062be                RSV11_IRQHandler
+                0x100062c0                RSV12_IRQHandler
+                0x100062c2                I2C0_IRQHandler
+                0x100062c4                UART0_IRQHandler
+                0x100062c6                UART1_IRQHandler
+                0x100062c8                SPI1_IRQHandler
+                0x100062ca                RSV17_IRQHandler
+                0x100062cc                RSV18_IRQHandler
+                0x100062ce                RSV19_IRQHandler
+                0x100062d0                ADC_IRQHandler
+                0x100062d2                RSV21_IRQHandler
+                0x100062d4                RSV22_IRQHandler
+                0x100062d6                FLC0_IRQHandler
+                0x100062de                RSV27_IRQHandler
+                0x100062e0                DMA0_IRQHandler
+                0x100062e2                DMA1_IRQHandler
+                0x100062e4                DMA2_IRQHandler
+                0x100062e6                DMA3_IRQHandler
+                0x100062e8                RSV32_IRQHandler
+                0x100062ea                RSV33_IRQHandler
+                0x100062ec                UART2_IRQHandler
+                0x100062ee                RSV35_IRQHandler
+                0x100062f0                I2C1_IRQHandler
+                0x100062f2                RSV37_IRQHandler
+                0x100062f4                RSV38_IRQHandler
+                0x100062f6                RSV39_IRQHandler
+                0x100062f8                RSV40_IRQHandler
+                0x100062fa                RSV41_IRQHandler
+                0x100062fc                RSV42_IRQHandler
+                0x100062fe                RSV43_IRQHandler
+                0x10006300                RSV44_IRQHandler
+                0x10006302                RSV45_IRQHandler
+                0x10006304                RSV46_IRQHandler
+                0x10006306                RSV47_IRQHandler
+                0x10006308                RSV48_IRQHandler
+                0x1000630a                RSV49_IRQHandler
+                0x1000630c                RSV50_IRQHandler
+                0x1000630e                RSV51_IRQHandler
+                0x10006310                RSV52_IRQHandler
+                0x10006312                WUT_IRQHandler
+                0x10006314                GPIOWAKE_IRQHandler
+                0x10006316                RSV55_IRQHandler
+                0x10006318                SPI0_IRQHandler
+                0x1000631a                WDT1_IRQHandler
+                0x1000631c                RSV58_IRQHandler
+                0x1000631e                PT_IRQHandler
+                0x10006320                RSV60_IRQHandler
+                0x10006322                RSV61_IRQHandler
+                0x10006324                I2C2_IRQHandler
+                0x10006326                RISCV_IRQHandler
+                0x10006328                RSV64_IRQHandler
+                0x1000632a                RSV65_IRQHandler
+                0x1000632c                RSV66_IRQHandler
+                0x1000632e                OWM_IRQHandler
+                0x10006330                RSV68_IRQHandler
+                0x10006332                RSV69_IRQHandler
+                0x10006334                RSV70_IRQHandler
+                0x10006336                RSV71_IRQHandler
+                0x10006338                RSV72_IRQHandler
+                0x1000633a                RSV73_IRQHandler
+                0x1000633c                RSV74_IRQHandler
+                0x1000633e                RSV75_IRQHandler
+                0x10006340                RSV76_IRQHandler
+                0x10006342                RSV77_IRQHandler
+                0x10006344                RSV78_IRQHandler
+                0x10006346                RSV79_IRQHandler
+                0x10006348                RSV80_IRQHandler
+                0x1000634a                RSV81_IRQHandler
+                0x1000634c                ECC_IRQHandler
+                0x1000634e                DVS_IRQHandler
+                0x10006350                SIMO_IRQHandler
+                0x10006352                RSV85_IRQHandler
+                0x10006354                RSV86_IRQHandler
+                0x10006356                RSV87_IRQHandler
+                0x10006358                UART3_IRQHandler
+                0x1000635a                RSV89_IRQHandler
+                0x1000635c                RSV90_IRQHandler
+                0x1000635e                PCIF_IRQHandler
+                0x10006360                RSV92_IRQHandler
+                0x10006362                RSV93_IRQHandler
+                0x10006364                RSV94_IRQHandler
+                0x10006366                RSV95_IRQHandler
+                0x10006368                RSV96_IRQHandler
+                0x1000636a                AES_IRQHandler
+                0x1000636c                RSV98_IRQHandler
+                0x1000636e                I2S_IRQHandler
+                0x10006370                CNN_FIFO_IRQHandler
+                0x10006372                CNN_IRQHandler
+                0x10006374                RSV102_IRQHandler
+                0x10006376                LPCMP_IRQHandler
+ .text._sbrk    0x100063a0       0x40 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/heap.o
+                0x100063a0                _sbrk
  .text.SystemCoreClockUpdate
-                0x100063d8       0x68 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/system_max78000.o
-                0x100063d8                SystemCoreClockUpdate
- .text.PreInit  0x10006440        0x4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/system_max78000.o
-                0x10006440                PreInit
+                0x100063e0       0x68 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/system_max78000.o
+                0x100063e0                SystemCoreClockUpdate
+ .text.PreInit  0x10006448        0x4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/system_max78000.o
+                0x10006448                PreInit
  .text.SystemInit
-                0x10006444       0x30 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/system_max78000.o
-                0x10006444                SystemInit
+                0x1000644c       0x30 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/system_max78000.o
+                0x1000644c                SystemInit
  .text.MXC_DelayInit
-                0x10006474       0x80 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
+                0x1000647c       0x80 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
  .text.MXC_DelayAsync
-                0x100064f4       0x3c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
-                0x100064f4                MXC_DelayAsync
+                0x100064fc       0x3c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
+                0x100064fc                MXC_DelayAsync
  .text.MXC_DelayCheck
-                0x10006530       0x74 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
-                0x10006530                MXC_DelayCheck
+                0x10006538       0x74 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
+                0x10006538                MXC_DelayCheck
  .text.MXC_DelayAbort
-                0x100065a4       0x34 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
-                0x100065a4                MXC_DelayAbort
+                0x100065ac       0x34 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
+                0x100065ac                MXC_DelayAbort
  .text.MXC_Delay
-                0x100065d8       0x74 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
-                0x100065d8                MXC_Delay
+                0x100065e0       0x74 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
+                0x100065e0                MXC_Delay
  .text.MXC_SYS_IsClockEnabled
-                0x1000664c       0x50 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
-                0x1000664c                MXC_SYS_IsClockEnabled
+                0x10006654       0x50 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
+                0x10006654                MXC_SYS_IsClockEnabled
  .text.MXC_SYS_ClockDisable
-                0x1000669c       0x44 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
-                0x1000669c                MXC_SYS_ClockDisable
+                0x100066a4       0x44 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
+                0x100066a4                MXC_SYS_ClockDisable
  .text.MXC_SYS_ClockEnable
-                0x100066e0       0x4c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
-                0x100066e0                MXC_SYS_ClockEnable
+                0x100066e8       0x4c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
+                0x100066e8                MXC_SYS_ClockEnable
  .text.MXC_SYS_Clock_Timeout
-                0x1000672c       0x30 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
-                0x1000672c                MXC_SYS_Clock_Timeout
+                0x10006734       0x30 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
+                0x10006734                MXC_SYS_Clock_Timeout
  .text.MXC_SYS_ClockSourceEnable
-                0x1000675c       0x60 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
-                0x1000675c                MXC_SYS_ClockSourceEnable
+                0x10006764       0x60 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
+                0x10006764                MXC_SYS_ClockSourceEnable
  .text.MXC_SYS_Clock_Select
-                0x100067bc       0xf4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
-                0x100067bc                MXC_SYS_Clock_Select
+                0x100067c4       0xf4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
+                0x100067c4                MXC_SYS_Clock_Select
  .text.MXC_SYS_Reset_Periph
-                0x100068b0       0x3c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
-                0x100068b0                MXC_SYS_Reset_Periph
+                0x100068b8       0x3c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
+                0x100068b8                MXC_SYS_Reset_Periph
  .text.NVIC_SetVector
-                0x100068ec       0x4c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(nvic_table.o)
-                0x100068ec                NVIC_SetVector
+                0x100068f4       0x4c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(nvic_table.o)
+                0x100068f4                NVIC_SetVector
  .text.MXC_PCIF_Init
-                0x10006938       0x6c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_ai85.o)
-                0x10006938                MXC_PCIF_Init
+                0x10006940       0x6c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_ai85.o)
+                0x10006940                MXC_PCIF_Init
  .text.MXC_PCIF_SetDataWidth
-                0x100069a4        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_ai85.o)
-                0x100069a4                MXC_PCIF_SetDataWidth
+                0x100069ac        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_ai85.o)
+                0x100069ac                MXC_PCIF_SetDataWidth
  .text.MXC_PCIF_SetTimingSel
-                0x100069b0        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_ai85.o)
-                0x100069b0                MXC_PCIF_SetTimingSel
+                0x100069b8        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_ai85.o)
+                0x100069b8                MXC_PCIF_SetTimingSel
  .text.MXC_PCIF_SetThreshold
-                0x100069bc        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_ai85.o)
-                0x100069bc                MXC_PCIF_SetThreshold
+                0x100069c4        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_ai85.o)
+                0x100069c4                MXC_PCIF_SetThreshold
  .text.MXC_PCIF_EnableInt
-                0x100069c8        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_ai85.o)
-                0x100069c8                MXC_PCIF_EnableInt
+                0x100069d0        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_ai85.o)
+                0x100069d0                MXC_PCIF_EnableInt
  .text.MXC_PCIF_DisableInt
-                0x100069d4        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_ai85.o)
-                0x100069d4                MXC_PCIF_DisableInt
+                0x100069dc        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_ai85.o)
+                0x100069dc                MXC_PCIF_DisableInt
  .text.MXC_PCIF_Start
-                0x100069e0        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_ai85.o)
-                0x100069e0                MXC_PCIF_Start
+                0x100069e8        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_ai85.o)
+                0x100069e8                MXC_PCIF_Start
  .text.MXC_PCIF_RevA_SetDatawidth
-                0x100069ec       0x14 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_reva.o)
-                0x100069ec                MXC_PCIF_RevA_SetDatawidth
+                0x100069f4       0x14 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_reva.o)
+                0x100069f4                MXC_PCIF_RevA_SetDatawidth
  .text.MXC_PCIF_RevA_SetTimingSel
-                0x10006a00       0x14 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_reva.o)
-                0x10006a00                MXC_PCIF_RevA_SetTimingSel
+                0x10006a08       0x14 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_reva.o)
+                0x10006a08                MXC_PCIF_RevA_SetTimingSel
  .text.MXC_PCIF_RevA_SetThreshold
-                0x10006a14       0x18 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_reva.o)
-                0x10006a14                MXC_PCIF_RevA_SetThreshold
+                0x10006a1c       0x18 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_reva.o)
+                0x10006a1c                MXC_PCIF_RevA_SetThreshold
  .text.MXC_PCIF_RevA_EnableInt
-                0x10006a2c        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_reva.o)
-                0x10006a2c                MXC_PCIF_RevA_EnableInt
+                0x10006a34        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_reva.o)
+                0x10006a34                MXC_PCIF_RevA_EnableInt
  .text.MXC_PCIF_RevA_DisableInt
-                0x10006a38       0x10 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_reva.o)
-                0x10006a38                MXC_PCIF_RevA_DisableInt
+                0x10006a40       0x10 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_reva.o)
+                0x10006a40                MXC_PCIF_RevA_DisableInt
  .text.MXC_PCIF_RevA_Start
-                0x10006a48       0x14 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_reva.o)
-                0x10006a48                MXC_PCIF_RevA_Start
+                0x10006a50       0x14 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_reva.o)
+                0x10006a50                MXC_PCIF_RevA_Start
  .text.MXC_DMA_Init
-                0x10006a5c       0x30 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(dma_me17.o)
-                0x10006a5c                MXC_DMA_Init
+                0x10006a64       0x30 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(dma_me17.o)
+                0x10006a64                MXC_DMA_Init
  .text.MXC_DMA_AcquireChannel
-                0x10006a8c        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(dma_me17.o)
-                0x10006a8c                MXC_DMA_AcquireChannel
+                0x10006a94        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(dma_me17.o)
+                0x10006a94                MXC_DMA_AcquireChannel
  .text.MXC_DMA_RevA_Init
-                0x10006a90       0x84 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(dma_reva.o)
-                0x10006a90                MXC_DMA_RevA_Init
+                0x10006a98       0x84 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(dma_reva.o)
+                0x10006a98                MXC_DMA_RevA_Init
  .text.MXC_DMA_RevA_AcquireChannel
-                0x10006b14       0x64 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(dma_reva.o)
-                0x10006b14                MXC_DMA_RevA_AcquireChannel
+                0x10006b1c       0x64 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(dma_reva.o)
+                0x10006b1c                MXC_DMA_RevA_AcquireChannel
  .text.MXC_GPIO_Init
-                0x10006b78       0x38 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
-                0x10006b78                MXC_GPIO_Init
+                0x10006b80       0x38 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
+                0x10006b80                MXC_GPIO_Init
  .text.MXC_GPIO_Config
-                0x10006bb0      0x190 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
-                0x10006bb0                MXC_GPIO_Config
+                0x10006bb8      0x190 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
+                0x10006bb8                MXC_GPIO_Config
  .text.MXC_GPIO_OutSet
-                0x10006d40       0x34 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
-                0x10006d40                MXC_GPIO_OutSet
+                0x10006d48       0x34 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
+                0x10006d48                MXC_GPIO_OutSet
  .text.MXC_GPIO_OutClr
-                0x10006d74       0x34 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
-                0x10006d74                MXC_GPIO_OutClr
+                0x10006d7c       0x34 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
+                0x10006d7c                MXC_GPIO_OutClr
  .text.MXC_GPIO_EnableInt
-                0x10006da8        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
-                0x10006da8                MXC_GPIO_EnableInt
- .text.MXC_GPIO_DisableInt
-                0x10006dac        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
-                0x10006dac                MXC_GPIO_DisableInt
- .text.MXC_GPIO_RegisterCallback
                 0x10006db0        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
-                0x10006db0                MXC_GPIO_RegisterCallback
- .text.MXC_GPIO_Handler
+                0x10006db0                MXC_GPIO_EnableInt
+ .text.MXC_GPIO_DisableInt
                 0x10006db4        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
-                0x10006db4                MXC_GPIO_Handler
- .text.MXC_GPIO_ClearFlags
+                0x10006db4                MXC_GPIO_DisableInt
+ .text.MXC_GPIO_RegisterCallback
                 0x10006db8        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
-                0x10006db8                MXC_GPIO_ClearFlags
- .text.MXC_GPIO_GetFlags
+                0x10006db8                MXC_GPIO_RegisterCallback
+ .text.MXC_GPIO_Handler
                 0x10006dbc        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
-                0x10006dbc                MXC_GPIO_GetFlags
- .text.MXC_GPIO_SetVSSEL
+                0x10006dbc                MXC_GPIO_Handler
+ .text.MXC_GPIO_ClearFlags
                 0x10006dc0        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
-                0x10006dc0                MXC_GPIO_SetVSSEL
+                0x10006dc0                MXC_GPIO_ClearFlags
+ .text.MXC_GPIO_GetFlags
+                0x10006dc4        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
+                0x10006dc4                MXC_GPIO_GetFlags
+ .text.MXC_GPIO_SetVSSEL
+                0x10006dc8        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
+                0x10006dc8                MXC_GPIO_SetVSSEL
  .text.MXC_GPIO_RevA_OutSet
-                0x10006dc4        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
-                0x10006dc4                MXC_GPIO_RevA_OutSet
- .text.MXC_GPIO_RevA_OutClr
-                0x10006dc8        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
-                0x10006dc8                MXC_GPIO_RevA_OutClr
- .text.MXC_GPIO_RevA_EnableInt
                 0x10006dcc        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
-                0x10006dcc                MXC_GPIO_RevA_EnableInt
- .text.MXC_GPIO_RevA_DisableInt
+                0x10006dcc                MXC_GPIO_RevA_OutSet
+ .text.MXC_GPIO_RevA_OutClr
                 0x10006dd0        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
-                0x10006dd0                MXC_GPIO_RevA_DisableInt
- .text.MXC_GPIO_RevA_ClearFlags
+                0x10006dd0                MXC_GPIO_RevA_OutClr
+ .text.MXC_GPIO_RevA_EnableInt
                 0x10006dd4        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
-                0x10006dd4                MXC_GPIO_RevA_ClearFlags
- .text.MXC_GPIO_RevA_GetFlags
+                0x10006dd4                MXC_GPIO_RevA_EnableInt
+ .text.MXC_GPIO_RevA_DisableInt
                 0x10006dd8        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
-                0x10006dd8                MXC_GPIO_RevA_GetFlags
+                0x10006dd8                MXC_GPIO_RevA_DisableInt
+ .text.MXC_GPIO_RevA_ClearFlags
+                0x10006ddc        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
+                0x10006ddc                MXC_GPIO_RevA_ClearFlags
+ .text.MXC_GPIO_RevA_GetFlags
+                0x10006de0        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
+                0x10006de0                MXC_GPIO_RevA_GetFlags
  .text.MXC_GPIO_RevA_SetVSSEL
-                0x10006ddc       0x30 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
-                0x10006ddc                MXC_GPIO_RevA_SetVSSEL
+                0x10006de4       0x30 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
+                0x10006de4                MXC_GPIO_RevA_SetVSSEL
  .text.MXC_GPIO_RevA_SetAF
-                0x10006e0c       0x58 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
-                0x10006e0c                MXC_GPIO_RevA_SetAF
+                0x10006e14       0x58 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
+                0x10006e14                MXC_GPIO_RevA_SetAF
  .text.MXC_ICC_Enable
-                0x10006e64        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(icc_me17.o)
-                0x10006e64                MXC_ICC_Enable
+                0x10006e6c        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(icc_me17.o)
+                0x10006e6c                MXC_ICC_Enable
  .text.MXC_ICC_RevA_Enable
-                0x10006e68       0x24 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(icc_reva.o)
-                0x10006e68                MXC_ICC_RevA_Enable
+                0x10006e70       0x24 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(icc_reva.o)
+                0x10006e70                MXC_ICC_RevA_Enable
  .text.MXC_PT_Init
-                0x10006e8c      0x128 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_me17.o)
-                0x10006e8c                MXC_PT_Init
+                0x10006e94      0x128 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_me17.o)
+                0x10006e94                MXC_PT_Init
  .text.MXC_PT_Config
-                0x10006fb4       0x5c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_me17.o)
-                0x10006fb4                MXC_PT_Config
+                0x10006fbc       0x5c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_me17.o)
+                0x10006fbc                MXC_PT_Config
  .text.MXC_PT_SqrWaveConfig
-                0x10007010       0x20 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_me17.o)
-                0x10007010                MXC_PT_SqrWaveConfig
+                0x10007018       0x20 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_me17.o)
+                0x10007018                MXC_PT_SqrWaveConfig
  .text.MXC_PT_Start
-                0x10007030        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_me17.o)
-                0x10007030                MXC_PT_Start
+                0x10007038        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_me17.o)
+                0x10007038                MXC_PT_Start
  .text.MXC_PT_IsActive
-                0x1000703c        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_me17.o)
-                0x1000703c                MXC_PT_IsActive
+                0x10007044        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_me17.o)
+                0x10007044                MXC_PT_IsActive
  .text.MXC_PT_RevA_Init
-                0x10007048        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_reva.o)
-                0x10007048                MXC_PT_RevA_Init
+                0x10007050        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_reva.o)
+                0x10007050                MXC_PT_RevA_Init
  .text.MXC_PT_RevA_Config
-                0x10007054       0xbc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_reva.o)
-                0x10007054                MXC_PT_RevA_Config
+                0x1000705c       0xbc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_reva.o)
+                0x1000705c                MXC_PT_RevA_Config
  .text.MXC_PT_RevA_SqrWaveConfig
-                0x10007110       0x1c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_reva.o)
-                0x10007110                MXC_PT_RevA_SqrWaveConfig
+                0x10007118       0x1c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_reva.o)
+                0x10007118                MXC_PT_RevA_SqrWaveConfig
  .text.MXC_PT_RevA_Start
-                0x1000712c       0x10 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_reva.o)
-                0x1000712c                MXC_PT_RevA_Start
+                0x10007134       0x10 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_reva.o)
+                0x10007134                MXC_PT_RevA_Start
  .text.MXC_PT_RevA_IsActive
-                0x1000713c        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_reva.o)
-                0x1000713c                MXC_PT_RevA_IsActive
+                0x10007144        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_reva.o)
+                0x10007144                MXC_PT_RevA_IsActive
  .text.MXC_RTC_Start
-                0x10007148        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_me17.o)
-                0x10007148                MXC_RTC_Start
+                0x10007150        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_me17.o)
+                0x10007150                MXC_RTC_Start
  .text.MXC_RTC_Init
-                0x10007154       0x20 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_me17.o)
-                0x10007154                MXC_RTC_Init
+                0x1000715c       0x20 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_me17.o)
+                0x1000715c                MXC_RTC_Init
  .text.MXC_RTC_GetSubSecond
-                0x10007174        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_me17.o)
-                0x10007174                MXC_RTC_GetSubSecond
+                0x1000717c        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_me17.o)
+                0x1000717c                MXC_RTC_GetSubSecond
  .text.MXC_RTC_GetSecond
-                0x10007178        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_me17.o)
-                0x10007178                MXC_RTC_GetSecond
+                0x10007180        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_me17.o)
+                0x10007180                MXC_RTC_GetSecond
  .text.MXC_RTC_CheckBusy
-                0x1000717c       0x34 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_reva.o)
-                0x1000717c                MXC_RTC_CheckBusy
+                0x10007184       0x34 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_reva.o)
+                0x10007184                MXC_RTC_CheckBusy
  .text.MXC_RTC_RevA_Start
-                0x100071b0       0x38 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_reva.o)
-                0x100071b0                MXC_RTC_RevA_Start
+                0x100071b8       0x38 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_reva.o)
+                0x100071b8                MXC_RTC_RevA_Start
  .text.MXC_RTC_RevA_Init
-                0x100071e8       0x50 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_reva.o)
-                0x100071e8                MXC_RTC_RevA_Init
+                0x100071f0       0x50 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_reva.o)
+                0x100071f0                MXC_RTC_RevA_Init
  .text.MXC_RTC_RevA_GetSubSecond
-                0x10007238        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_reva.o)
-                0x10007238                MXC_RTC_RevA_GetSubSecond
+                0x10007240        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_reva.o)
+                0x10007240                MXC_RTC_RevA_GetSubSecond
  .text.MXC_RTC_RevA_GetSecond
-                0x10007244        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_reva.o)
-                0x10007244                MXC_RTC_RevA_GetSecond
+                0x1000724c        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_reva.o)
+                0x1000724c                MXC_RTC_RevA_GetSecond
  .text.MXC_SPI_Init
-                0x10007250      0x1e0 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
-                0x10007250                MXC_SPI_Init
+                0x10007258      0x1e0 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
+                0x10007258                MXC_SPI_Init
  .text.MXC_SPI_SetFrequency
-                0x10007430        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
-                0x10007430                MXC_SPI_SetFrequency
- .text.MXC_SPI_SetDataSize
-                0x10007434        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
-                0x10007434                MXC_SPI_SetDataSize
- .text.MXC_SPI_GetDataSize
                 0x10007438        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
-                0x10007438                MXC_SPI_GetDataSize
- .text.MXC_SPI_SetSlave
+                0x10007438                MXC_SPI_SetFrequency
+ .text.MXC_SPI_SetDataSize
                 0x1000743c        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
-                0x1000743c                MXC_SPI_SetSlave
- .text.MXC_SPI_SetWidth
+                0x1000743c                MXC_SPI_SetDataSize
+ .text.MXC_SPI_GetDataSize
                 0x10007440        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
-                0x10007440                MXC_SPI_SetWidth
- .text.MXC_SPI_GetWidth
+                0x10007440                MXC_SPI_GetDataSize
+ .text.MXC_SPI_SetSlave
                 0x10007444        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
-                0x10007444                MXC_SPI_GetWidth
- .text.MXC_SPI_StartTransmission
+                0x10007444                MXC_SPI_SetSlave
+ .text.MXC_SPI_SetWidth
                 0x10007448        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
-                0x10007448                MXC_SPI_StartTransmission
- .text.MXC_SPI_GetActive
+                0x10007448                MXC_SPI_SetWidth
+ .text.MXC_SPI_GetWidth
                 0x1000744c        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
-                0x1000744c                MXC_SPI_GetActive
- .text.MXC_SPI_ReadRXFIFO
+                0x1000744c                MXC_SPI_GetWidth
+ .text.MXC_SPI_StartTransmission
                 0x10007450        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
-                0x10007450                MXC_SPI_ReadRXFIFO
- .text.MXC_SPI_GetRXFIFOAvailable
+                0x10007450                MXC_SPI_StartTransmission
+ .text.MXC_SPI_GetActive
                 0x10007454        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
-                0x10007454                MXC_SPI_GetRXFIFOAvailable
- .text.MXC_SPI_WriteTXFIFO
+                0x10007454                MXC_SPI_GetActive
+ .text.MXC_SPI_ReadRXFIFO
                 0x10007458        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
-                0x10007458                MXC_SPI_WriteTXFIFO
- .text.MXC_SPI_GetTXFIFOAvailable
+                0x10007458                MXC_SPI_ReadRXFIFO
+ .text.MXC_SPI_GetRXFIFOAvailable
                 0x1000745c        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
-                0x1000745c                MXC_SPI_GetTXFIFOAvailable
- .text.MXC_SPI_SetRXThreshold
+                0x1000745c                MXC_SPI_GetRXFIFOAvailable
+ .text.MXC_SPI_WriteTXFIFO
                 0x10007460        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
-                0x10007460                MXC_SPI_SetRXThreshold
- .text.MXC_SPI_SetTXThreshold
+                0x10007460                MXC_SPI_WriteTXFIFO
+ .text.MXC_SPI_GetTXFIFOAvailable
                 0x10007464        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
-                0x10007464                MXC_SPI_SetTXThreshold
- .text.MXC_SPI_MasterTransaction
+                0x10007464                MXC_SPI_GetTXFIFOAvailable
+ .text.MXC_SPI_SetRXThreshold
                 0x10007468        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
-                0x10007468                MXC_SPI_MasterTransaction
+                0x10007468                MXC_SPI_SetRXThreshold
+ .text.MXC_SPI_SetTXThreshold
+                0x1000746c        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
+                0x1000746c                MXC_SPI_SetTXThreshold
+ .text.MXC_SPI_MasterTransaction
+                0x10007470        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
+                0x10007470                MXC_SPI_MasterTransaction
  .text.MXC_SPI_RevA_TransSetup
-                0x1000746c      0x1a4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
+                0x10007474      0x1a4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
  .text.MXC_SPI_RevA_TransHandler
-                0x10007610      0x164 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
+                0x10007618      0x164 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
  .text.MXC_SPI_RevA_MasterTransHandler
-                0x10007774       0x68 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
+                0x1000777c       0x68 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
  .text.MXC_SPI_RevA_Init
-                0x100077dc       0xd8 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
-                0x100077dc                MXC_SPI_RevA_Init
+                0x100077e4       0xd8 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
+                0x100077e4                MXC_SPI_RevA_Init
  .text.MXC_SPI_RevA_SetFrequency
-                0x100078b4       0x90 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
-                0x100078b4                MXC_SPI_RevA_SetFrequency
+                0x100078bc       0x90 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
+                0x100078bc                MXC_SPI_RevA_SetFrequency
  .text.MXC_SPI_RevA_SetDataSize
-                0x10007944       0x9c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
-                0x10007944                MXC_SPI_RevA_SetDataSize
+                0x1000794c       0x9c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
+                0x1000794c                MXC_SPI_RevA_SetDataSize
  .text.MXC_SPI_RevA_GetDataSize
-                0x100079e0       0x3c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
-                0x100079e0                MXC_SPI_RevA_GetDataSize
+                0x100079e8       0x3c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
+                0x100079e8                MXC_SPI_RevA_GetDataSize
  .text.MXC_SPI_RevA_SetSlave
-                0x10007a1c       0x5c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
-                0x10007a1c                MXC_SPI_RevA_SetSlave
+                0x10007a24       0x5c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
+                0x10007a24                MXC_SPI_RevA_SetSlave
  .text.MXC_SPI_RevA_SetWidth
-                0x10007a78       0x6c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
-                0x10007a78                MXC_SPI_RevA_SetWidth
+                0x10007a80       0x6c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
+                0x10007a80                MXC_SPI_RevA_SetWidth
  .text.MXC_SPI_RevA_GetWidth
-                0x10007ae4       0x24 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
-                0x10007ae4                MXC_SPI_RevA_GetWidth
+                0x10007aec       0x24 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
+                0x10007aec                MXC_SPI_RevA_GetWidth
  .text.MXC_SPI_RevA_StartTransmission
-                0x10007b08       0x40 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
-                0x10007b08                MXC_SPI_RevA_StartTransmission
+                0x10007b10       0x40 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
+                0x10007b10                MXC_SPI_RevA_StartTransmission
  .text.MXC_SPI_RevA_GetActive
-                0x10007b48       0x10 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
-                0x10007b48                MXC_SPI_RevA_GetActive
+                0x10007b50       0x10 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
+                0x10007b50                MXC_SPI_RevA_GetActive
  .text.MXC_SPI_RevA_ReadRXFIFO
-                0x10007b58       0x88 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
-                0x10007b58                MXC_SPI_RevA_ReadRXFIFO
+                0x10007b60       0x88 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
+                0x10007b60                MXC_SPI_RevA_ReadRXFIFO
  .text.MXC_SPI_RevA_GetRXFIFOAvailable
-                0x10007be0        0x8 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
-                0x10007be0                MXC_SPI_RevA_GetRXFIFOAvailable
+                0x10007be8        0x8 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
+                0x10007be8                MXC_SPI_RevA_GetRXFIFOAvailable
  .text.MXC_SPI_RevA_WriteTXFIFO
-                0x10007be8       0x90 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
-                0x10007be8                MXC_SPI_RevA_WriteTXFIFO
+                0x10007bf0       0x90 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
+                0x10007bf0                MXC_SPI_RevA_WriteTXFIFO
  .text.MXC_SPI_RevA_GetTXFIFOAvailable
-                0x10007c78       0x38 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
-                0x10007c78                MXC_SPI_RevA_GetTXFIFOAvailable
+                0x10007c80       0x38 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
+                0x10007c80                MXC_SPI_RevA_GetTXFIFOAvailable
  .text.MXC_SPI_RevA_SetRXThreshold
-                0x10007cb0       0x4c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
-                0x10007cb0                MXC_SPI_RevA_SetRXThreshold
+                0x10007cb8       0x4c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
+                0x10007cb8                MXC_SPI_RevA_SetRXThreshold
  .text.MXC_SPI_RevA_SetTXThreshold
-                0x10007cfc       0x48 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
-                0x10007cfc                MXC_SPI_RevA_SetTXThreshold
+                0x10007d04       0x48 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
+                0x10007d04                MXC_SPI_RevA_SetTXThreshold
  .text.MXC_SPI_RevA_MasterTransaction
-                0x10007d44       0x2c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
-                0x10007d44                MXC_SPI_RevA_MasterTransaction
+                0x10007d4c       0x2c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
+                0x10007d4c                MXC_SPI_RevA_MasterTransaction
  .text.MXC_TMR_Init
-                0x10007d70      0x344 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_ai85.o)
-                0x10007d70                MXC_TMR_Init
+                0x10007d78      0x344 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_ai85.o)
+                0x10007d78                MXC_TMR_Init
  .text.MXC_TMR_Start
-                0x100080b4        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_ai85.o)
-                0x100080b4                MXC_TMR_Start
- .text.MXC_TMR_Stop
-                0x100080b8        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_ai85.o)
-                0x100080b8                MXC_TMR_Stop
- .text.MXC_TMR_ClearFlags
                 0x100080bc        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_ai85.o)
-                0x100080bc                MXC_TMR_ClearFlags
- .text.MXC_TMR_GetFlags
+                0x100080bc                MXC_TMR_Start
+ .text.MXC_TMR_Stop
                 0x100080c0        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_ai85.o)
-                0x100080c0                MXC_TMR_GetFlags
- .text.MXC_TMR_SetCount
+                0x100080c0                MXC_TMR_Stop
+ .text.MXC_TMR_ClearFlags
                 0x100080c4        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_ai85.o)
-                0x100080c4                MXC_TMR_SetCount
- .text.MXC_TMR_Delay
+                0x100080c4                MXC_TMR_ClearFlags
+ .text.MXC_TMR_GetFlags
                 0x100080c8        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_ai85.o)
-                0x100080c8                MXC_TMR_Delay
- .text.MXC_TMR_TO_Start
+                0x100080c8                MXC_TMR_GetFlags
+ .text.MXC_TMR_SetCount
                 0x100080cc        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_ai85.o)
-                0x100080cc                MXC_TMR_TO_Start
- .text.MXC_TMR_TO_Check
+                0x100080cc                MXC_TMR_SetCount
+ .text.MXC_TMR_Delay
                 0x100080d0        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_ai85.o)
-                0x100080d0                MXC_TMR_TO_Check
- .text.MXC_TMR_TO_Stop
+                0x100080d0                MXC_TMR_Delay
+ .text.MXC_TMR_TO_Start
                 0x100080d4        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_ai85.o)
-                0x100080d4                MXC_TMR_TO_Stop
- .text.MXC_TMR_TO_Elapsed
+                0x100080d4                MXC_TMR_TO_Start
+ .text.MXC_TMR_TO_Check
                 0x100080d8        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_ai85.o)
-                0x100080d8                MXC_TMR_TO_Elapsed
- .text.MXC_TMR_SW_Start
+                0x100080d8                MXC_TMR_TO_Check
+ .text.MXC_TMR_TO_Stop
                 0x100080dc        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_ai85.o)
-                0x100080dc                MXC_TMR_SW_Start
- .text.MXC_TMR_SW_Stop
+                0x100080dc                MXC_TMR_TO_Stop
+ .text.MXC_TMR_TO_Elapsed
                 0x100080e0        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_ai85.o)
-                0x100080e0                MXC_TMR_SW_Stop
- .text.MXC_TMR_GetTime
+                0x100080e0                MXC_TMR_TO_Elapsed
+ .text.MXC_TMR_SW_Start
                 0x100080e4        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_ai85.o)
-                0x100080e4                MXC_TMR_GetTime
+                0x100080e4                MXC_TMR_SW_Start
+ .text.MXC_TMR_SW_Stop
+                0x100080e8        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_ai85.o)
+                0x100080e8                MXC_TMR_SW_Stop
+ .text.MXC_TMR_GetTime
+                0x100080ec        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_ai85.o)
+                0x100080ec                MXC_TMR_GetTime
  .text.MXC_TMR_RevB_ConfigGeneric
-                0x100080e8       0xd4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_revb.o)
-                0x100080e8                MXC_TMR_RevB_ConfigGeneric
+                0x100080f0       0xd4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_revb.o)
+                0x100080f0                MXC_TMR_RevB_ConfigGeneric
  .text.MXC_TMR_RevB_Init
-                0x100081bc       0xc4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_revb.o)
-                0x100081bc                MXC_TMR_RevB_Init
+                0x100081c4       0xc4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_revb.o)
+                0x100081c4                MXC_TMR_RevB_Init
  .text.MXC_TMR_RevB_Start
-                0x10008280       0x5c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_revb.o)
-                0x10008280                MXC_TMR_RevB_Start
+                0x10008288       0x5c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_revb.o)
+                0x10008288                MXC_TMR_RevB_Start
  .text.MXC_TMR_RevB_Stop
-                0x100082dc       0x58 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_revb.o)
-                0x100082dc                MXC_TMR_RevB_Stop
+                0x100082e4       0x58 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_revb.o)
+                0x100082e4                MXC_TMR_RevB_Stop
  .text.MXC_TMR_RevB_ClearFlags
-                0x10008334       0x58 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_revb.o)
-                0x10008334                MXC_TMR_RevB_ClearFlags
+                0x1000833c       0x58 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_revb.o)
+                0x1000833c                MXC_TMR_RevB_ClearFlags
  .text.MXC_TMR_RevB_GetFlags
-                0x1000838c       0x58 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_revb.o)
-                0x1000838c                MXC_TMR_RevB_GetFlags
+                0x10008394       0x58 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_revb.o)
+                0x10008394                MXC_TMR_RevB_GetFlags
  .text.MXC_TMR_RevB_SetCount
-                0x100083e4       0x54 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_revb.o)
-                0x100083e4                MXC_TMR_RevB_SetCount
+                0x100083ec       0x54 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_revb.o)
+                0x100083ec                MXC_TMR_RevB_SetCount
  .text.MXC_TMR_RevB_TO_Start
-                0x10008438       0xf8 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_revb.o)
-                0x10008438                MXC_TMR_RevB_TO_Start
+                0x10008440       0xf8 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_revb.o)
+                0x10008440                MXC_TMR_RevB_TO_Start
  .text.MXC_TMR_RevB_GetTime
-                0x10008530      0x15c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_revb.o)
-                0x10008530                MXC_TMR_RevB_GetTime
+                0x10008538      0x15c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_revb.o)
+                0x10008538                MXC_TMR_RevB_GetTime
  .text.MXC_UART_Shutdown
-                0x1000868c       0x70 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x1000868c                MXC_UART_Shutdown
+                0x10008694       0x70 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
+                0x10008694                MXC_UART_Shutdown
  .text.MXC_UART_Init
-                0x100086fc       0xb8 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x100086fc                MXC_UART_Init
+                0x10008704       0xb8 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
+                0x10008704                MXC_UART_Init
  .text.MXC_UART_SetFrequency
-                0x100087b4        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x100087b4                MXC_UART_SetFrequency
- .text.MXC_UART_GetFrequency
-                0x100087b8        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x100087b8                MXC_UART_GetFrequency
- .text.MXC_UART_SetDataSize
                 0x100087bc        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x100087bc                MXC_UART_SetDataSize
- .text.MXC_UART_SetStopBits
+                0x100087bc                MXC_UART_SetFrequency
+ .text.MXC_UART_GetFrequency
                 0x100087c0        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x100087c0                MXC_UART_SetStopBits
- .text.MXC_UART_SetParity
+                0x100087c0                MXC_UART_GetFrequency
+ .text.MXC_UART_SetDataSize
                 0x100087c4        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x100087c4                MXC_UART_SetParity
- .text.MXC_UART_ReadCharacterRaw
+                0x100087c4                MXC_UART_SetDataSize
+ .text.MXC_UART_SetStopBits
                 0x100087c8        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x100087c8                MXC_UART_ReadCharacterRaw
- .text.MXC_UART_WriteCharacterRaw
+                0x100087c8                MXC_UART_SetStopBits
+ .text.MXC_UART_SetParity
                 0x100087cc        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x100087cc                MXC_UART_WriteCharacterRaw
- .text.MXC_UART_ReadCharacter
+                0x100087cc                MXC_UART_SetParity
+ .text.MXC_UART_ReadCharacterRaw
                 0x100087d0        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x100087d0                MXC_UART_ReadCharacter
- .text.MXC_UART_WriteCharacter
+                0x100087d0                MXC_UART_ReadCharacterRaw
+ .text.MXC_UART_WriteCharacterRaw
                 0x100087d4        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x100087d4                MXC_UART_WriteCharacter
- .text.MXC_UART_GetRXFIFOAvailable
+                0x100087d4                MXC_UART_WriteCharacterRaw
+ .text.MXC_UART_ReadCharacter
                 0x100087d8        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x100087d8                MXC_UART_GetRXFIFOAvailable
- .text.MXC_UART_GetTXFIFOAvailable
+                0x100087d8                MXC_UART_ReadCharacter
+ .text.MXC_UART_WriteCharacter
                 0x100087dc        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x100087dc                MXC_UART_GetTXFIFOAvailable
- .text.MXC_UART_SetRXThreshold
+                0x100087dc                MXC_UART_WriteCharacter
+ .text.MXC_UART_GetRXFIFOAvailable
                 0x100087e0        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x100087e0                MXC_UART_SetRXThreshold
+                0x100087e0                MXC_UART_GetRXFIFOAvailable
+ .text.MXC_UART_GetTXFIFOAvailable
+                0x100087e4        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
+                0x100087e4                MXC_UART_GetTXFIFOAvailable
+ .text.MXC_UART_SetRXThreshold
+                0x100087e8        0x4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
+                0x100087e8                MXC_UART_SetRXThreshold
  .text.MXC_UART_Common_ReadCharacter
-                0x100087e4       0x18 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_common.o)
-                0x100087e4                MXC_UART_Common_ReadCharacter
+                0x100087ec       0x18 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_common.o)
+                0x100087ec                MXC_UART_Common_ReadCharacter
  .text.MXC_UART_Common_WriteCharacter
-                0x100087fc       0x1c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_common.o)
-                0x100087fc                MXC_UART_Common_WriteCharacter
+                0x10008804       0x1c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_common.o)
+                0x10008804                MXC_UART_Common_WriteCharacter
  .text.MXC_UART_RevB_Init
-                0x10008818       0x70 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x10008818                MXC_UART_RevB_Init
+                0x10008820       0x70 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x10008820                MXC_UART_RevB_Init
  .text.MXC_UART_RevB_SetFrequency
-                0x10008888      0x11c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x10008888                MXC_UART_RevB_SetFrequency
+                0x10008890      0x11c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x10008890                MXC_UART_RevB_SetFrequency
  .text.MXC_UART_RevB_GetFrequency
-                0x100089a4       0xc0 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x100089a4                MXC_UART_RevB_GetFrequency
+                0x100089ac       0xc0 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x100089ac                MXC_UART_RevB_GetFrequency
  .text.MXC_UART_RevB_SetDataSize
-                0x10008a64       0x40 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x10008a64                MXC_UART_RevB_SetDataSize
+                0x10008a6c       0x40 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x10008a6c                MXC_UART_RevB_SetDataSize
  .text.MXC_UART_RevB_SetStopBits
-                0x10008aa4       0x4c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x10008aa4                MXC_UART_RevB_SetStopBits
+                0x10008aac       0x4c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x10008aac                MXC_UART_RevB_SetStopBits
  .text.MXC_UART_RevB_SetParity
-                0x10008af0       0x9c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x10008af0                MXC_UART_RevB_SetParity
+                0x10008af8       0x9c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x10008af8                MXC_UART_RevB_SetParity
  .text.MXC_UART_RevB_ReadCharacterRaw
-                0x10008b8c       0x38 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x10008b8c                MXC_UART_RevB_ReadCharacterRaw
+                0x10008b94       0x38 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x10008b94                MXC_UART_RevB_ReadCharacterRaw
  .text.MXC_UART_RevB_WriteCharacterRaw
-                0x10008bc4       0x3c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x10008bc4                MXC_UART_RevB_WriteCharacterRaw
+                0x10008bcc       0x3c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x10008bcc                MXC_UART_RevB_WriteCharacterRaw
  .text.MXC_UART_RevB_GetRXFIFOAvailable
-                0x10008c00        0x8 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x10008c00                MXC_UART_RevB_GetRXFIFOAvailable
+                0x10008c08        0x8 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x10008c08                MXC_UART_RevB_GetRXFIFOAvailable
  .text.MXC_UART_RevB_GetTXFIFOAvailable
-                0x10008c08        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x10008c08                MXC_UART_RevB_GetTXFIFOAvailable
+                0x10008c10        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x10008c10                MXC_UART_RevB_GetTXFIFOAvailable
  .text.MXC_UART_RevB_SetRXThreshold
-                0x10008c14       0x3c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x10008c14                MXC_UART_RevB_SetRXThreshold
+                0x10008c1c       0x3c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x10008c1c                MXC_UART_RevB_SetRXThreshold
  .text.MXC_GetLock
-                0x10008c50       0x1c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_lock.o)
-                0x10008c50                MXC_GetLock
+                0x10008c58       0x1c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_lock.o)
+                0x10008c58                MXC_GetLock
  .text.MXC_FreeLock
-                0x10008c6c        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_lock.o)
-                0x10008c6c                MXC_FreeLock
+                0x10008c74        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_lock.o)
+                0x10008c74                MXC_FreeLock
  .text.MXC_GPIO_Common_Init
-                0x10008c78       0x3c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_common.o)
-                0x10008c78                MXC_GPIO_Common_Init
+                0x10008c80       0x3c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_common.o)
+                0x10008c80                MXC_GPIO_Common_Init
  .text.MXC_GPIO_Common_RegisterCallback
-                0x10008cb4       0x78 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_common.o)
-                0x10008cb4                MXC_GPIO_Common_RegisterCallback
+                0x10008cbc       0x78 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_common.o)
+                0x10008cbc                MXC_GPIO_Common_RegisterCallback
  .text.MXC_GPIO_Common_Handler
-                0x10008d2c       0x88 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_common.o)
-                0x10008d2c                MXC_GPIO_Common_Handler
+                0x10008d34       0x88 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_common.o)
+                0x10008d34                MXC_GPIO_Common_Handler
  .text.MXC_TMR_Common_Delay
-                0x10008db4       0x18 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_common.o)
-                0x10008db4                MXC_TMR_Common_Delay
+                0x10008dbc       0x18 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_common.o)
+                0x10008dbc                MXC_TMR_Common_Delay
  .text.MXC_TMR_Common_TO_Check
-                0x10008dcc       0x14 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_common.o)
-                0x10008dcc                MXC_TMR_Common_TO_Check
+                0x10008dd4       0x14 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_common.o)
+                0x10008dd4                MXC_TMR_Common_TO_Check
  .text.MXC_TMR_Common_TO_Stop
-                0x10008de0       0x14 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_common.o)
-                0x10008de0                MXC_TMR_Common_TO_Stop
+                0x10008de8       0x14 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_common.o)
+                0x10008de8                MXC_TMR_Common_TO_Stop
  .text.MXC_TMR_Common_SW_Start
-                0x10008df4        0x8 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_common.o)
-                0x10008df4                MXC_TMR_Common_SW_Start
+                0x10008dfc        0x8 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_common.o)
+                0x10008dfc                MXC_TMR_Common_SW_Start
  .text.MXC_TMR_Common_SW_Stop
-                0x10008dfc       0x14 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_common.o)
-                0x10008dfc                MXC_TMR_Common_SW_Stop
+                0x10008e04       0x14 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_common.o)
+                0x10008e04                MXC_TMR_Common_SW_Stop
  .text.MXC_TMR_Common_TO_Elapsed
-                0x10008e10       0x58 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_common.o)
-                0x10008e10                MXC_TMR_Common_TO_Elapsed
- .text.__errno  0x10008e68        0xc c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-errno.o)
-                0x10008e68                __errno
+                0x10008e18       0x58 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_common.o)
+                0x10008e18                MXC_TMR_Common_TO_Elapsed
+ .text.__errno  0x10008e70        0xc c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-errno.o)
+                0x10008e70                __errno
  .text.__libc_init_array
-                0x10008e74       0x48 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-init.o)
-                0x10008e74                __libc_init_array
- .text.malloc   0x10008ebc       0x10 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-malloc.o)
-                0x10008ebc                malloc
- .text.free     0x10008ecc       0x10 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-malloc.o)
-                0x10008ecc                free
+                0x10008e7c       0x48 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-init.o)
+                0x10008e7c                __libc_init_array
+ .text.malloc   0x10008ec4       0x10 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-malloc.o)
+                0x10008ec4                malloc
+ .text.free     0x10008ed4       0x10 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-malloc.o)
+                0x10008ed4                free
  .text._malloc_r
-                0x10008edc      0x574 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-mallocr.o)
-                0x10008edc                _malloc_r
- .text          0x10009450      0x134 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-memcpy.o)
-                0x10009450                memcpy
- .text.memset   0x10009584       0xa0 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-memset.o)
-                0x10009584                memset
+                0x10008ee4      0x574 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-mallocr.o)
+                0x10008ee4                _malloc_r
+ .text          0x10009458      0x134 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-memcpy.o)
+                0x10009458                memcpy
+ .text.memset   0x1000958c       0xa0 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-memset.o)
+                0x1000958c                memset
  .text.__malloc_lock
-                0x10009624        0xc c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-mlock.o)
-                0x10009624                __malloc_lock
+                0x1000962c        0xc c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-mlock.o)
+                0x1000962c                __malloc_lock
  .text.__malloc_unlock
-                0x10009630        0xc c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-mlock.o)
-                0x10009630                __malloc_unlock
- .text.printf   0x1000963c       0x28 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-printf.o)
-                0x1000963c                printf
- .text.putchar  0x10009664       0x14 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-putchar.o)
-                0x10009664                putchar
- .text._puts_r  0x10009678       0x9c c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-puts.o)
-                0x10009678                _puts_r
- .text.puts     0x10009714       0x10 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-puts.o)
-                0x10009714                puts
- .text._sbrk_r  0x10009724       0x24 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-sbrkr.o)
-                0x10009724                _sbrk_r
- .text.sprintf  0x10009748       0x44 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-sprintf.o)
-                0x10009748                sprintf
- *fill*         0x1000978c       0x34 
+                0x10009638        0xc c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-mlock.o)
+                0x10009638                __malloc_unlock
+ .text.printf   0x10009644       0x28 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-printf.o)
+                0x10009644                printf
+ .text.putchar  0x1000966c       0x14 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-putchar.o)
+                0x1000966c                putchar
+ .text._puts_r  0x10009680       0x9c c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-puts.o)
+                0x10009680                _puts_r
+ .text.puts     0x1000971c       0x10 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-puts.o)
+                0x1000971c                puts
+ .text._sbrk_r  0x1000972c       0x24 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-sbrkr.o)
+                0x1000972c                _sbrk_r
+ .text.sprintf  0x10009750       0x44 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-sprintf.o)
+                0x10009750                sprintf
+ *fill*         0x10009794       0x2c 
  .text          0x100097c0       0xdc c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-strlen.o)
                 0x100097c0                strlen
  *fill*         0x1000989c        0x4 
@@ -6147,366 +6147,366 @@ LOAD c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+f
                 0x10010aec                __aeabi_ldiv0
  *(.rodata*)
  .rodata.main.str1.4
-                0x10010af0      0x131 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/main.o
- *fill*         0x10010c21        0x3 
- .rodata        0x10010c24       0x18 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/main.o
+                0x10010af0      0x13d c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/main.o
+ *fill*         0x10010c2d        0x3 
+ .rodata        0x10010c30       0x18 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/main.o
  .rodata.camera_settings
-                0x10010c3c       0xf0 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/main.o
+                0x10010c48       0xf0 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/main.o
  .rodata.str1.4
-                0x10010d2c       0x23 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_home.o
- *fill*         0x10010d4f        0x1 
- .rodata        0x10010d50       0x20 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_home.o
+                0x10010d38       0x23 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_home.o
+ *fill*         0x10010d5b        0x1 
+ .rodata        0x10010d5c       0x20 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_home.o
  .rodata.run_cnn.str1.4
-                0x10010d70       0x96 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_faceID.o
+                0x10010d7c       0x96 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_faceID.o
                                  0x9a (size before relaxing)
- *fill*         0x10010e06        0x2 
+ *fill*         0x10010e12        0x2 
  .rodata.init.str1.4
-                0x10010e08        0x3 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_faceID.o
- *fill*         0x10010e0b        0x1 
+                0x10010e14        0x3 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_faceID.o
+ *fill*         0x10010e17        0x1 
  .rodata.str1.4
-                0x10010e0c       0x16 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_faceID.o
+                0x10010e18       0x16 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_faceID.o
                                  0x22 (size before relaxing)
- *fill*         0x10010e22        0x2 
- .rodata        0x10010e24       0x10 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_faceID.o
+ *fill*         0x10010e2e        0x2 
+ .rodata        0x10010e30       0x10 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_faceID.o
  .rodata.kernels_0
-                0x10010e34      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10010e40      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_1
-                0x10011938      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10011944      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_10
-                0x1001243c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10012448      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_11
-                0x10012f40      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10012f4c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_12
-                0x10013a44      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10013a50      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_13
-                0x10014548      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10014554      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_14
-                0x1001504c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10015058      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_15
-                0x10015b50      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10015b5c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_16
-                0x10016654      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10016660      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_17
-                0x10017158      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10017164      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_18
-                0x10017c5c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10017c68      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_19
-                0x10018760      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1001876c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_2
-                0x10019264      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10019270      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_20
-                0x10019d68      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10019d74      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_21
-                0x1001a74c      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1001a758      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_22
-                0x1001b130      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1001b13c      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_23
-                0x1001bb14      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1001bb20      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_24
-                0x1001c4f8      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1001c504      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_25
-                0x1001cedc      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1001cee8      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_26
-                0x1001d8c0      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1001d8cc      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_27
-                0x1001e2a4      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1001e2b0      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_28
-                0x1001ec88      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1001ec94      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_29
-                0x1001f66c      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1001f678      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_3
-                0x10020050      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1002005c      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_30
-                0x10020a34      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10020a40      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_31
-                0x10021418      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10021424      0x9e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_32
-                0x10021dfc      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10021e08      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_33
-                0x10022900      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1002290c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_34
-                0x10023404      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10023410      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_35
-                0x10023f08      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10023f14      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_36
-                0x10024a0c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10024a18      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_37
-                0x10025510      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1002551c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_38
-                0x10026014      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10026020      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_39
-                0x10026b18      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10026b24      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_4
-                0x1002761c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10027628      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_40
-                0x10028120      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1002812c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_41
-                0x10028c24      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10028c30      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_42
-                0x10029728      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10029734      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_43
-                0x1002a22c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1002a238      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_44
-                0x1002ad30      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1002ad3c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_45
-                0x1002b834      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1002b840      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_46
-                0x1002c338      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1002c344      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_47
-                0x1002ce3c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1002ce48      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_48
-                0x1002d940      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1002d94c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_49
-                0x1002e444      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1002e450      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_5
-                0x1002ef48      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1002ef54      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_50
-                0x1002fa4c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1002fa58      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_51
-                0x10030550      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1003055c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_52
-                0x10031054      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10031060      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_53
-                0x10031b58      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10031b64      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_54
-                0x1003265c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10032668      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_55
-                0x10033160      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1003316c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_56
-                0x10033c64      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10033c70      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_57
-                0x10034768      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10034774      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_58
-                0x1003526c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10035278      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_59
-                0x10035d70      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10035d7c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_6
-                0x10036874      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10036880      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_60
-                0x10037378      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10037384      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_61
-                0x10037e7c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10037e88      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_62
-                0x10038980      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1003898c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_63
-                0x10039484      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10039490      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_7
-                0x10039f88      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x10039f94      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_8
-                0x1003aa8c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1003aa98      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.kernels_9
-                0x1003b590      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+                0x1003b59c      0xb04 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
  .rodata.calculate_minDistance.str1.4
-                0x1003c094       0x84 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/embedding_process.o
+                0x1003c0a0       0x84 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/embedding_process.o
                                  0x88 (size before relaxing)
  .rodata.embeddings
-                0x1003c118      0xa14 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/embedding_process.o
+                0x1003c124      0xa14 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/embedding_process.o
  .rodata.mxc_assert.str1.4
-                0x1003cb2c       0x19 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/board.o
- *fill*         0x1003cb45        0x3 
+                0x1003cb38       0x19 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/board.o
+ *fill*         0x1003cb51        0x3 
  .rodata.Board_Init.str1.4
-                0x1003cb48       0x39 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/board.o
- *fill*         0x1003cb81        0x3 
+                0x1003cb54       0x39 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/board.o
+ *fill*         0x1003cb8d        0x3 
  .rodata.led_pin
-                0x1003cb84       0x18 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/board.o
-                0x1003cb84                led_pin
+                0x1003cb90       0x18 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/board.o
+                0x1003cb90                led_pin
  .rodata.num_leds
-                0x1003cb9c        0x4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/board.o
-                0x1003cb9c                num_leds
+                0x1003cba8        0x4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/board.o
+                0x1003cba8                num_leds
  .rodata.num_pbs
-                0x1003cba0        0x4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/board.o
-                0x1003cba0                num_pbs
+                0x1003cbac        0x4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/board.o
+                0x1003cbac                num_pbs
  .rodata.pb_pin
-                0x1003cba4       0x18 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/board.o
-                0x1003cba4                pb_pin
+                0x1003cbb0       0x18 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/board.o
+                0x1003cbb0                pb_pin
  .rodata.LED_On.str1.4
-                0x1003cbbc       0x43 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/led.o
- *fill*         0x1003cbff        0x1 
+                0x1003cbc8       0x43 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/led.o
+ *fill*         0x1003cc0b        0x1 
  .rodata.dump_registers.str1.4
-                0x1003cc00       0x12 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
- *fill*         0x1003cc12        0x2 
+                0x1003cc0c       0x12 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+ *fill*         0x1003cc1e        0x2 
  .rodata.default_regs
-                0x1003cc14       0x4c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+                0x1003cc20       0x4c c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
  .rodata.gpio_cfg_scl
-                0x1003cc60        0xc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/sccb.o
- .rodata.gpio_cfg_sda
                 0x1003cc6c        0xc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/sccb.o
+ .rodata.gpio_cfg_sda
+                0x1003cc78        0xc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/sccb.o
  .rodata.gpio_cfg_pcif_P0_BITS_0_7
-                0x1003cc78        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
-                0x1003cc78                gpio_cfg_pcif_P0_BITS_0_7
- .rodata.gpio_cfg_pcif_P0_BITS_8_9
                 0x1003cc84        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
-                0x1003cc84                gpio_cfg_pcif_P0_BITS_8_9
- .rodata.gpio_cfg_pcif_P1_BITS_10_11
+                0x1003cc84                gpio_cfg_pcif_P0_BITS_0_7
+ .rodata.gpio_cfg_pcif_P0_BITS_8_9
                 0x1003cc90        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
-                0x1003cc90                gpio_cfg_pcif_P1_BITS_10_11
- .rodata.gpio_cfg_pcif_hsync
+                0x1003cc90                gpio_cfg_pcif_P0_BITS_8_9
+ .rodata.gpio_cfg_pcif_P1_BITS_10_11
                 0x1003cc9c        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
-                0x1003cc9c                gpio_cfg_pcif_hsync
- .rodata.gpio_cfg_pcif_vsync
+                0x1003cc9c                gpio_cfg_pcif_P1_BITS_10_11
+ .rodata.gpio_cfg_pcif_hsync
                 0x1003cca8        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
-                0x1003cca8                gpio_cfg_pcif_vsync
- .rodata.gpio_cfg_pcif_xclk
+                0x1003cca8                gpio_cfg_pcif_hsync
+ .rodata.gpio_cfg_pcif_vsync
                 0x1003ccb4        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
-                0x1003ccb4                gpio_cfg_pcif_xclk
- .rodata.gpio_cfg_pt0
+                0x1003ccb4                gpio_cfg_pcif_vsync
+ .rodata.gpio_cfg_pcif_xclk
                 0x1003ccc0        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
-                0x1003ccc0                gpio_cfg_pt0
- .rodata.gpio_cfg_pt1
+                0x1003ccc0                gpio_cfg_pcif_xclk
+ .rodata.gpio_cfg_pt0
                 0x1003cccc        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
-                0x1003cccc                gpio_cfg_pt1
- .rodata.gpio_cfg_pt2
+                0x1003cccc                gpio_cfg_pt0
+ .rodata.gpio_cfg_pt1
                 0x1003ccd8        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
-                0x1003ccd8                gpio_cfg_pt2
- .rodata.gpio_cfg_pt3
+                0x1003ccd8                gpio_cfg_pt1
+ .rodata.gpio_cfg_pt2
                 0x1003cce4        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
-                0x1003cce4                gpio_cfg_pt3
- .rodata.gpio_cfg_tmr0
+                0x1003cce4                gpio_cfg_pt2
+ .rodata.gpio_cfg_pt3
                 0x1003ccf0        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
-                0x1003ccf0                gpio_cfg_tmr0
- .rodata.gpio_cfg_tmr0b
+                0x1003ccf0                gpio_cfg_pt3
+ .rodata.gpio_cfg_tmr0
                 0x1003ccfc        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
-                0x1003ccfc                gpio_cfg_tmr0b
- .rodata.gpio_cfg_tmr1
+                0x1003ccfc                gpio_cfg_tmr0
+ .rodata.gpio_cfg_tmr0b
                 0x1003cd08        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
-                0x1003cd08                gpio_cfg_tmr1
- .rodata.gpio_cfg_tmr1b
+                0x1003cd08                gpio_cfg_tmr0b
+ .rodata.gpio_cfg_tmr1
                 0x1003cd14        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
-                0x1003cd14                gpio_cfg_tmr1b
- .rodata.gpio_cfg_tmr2
+                0x1003cd14                gpio_cfg_tmr1
+ .rodata.gpio_cfg_tmr1b
                 0x1003cd20        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
-                0x1003cd20                gpio_cfg_tmr2
- .rodata.gpio_cfg_tmr2b
+                0x1003cd20                gpio_cfg_tmr1b
+ .rodata.gpio_cfg_tmr2
                 0x1003cd2c        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
-                0x1003cd2c                gpio_cfg_tmr2b
- .rodata.gpio_cfg_tmr3
+                0x1003cd2c                gpio_cfg_tmr2
+ .rodata.gpio_cfg_tmr2b
                 0x1003cd38        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
-                0x1003cd38                gpio_cfg_tmr3
- .rodata.gpio_cfg_tmr3b
+                0x1003cd38                gpio_cfg_tmr2b
+ .rodata.gpio_cfg_tmr3
                 0x1003cd44        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
-                0x1003cd44                gpio_cfg_tmr3b
- .rodata.gpio_cfg_tmr4
+                0x1003cd44                gpio_cfg_tmr3
+ .rodata.gpio_cfg_tmr3b
                 0x1003cd50        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
-                0x1003cd50                gpio_cfg_tmr4
- .rodata.gpio_cfg_tmr5
+                0x1003cd50                gpio_cfg_tmr3b
+ .rodata.gpio_cfg_tmr4
                 0x1003cd5c        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
-                0x1003cd5c                gpio_cfg_tmr5
- .rodata.gpio_cfg_uart0
+                0x1003cd5c                gpio_cfg_tmr4
+ .rodata.gpio_cfg_tmr5
                 0x1003cd68        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
-                0x1003cd68                gpio_cfg_uart0
- .rodata.gpio_cfg_uart1
+                0x1003cd68                gpio_cfg_tmr5
+ .rodata.gpio_cfg_uart0
                 0x1003cd74        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
-                0x1003cd74                gpio_cfg_uart1
- .rodata.gpio_cfg_uart2
+                0x1003cd74                gpio_cfg_uart0
+ .rodata.gpio_cfg_uart1
                 0x1003cd80        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
-                0x1003cd80                gpio_cfg_uart2
- .rodata.gpio_cfg_uart3
+                0x1003cd80                gpio_cfg_uart1
+ .rodata.gpio_cfg_uart2
                 0x1003cd8c        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
-                0x1003cd8c                gpio_cfg_uart3
+                0x1003cd8c                gpio_cfg_uart2
+ .rodata.gpio_cfg_uart3
+                0x1003cd98        0xc Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
+                0x1003cd98                gpio_cfg_uart3
  .rodata.MXC_PT_Init.str1.4
-                0x1003cd98       0x7d Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_me17.o)
- *fill*         0x1003ce15        0x3 
+                0x1003cda4       0x7d Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_me17.o)
+ *fill*         0x1003ce21        0x3 
  .rodata.MXC_PT_RevA_Config.str1.4
-                0x1003ce18       0x79 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_reva.o)
- *fill*         0x1003ce91        0x3 
+                0x1003ce24       0x79 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_reva.o)
+ *fill*         0x1003ce9d        0x3 
  .rodata.MXC_SPI_Init.str1.4
-                0x1003ce94       0x79 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
- *fill*         0x1003cf0d        0x3 
+                0x1003cea0       0x79 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
+ *fill*         0x1003cf19        0x3 
  .rodata.MXC_SPI_RevA_DMACallback.str1.4
-                0x1003cf10       0x78 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
+                0x1003cf1c       0x78 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
  .rodata.MXC_SPI_RevA_TransSetup.str1.4
-                0x1003cf88       0x22 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
+                0x1003cf94       0x22 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
                                  0x32 (size before relaxing)
- *fill*         0x1003cfaa        0x2 
+ *fill*         0x1003cfb6        0x2 
  .rodata.MXC_SPI_RevA_ReadyForSleep.str1.4
-                0x1003cfac       0x2d Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
- *fill*         0x1003cfd9        0x3 
+                0x1003cfb8       0x2d Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
+ *fill*         0x1003cfe5        0x3 
  .rodata.MXC_TMR_Init.str1.4
-                0x1003cfdc       0x78 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_ai85.o)
+                0x1003cfe8       0x78 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_ai85.o)
  .rodata.MXC_TMR_RevB_ConfigGeneric.str1.4
-                0x1003d054       0x98 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_revb.o)
+                0x1003d060       0x98 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_revb.o)
  .rodata.MXC_GPIO_Common_Handler.str1.4
-                0x1003d0ec       0x8e Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_common.o)
- *fill*         0x1003d17a        0x2 
+                0x1003d0f8       0x8e Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_common.o)
+ *fill*         0x1003d186        0x2 
  .rodata._global_impure_ptr
-                0x1003d17c        0x4 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-impure.o)
-                0x1003d17c                _global_impure_ptr
+                0x1003d188        0x4 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-impure.o)
+                0x1003d188                _global_impure_ptr
  .rodata._puts_r.str1.4
-                0x1003d180        0x2 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-puts.o)
+                0x1003d18c        0x2 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-puts.o)
  .rodata._svfprintf_r.str1.4
-                0x1003d180       0x42 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-svfprintf.o)
- *fill*         0x1003d1c2        0x2 
+                0x1003d18c       0x42 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-svfprintf.o)
+ *fill*         0x1003d1ce        0x2 
  .rodata.blanks.8708
-                0x1003d1c4       0x10 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-svfprintf.o)
+                0x1003d1d0       0x10 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-svfprintf.o)
  .rodata.zeroes.8709
-                0x1003d1d4       0x10 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-svfprintf.o)
+                0x1003d1e0       0x10 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-svfprintf.o)
  .rodata._vfprintf_r.str1.4
-                0x1003d1e4       0x42 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-vfprintf.o)
+                0x1003d1f0       0x42 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-vfprintf.o)
  .rodata.blanks.8723
-                0x1003d1e4       0x10 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-vfprintf.o)
+                0x1003d1f0       0x10 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-vfprintf.o)
  .rodata.zeroes.8724
-                0x1003d1f4       0x10 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-vfprintf.o)
+                0x1003d200       0x10 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-vfprintf.o)
  .rodata._dtoa_r.str1.4
-                0x1003d204        0xd c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-dtoa.o)
+                0x1003d210        0xd c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-dtoa.o)
                                  0x12 (size before relaxing)
- *fill*         0x1003d211        0x7 
+ *fill*         0x1003d21d        0x3 
  .rodata.__mprec_bigtens
-                0x1003d218       0x28 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-mprec.o)
-                0x1003d218                __mprec_bigtens
+                0x1003d220       0x28 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-mprec.o)
+                0x1003d220                __mprec_bigtens
  .rodata.__mprec_tens
-                0x1003d240       0xc8 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-mprec.o)
-                0x1003d240                __mprec_tens
+                0x1003d248       0xc8 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-mprec.o)
+                0x1003d248                __mprec_tens
  .rodata.p05.7478
-                0x1003d308        0xc c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-mprec.o)
+                0x1003d310        0xc c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-mprec.o)
  .rodata._setlocale_r.str1.4
-                0x1003d314        0xa c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-locale.o)
+                0x1003d31c        0xa c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-locale.o)
                                   0xd (size before relaxing)
- *fill*         0x1003d31e        0x2 
+ *fill*         0x1003d326        0x2 
  .rodata.str1.4
-                0x1003d320        0x2 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-locale.o)
- *fill*         0x1003d322        0x2 
+                0x1003d328        0x2 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-locale.o)
+ *fill*         0x1003d32a        0x2 
  .rodata._ctype_
-                0x1003d324      0x101 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-ctype_.o)
-                0x1003d324                _ctype_
+                0x1003d32c      0x101 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-ctype_.o)
+                0x1003d32c                _ctype_
  *(.init)
- *fill*         0x1003d425        0x3 
- .init          0x1003d428        0x4 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crti.o
-                0x1003d428                _init
- .init          0x1003d42c        0x8 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtn.o
+ *fill*         0x1003d42d        0x3 
+ .init          0x1003d430        0x4 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crti.o
+                0x1003d430                _init
+ .init          0x1003d434        0x8 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtn.o
  *(.fini)
- .fini          0x1003d434        0x4 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crti.o
-                0x1003d434                _fini
- .fini          0x1003d438        0x8 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtn.o
+ .fini          0x1003d43c        0x4 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crti.o
+                0x1003d43c                _fini
+ .fini          0x1003d440        0x8 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtn.o
  *(.eh_frame*)
- .eh_frame      0x1003d440        0x0 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
- .eh_frame      0x1003d440        0x4 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtend.o
-                0x1003d444                _etext = .
+ .eh_frame      0x1003d448        0x0 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
+ .eh_frame      0x1003d448        0x4 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtend.o
+                0x1003d44c                _etext = .
 
-.glue_7         0x1003d444        0x0
- .glue_7        0x1003d444        0x0 linker stubs
+.glue_7         0x1003d44c        0x0
+ .glue_7        0x1003d44c        0x0 linker stubs
 
-.glue_7t        0x1003d444        0x0
- .glue_7t       0x1003d444        0x0 linker stubs
+.glue_7t        0x1003d44c        0x0
+ .glue_7t       0x1003d44c        0x0 linker stubs
 
-.vfp11_veneer   0x1003d444        0x0
- .vfp11_veneer  0x1003d444        0x0 linker stubs
+.vfp11_veneer   0x1003d44c        0x0
+ .vfp11_veneer  0x1003d44c        0x0 linker stubs
 
-.v4_bx          0x1003d444        0x0
- .v4_bx         0x1003d444        0x0 linker stubs
+.v4_bx          0x1003d44c        0x0
+ .v4_bx         0x1003d44c        0x0 linker stubs
 
-.iplt           0x1003d444        0x0
- .iplt          0x1003d444        0x0 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
+.iplt           0x1003d44c        0x0
+ .iplt          0x1003d44c        0x0 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
 
-.bin_storage    0x1003d444     0x75fc
+.bin_storage    0x1003d44c     0x75fc
  FILL mask 0xff
-                0x1003d444                _bin_start_ = .
+                0x1003d44c                _bin_start_ = .
  *(.bin_storage_img)
  .bin_storage_img
-                0x1003d444     0x75fb c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/all_imgs.o
-                0x1003d444                imgs_arr
-                0x10044a3f                _bin_end_ = .
-                0x10044a40                . = ALIGN (0x4)
- *fill*         0x10044a3f        0x1 ff
+                0x1003d44c     0x75fb c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/all_imgs.o
+                0x1003d44c                imgs_arr
+                0x10044a47                _bin_end_ = .
+                0x10044a48                . = ALIGN (0x4)
+ *fill*         0x10044a47        0x1 ff
 
 .rom_code       0x00000000        0x0
                 0x00000000                . = ALIGN (0x10)
@@ -6514,8 +6514,9 @@ LOAD c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+f
  *(.rom_code_section)
                 0x20000000                _esran_code = .
 
-.flash_code     0x10044a40        0x0
-                0x10044a40                . = ALIGN (0x10)
+.flash_code     0x10044a48        0x8
+                0x10044a50                . = ALIGN (0x10)
+ *fill*         0x10044a48        0x8 
                 0x20000000                _sran_code = .
  *(.flash_code_section)
                 0x20000000                _esran_code = .
@@ -6526,16 +6527,16 @@ LOAD c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+f
  *(.sram_code_section)
                 0x20000000                _esran_code = .
 
-.ARM.exidx      0x10044a40        0x8
-                0x10044a40                __exidx_start = .
+.ARM.exidx      0x10044a50        0x8
+                0x10044a50                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x10044a40        0x8 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp\libgcc.a(_udivmoddi4.o)
-                0x10044a48                __exidx_end = .
+ .ARM.exidx     0x10044a50        0x8 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp\libgcc.a(_udivmoddi4.o)
+                0x10044a58                __exidx_end = .
 
-.rel.dyn        0x10044a48        0x0
- .rel.iplt      0x10044a48        0x0 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
+.rel.dyn        0x10044a58        0x0
+ .rel.iplt      0x10044a58        0x0 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
 
-.data           0x20000000      0xa24 load address 0x10044a48
+.data           0x20000000      0xa24 load address 0x10044a58
                 0x20000000                _data = ALIGN (., 0x4)
  *(.data*)
  .data.g_state  0x20000000       0x14 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_home.o
@@ -6604,12 +6605,12 @@ LOAD c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+f
  .fini_array    0x20000a20        0x4 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
                 0x20000a24                PROVIDE (__fini_array_end = .)
                 0x20000a24                _edata = ALIGN (., 0x4)
-                0x10044a48                __load_data = LOADADDR (.data)
+                0x10044a58                __load_data = LOADADDR (.data)
 
-.igot.plt       0x20000a24        0x0 load address 0x1004546c
+.igot.plt       0x20000a24        0x0 load address 0x1004547c
  .igot.plt      0x20000a24        0x0 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
 
-.bss            0x20000c00     0x5fd0 load address 0x1004546c
+.bss            0x20000c00     0x5fd0 load address 0x1004547c
                 0x20000c00                . = ALIGN (0x4)
                 0x20000c00                _bss = .
  *(.bss*)
@@ -6738,7 +6739,7 @@ LOAD c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+f
                 0x20006bcc                errno
                 0x20006bd0                _ebss = ALIGN (., 0x4)
 
-.shared         0x20006bd0        0x4 load address 0x1004546c
+.shared         0x20006bd0        0x4 load address 0x1004547c
                 0x20006bd0                . = ALIGN (0x4)
                 0x20006bd0                _shared = .
  *(.mailbox*)
@@ -6747,15 +6748,15 @@ LOAD c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+f
  .shared        0x20006bd0        0x4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/system_max78000.o
                 0x20006bd0                SystemCoreClock
                 0x20006bd4                _eshared = ALIGN (., 0x4)
-                0x1004546c                __shared_data = LOADADDR (.shared)
+                0x1004547c                __shared_data = LOADADDR (.shared)
                 0x20020000                __StackTop = (ORIGIN (SRAM) + LENGTH (SRAM))
                 0x2001f000                __StackLimit = (__StackTop - SIZEOF (.stack_dummy))
 
-.stack_dummy    0x20006bd8     0x1000 load address 0x10045470
+.stack_dummy    0x20006bd8     0x1000 load address 0x10045480
  *(.stack*)
  .stack         0x20006bd8     0x1000 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/startup_max78000.o
 
-.heap           0x20006bd8      0xc00 load address 0x10045470
+.heap           0x20006bd8      0xc00 load address 0x10045480
                 0x20006bd8                . = ALIGN (0x4)
  *(.heap*)
  .heap          0x20006bd8      0xc00 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/startup_max78000.o
@@ -7045,52 +7046,52 @@ OUTPUT(c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/Alexa
  .comment       0x000000d2       0x7a Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_common.o)
  .comment       0x000000d2       0x7a Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_common.o)
 
-.debug_info     0x00000000    0x3c5e0
- .debug_info    0x00000000     0x1a8e c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/main.o
- .debug_info    0x00001a8e       0x5d c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/all_imgs.o
- .debug_info    0x00001aeb     0x1167 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/utils.o
- .debug_info    0x00002c52      0xa69 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state.o
- .debug_info    0x000036bb     0x1344 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_home.o
- .debug_info    0x000049ff     0x1da6 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_faceID.o
- .debug_info    0x000067a5     0x2e58 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
- .debug_info    0x000095fd     0x157d c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/embedding_process.o
- .debug_info    0x0000ab7a     0x1534 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/board.o
- .debug_info    0x0000c0ae     0x14e1 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/stdio.o
- .debug_info    0x0000d58f     0x10b9 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/led.o
- .debug_info    0x0000e648      0xe87 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/pb.o
- .debug_info    0x0000f4cf     0x46d1 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
- .debug_info    0x00013ba0     0x20f7 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/touchscreen.o
- .debug_info    0x00015c97     0x1f99 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/camera.o
- .debug_info    0x00017c30     0x1fc3 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
- .debug_info    0x00019bf3     0x1597 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/sccb.o
- .debug_info    0x0001b18a      0xa22 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/heap.o
- .debug_info    0x0001bbac     0x1360 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/system_max78000.o
- .debug_info    0x0001cf0c      0x914 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
- .debug_info    0x0001d820      0x889 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
- .debug_info    0x0001e0a9      0xe12 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
- .debug_info    0x0001eebb     0x1646 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(nvic_table.o)
- .debug_info    0x00020501     0x1464 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_ai85.o)
- .debug_info    0x00021965     0x12b7 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_reva.o)
- .debug_info    0x00022c1c     0x14ec Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(dma_me17.o)
- .debug_info    0x00024108     0x1587 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(dma_reva.o)
- .debug_info    0x0002568f     0x133c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
- .debug_info    0x000269cb      0xbc9 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
- .debug_info    0x00027594      0x921 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(icc_me17.o)
- .debug_info    0x00027eb5      0x800 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(icc_reva.o)
- .debug_info    0x000286b5     0x1ade Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_me17.o)
- .debug_info    0x0002a193     0x1673 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_reva.o)
- .debug_info    0x0002b806      0xd98 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_me17.o)
- .debug_info    0x0002c59e      0xcd3 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_reva.o)
- .debug_info    0x0002d271     0x2536 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
- .debug_info    0x0002f7a7     0x3273 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
- .debug_info    0x00032a1a     0x1947 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_ai85.o)
- .debug_info    0x00034361     0x12fe Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_revb.o)
- .debug_info    0x0003565f     0x1f8b Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
- .debug_info    0x000375ea      0x826 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_common.o)
- .debug_info    0x00037e10     0x2d00 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
- .debug_info    0x0003ab10      0x7c5 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_lock.o)
- .debug_info    0x0003b2d5      0x880 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_common.o)
- .debug_info    0x0003bb55      0xa8b Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_common.o)
+.debug_info     0x00000000    0x3c5f7
+ .debug_info    0x00000000     0x1aa5 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/main.o
+ .debug_info    0x00001aa5       0x5d c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/all_imgs.o
+ .debug_info    0x00001b02     0x1167 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/utils.o
+ .debug_info    0x00002c69      0xa69 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state.o
+ .debug_info    0x000036d2     0x1344 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_home.o
+ .debug_info    0x00004a16     0x1da6 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_faceID.o
+ .debug_info    0x000067bc     0x2e58 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+ .debug_info    0x00009614     0x157d c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/embedding_process.o
+ .debug_info    0x0000ab91     0x1534 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/board.o
+ .debug_info    0x0000c0c5     0x14e1 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/stdio.o
+ .debug_info    0x0000d5a6     0x10b9 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/led.o
+ .debug_info    0x0000e65f      0xe87 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/pb.o
+ .debug_info    0x0000f4e6     0x46d1 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+ .debug_info    0x00013bb7     0x20f7 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/touchscreen.o
+ .debug_info    0x00015cae     0x1f99 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/camera.o
+ .debug_info    0x00017c47     0x1fc3 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+ .debug_info    0x00019c0a     0x1597 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/sccb.o
+ .debug_info    0x0001b1a1      0xa22 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/heap.o
+ .debug_info    0x0001bbc3     0x1360 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/system_max78000.o
+ .debug_info    0x0001cf23      0x914 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
+ .debug_info    0x0001d837      0x889 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
+ .debug_info    0x0001e0c0      0xe12 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
+ .debug_info    0x0001eed2     0x1646 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(nvic_table.o)
+ .debug_info    0x00020518     0x1464 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_ai85.o)
+ .debug_info    0x0002197c     0x12b7 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_reva.o)
+ .debug_info    0x00022c33     0x14ec Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(dma_me17.o)
+ .debug_info    0x0002411f     0x1587 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(dma_reva.o)
+ .debug_info    0x000256a6     0x133c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
+ .debug_info    0x000269e2      0xbc9 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
+ .debug_info    0x000275ab      0x921 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(icc_me17.o)
+ .debug_info    0x00027ecc      0x800 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(icc_reva.o)
+ .debug_info    0x000286cc     0x1ade Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_me17.o)
+ .debug_info    0x0002a1aa     0x1673 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_reva.o)
+ .debug_info    0x0002b81d      0xd98 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_me17.o)
+ .debug_info    0x0002c5b5      0xcd3 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_reva.o)
+ .debug_info    0x0002d288     0x2536 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
+ .debug_info    0x0002f7be     0x3273 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
+ .debug_info    0x00032a31     0x1947 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_ai85.o)
+ .debug_info    0x00034378     0x12fe Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_revb.o)
+ .debug_info    0x00035676     0x1f8b Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
+ .debug_info    0x00037601      0x826 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_common.o)
+ .debug_info    0x00037e27     0x2d00 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+ .debug_info    0x0003ab27      0x7c5 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_lock.o)
+ .debug_info    0x0003b2ec      0x880 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_common.o)
+ .debug_info    0x0003bb6c      0xa8b Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_common.o)
 
 .debug_abbrev   0x00000000     0x7f3d
  .debug_abbrev  0x00000000      0x384 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/main.o
@@ -7526,52 +7527,52 @@ OUTPUT(c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/Alexa
  .debug_macro   0x00015c87       0xfe Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_common.o)
  .debug_macro   0x00015d85      0x143 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_common.o)
 
-.debug_line     0x00000000    0x1c884
- .debug_line    0x00000000      0x984 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/main.o
- .debug_line    0x00000984       0x41 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/all_imgs.o
- .debug_line    0x000009c5      0x4bc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/utils.o
- .debug_line    0x00000e81      0x209 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state.o
- .debug_line    0x0000108a      0x5c1 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_home.o
- .debug_line    0x0000164b      0xb1d c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_faceID.o
- .debug_line    0x00002168     0x3fd5 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
- .debug_line    0x0000613d      0xb65 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/embedding_process.o
- .debug_line    0x00006ca2      0x5e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/board.o
- .debug_line    0x00007286      0x6cb c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/stdio.o
- .debug_line    0x00007951      0x592 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/led.o
- .debug_line    0x00007ee3      0x58f c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/pb.o
- .debug_line    0x00008472     0x2590 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
- .debug_line    0x0000aa02      0x969 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/touchscreen.o
- .debug_line    0x0000b36b      0xcd1 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/camera.o
- .debug_line    0x0000c03c      0xcdc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
- .debug_line    0x0000cd18      0x790 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/sccb.o
- .debug_line    0x0000d4a8      0x33d c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/heap.o
- .debug_line    0x0000d7e5      0x529 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/system_max78000.o
- .debug_line    0x0000dd0e      0x6e4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
- .debug_line    0x0000e3f2      0x2fa Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
- .debug_line    0x0000e6ec      0x7a8 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
- .debug_line    0x0000ee94      0x492 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(nvic_table.o)
- .debug_line    0x0000f326      0x564 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_ai85.o)
- .debug_line    0x0000f88a      0x54e Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_reva.o)
- .debug_line    0x0000fdd8      0x61c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(dma_me17.o)
- .debug_line    0x000103f4      0xdbb Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(dma_reva.o)
- .debug_line    0x000111af      0x8cb Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
- .debug_line    0x00011a7a      0x65d Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
- .debug_line    0x000120d7      0x3f5 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(icc_me17.o)
- .debug_line    0x000124cc      0x465 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(icc_reva.o)
- .debug_line    0x00012931      0x8db Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_me17.o)
- .debug_line    0x0001320c      0x9c1 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_reva.o)
- .debug_line    0x00013bcd      0x524 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_me17.o)
- .debug_line    0x000140f1      0x8ea Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_reva.o)
- .debug_line    0x000149db      0xbf8 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
- .debug_line    0x000155d3     0x22f3 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
- .debug_line    0x000178c6      0xaab Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_ai85.o)
- .debug_line    0x00018371     0x1052 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_revb.o)
- .debug_line    0x000193c3      0x9af Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
- .debug_line    0x00019d72      0x3d4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_common.o)
- .debug_line    0x0001a146     0x199e Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
- .debug_line    0x0001bae4      0x3b3 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_lock.o)
- .debug_line    0x0001be97      0x4e2 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_common.o)
- .debug_line    0x0001c379      0x50b Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_common.o)
+.debug_line     0x00000000    0x1c87b
+ .debug_line    0x00000000      0x97b c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/main.o
+ .debug_line    0x0000097b       0x41 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/all_imgs.o
+ .debug_line    0x000009bc      0x4bc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/utils.o
+ .debug_line    0x00000e78      0x209 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state.o
+ .debug_line    0x00001081      0x5c1 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_home.o
+ .debug_line    0x00001642      0xb1d c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_faceID.o
+ .debug_line    0x0000215f     0x3fd5 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/cnn.o
+ .debug_line    0x00006134      0xb65 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/embedding_process.o
+ .debug_line    0x00006c99      0x5e4 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/board.o
+ .debug_line    0x0000727d      0x6cb c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/stdio.o
+ .debug_line    0x00007948      0x592 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/led.o
+ .debug_line    0x00007eda      0x58f c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/pb.o
+ .debug_line    0x00008469     0x2590 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/tft.o
+ .debug_line    0x0000a9f9      0x969 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/touchscreen.o
+ .debug_line    0x0000b362      0xcd1 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/camera.o
+ .debug_line    0x0000c033      0xcdc c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/ov7692.o
+ .debug_line    0x0000cd0f      0x790 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/sccb.o
+ .debug_line    0x0000d49f      0x33d c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/heap.o
+ .debug_line    0x0000d7dc      0x529 c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/system_max78000.o
+ .debug_line    0x0000dd05      0x6e4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
+ .debug_line    0x0000e3e9      0x2fa Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
+ .debug_line    0x0000e6e3      0x7a8 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
+ .debug_line    0x0000ee8b      0x492 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(nvic_table.o)
+ .debug_line    0x0000f31d      0x564 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_ai85.o)
+ .debug_line    0x0000f881      0x54e Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(cameraif_reva.o)
+ .debug_line    0x0000fdcf      0x61c Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(dma_me17.o)
+ .debug_line    0x000103eb      0xdbb Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(dma_reva.o)
+ .debug_line    0x000111a6      0x8cb Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
+ .debug_line    0x00011a71      0x65d Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
+ .debug_line    0x000120ce      0x3f5 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(icc_me17.o)
+ .debug_line    0x000124c3      0x465 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(icc_reva.o)
+ .debug_line    0x00012928      0x8db Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_me17.o)
+ .debug_line    0x00013203      0x9c1 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pt_reva.o)
+ .debug_line    0x00013bc4      0x524 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_me17.o)
+ .debug_line    0x000140e8      0x8ea Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(rtc_reva.o)
+ .debug_line    0x000149d2      0xbf8 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_me17.o)
+ .debug_line    0x000155ca     0x22f3 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(spi_reva.o)
+ .debug_line    0x000178bd      0xaab Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_ai85.o)
+ .debug_line    0x00018368     0x1052 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_revb.o)
+ .debug_line    0x000193ba      0x9af Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
+ .debug_line    0x00019d69      0x3d4 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_common.o)
+ .debug_line    0x0001a13d     0x199e Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+ .debug_line    0x0001badb      0x3b3 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_lock.o)
+ .debug_line    0x0001be8e      0x4e2 Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_common.o)
+ .debug_line    0x0001c370      0x50b Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(tmr_common.o)
 
 .debug_str      0x00000000   0x17c665
  .debug_str     0x00000000    0xd4f8f c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/main.o

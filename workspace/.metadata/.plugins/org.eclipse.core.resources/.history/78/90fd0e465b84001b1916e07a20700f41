@@ -184,14 +184,19 @@ int16_t HPF(int16_t input);
 void TFT_Intro(void);
 void TFT_Print(char* str, int x, int y, int font, int length);
 void TFT_End(uint16_t words);
-
+#ifdef BOARD_EVKIT_V1
 int image_bitmap = img_1_bmp;
 int font_1 = urw_gothic_12_white_bg_grey;
 int font_2 = urw_gothic_13_white_bg_grey;
-
-
+#endif
+#ifdef BOARD_FTHR_REVA
+int image_bitmap = (int)& img_1_rgb565[0];
+int font_1 = (int)& SansSerif16x16[0];
+int font_2 = (int)& SansSerif16x16[0];
+#endif
 #endif
 /* **************************************************************************** */
+
 
 // ------------KWS Set Ups end -----------------------------------------------------//
 
@@ -320,33 +325,6 @@ static const uint8_t camera_settings[][2] = {
 
 // *****************************************************************************
 
-// ---------------------- Function for KWS start-----------------------------------------------------//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ---------------------- Function for KWS end-----------------------------------------------------//
-
-
-
-
-
-
-
-
 int main(void)
 {
 	// --------- setting variable values for KWS start ----------//
@@ -354,6 +332,7 @@ int main(void)
 	mxc_tmr_unit_t units;
 
 	uint8_t pChunkBuff[CHUNK];
+
 	uint16_t avg = 0;
 	uint16_t preambleCounter = 0;
 	uint16_t ai85Counter = 0;
@@ -388,6 +367,10 @@ int main(void)
     int id;
     int dma_channel;
 
+#ifdef BOARD_FTHR_REVA
+	// Wait for PMIC 1.8V to become available, about 180ms after power up.
+	MXC_Delay(200000);
+#endif
 	/* Enable cache */
 	MXC_ICC_Enable(MXC_ICC0);
 
@@ -415,9 +398,14 @@ int main(void)
 	MXC_DMA_Init();
 	dma_channel = MXC_DMA_AcquireChannel();
 
-
+#ifdef BOARD_FTHR_REVA
+	/* Enable camera power */
+	Camera_Power(POWER_ON);
+	MXC_Delay(300000);
+	PR_DEBUG("\n\nFaceID Feather Demo\n");
+#else
 	PR_DEBUG("\n\nFaceID Evkit Demo\n");
-
+#endif
 	// Initialize the camera driver.
 	camera_init(CAMERA_FREQ);
 
@@ -454,12 +442,21 @@ int main(void)
 	}
 
 #ifdef TFT_ENABLE
+#ifdef BOARD_EVKIT_V1
 	/* Initialize TFT display */
 	MXC_TFT_Init(MXC_SPI0, 1, NULL, NULL);
 	/* Set the screen rotation */
 	MXC_TFT_SetRotation(SCREEN_ROTATE);
 	/* Change entry mode settings */
 	MXC_TFT_WriteReg(0x0011, 0x6858);
+#endif
+#ifdef BOARD_FTHR_REVA
+    /* Initialize TFT display */
+    MXC_TFT_Init(MXC_SPI0, 1, NULL, NULL);
+	MXC_TFT_SetRotation(ROTATE_180);
+	MXC_TFT_SetBackGroundColor(4);
+    MXC_TFT_SetForeGroundColor(WHITE);   // set font color to white
+#endif
 #endif
 
 #ifdef TS_ENABLE
