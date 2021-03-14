@@ -367,61 +367,6 @@ mxc_spi_reva_width_t MXC_SPI_RevA_GetWidth (mxc_spi_reva_regs_t* spi)
     return SPI_REVA_WIDTH_STANDARD;
 }
 
-int MXC_SPI_RevA_SetMode (mxc_spi_reva_regs_t* spi, mxc_spi_reva_mode_t spiMode)
-{
-    int spi_num = MXC_SPI_GET_IDX ((mxc_spi_regs_t*) spi);
-    MXC_ASSERT (spi_num >= 0);
-
-    switch(spiMode) {
-    case SPI_REVA_MODE_0:
-        spi->ctrl2 &= ~MXC_F_SPI_REVA_CTRL2_CLKPHA;
-        spi->ctrl2 &= ~MXC_F_SPI_REVA_CTRL2_CLKPOL;
-        break;
-
-    case SPI_REVA_MODE_1:
-        spi->ctrl2 &= ~MXC_F_SPI_REVA_CTRL2_CLKPHA;
-        spi->ctrl2 |=  MXC_F_SPI_REVA_CTRL2_CLKPOL;
-        break;
-
-    case SPI_REVA_MODE_2:
-        spi->ctrl2 |=  MXC_F_SPI_REVA_CTRL2_CLKPHA;
-        spi->ctrl2 &= ~MXC_F_SPI_REVA_CTRL2_CLKPOL;
-        break;
-
-    case SPI_REVA_MODE_3:
-        spi->ctrl2 |=  MXC_F_SPI_REVA_CTRL2_CLKPHA;
-        spi->ctrl2 |=  MXC_F_SPI_REVA_CTRL2_CLKPOL;
-        break;
-
-    default:
-        break;                
-    }
-
-    return E_NO_ERROR;
-}
-
-mxc_spi_reva_mode_t MXC_SPI_RevA_GetMode (mxc_spi_reva_regs_t* spi)
-{
-    int spi_num = MXC_SPI_GET_IDX ((mxc_spi_regs_t*) spi);
-    MXC_ASSERT (spi_num >= 0);
-
-    if(spi->ctrl2 & MXC_F_SPI_REVA_CTRL2_CLKPHA) {
-        if(spi->ctrl2 & MXC_F_SPI_REVA_CTRL2_CLKPOL) {
-            return SPI_REVA_MODE_3;
-        }
-        else {
-            return SPI_REVA_MODE_2;
-        }
-    }
-    else {
-        if(spi->ctrl2 & MXC_F_SPI_REVA_CTRL2_CLKPOL) {
-            return SPI_REVA_MODE_1;
-        }
-    }
-
-    return SPI_REVA_MODE_0;
-}
-
 int MXC_SPI_RevA_StartTransmission (mxc_spi_reva_regs_t* spi)
 {
     int spi_num = MXC_SPI_GET_IDX ((mxc_spi_regs_t*) spi);

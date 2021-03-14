@@ -41,7 +41,7 @@ extern "C" {
 /**
  * @brief   Flush the instruction cache controller.
  */
-void MXC_ICC_Com_Flush(void);
+void MXC_ICC_Com_Flush (void);
 
 /**@} end of group icc */
 

@@ -240,20 +240,6 @@ int MXC_SYS_ClockSourceEnable(mxc_sys_system_clock_t clock)
         break;
 
     case MXC_SYS_CLOCK_ERFO:
-        /* Initialize kickstart circuit
-           Select Kick start circuit clock source- IPO/ISO 
-        */
-        MXC_FCR->erfoks = ((MXC_S_FCR_ERFOKS_KSCLKSEL_ISO)
-            /* Set Drive strengh - 0x1,0x2,0x3 */
-            | ((0x1)<<MXC_F_FCR_ERFOKS_KSERFODRIVER_POS)
-            /* Set kick count 1-127 */
-            | (0x8)
-            /* Set double pulse length  On/Off*/
-            | (0 & MXC_F_FCR_ERFOKS_KSERFO2X)
-            /* Enable On/Off */
-            | (MXC_F_FCR_ERFOKS_KSERFO_EN));
-
-        /* Enable ERFO */
         MXC_GCR->clkctrl |= MXC_F_GCR_CLKCTRL_ERFO_EN;
         return MXC_SYS_Clock_Timeout(MXC_F_GCR_CLKCTRL_ERFO_RDY);
         break;

@@ -1,5 +1,5 @@
-c:/Users/ian89/eclipse-workspace/Alexa_V-1/build/stdio.o: \
- c:\maximsdk\libraries\boards\max78000\source\stdio.c \
+c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/stdio.o: \
+ Libraries/Boards/MAX78000/EvKit_V1/../Source/stdio.c \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\sys\errno.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\sys\reent.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\_ansi.h \
@@ -45,22 +45,22 @@ c:/Users/ian89/eclipse-workspace/Alexa_V-1/build/stdio.o: \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\sys\stat.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\time.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\machine\time.h \
- c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/mxc_device.h \
- c:/MaximSDK/Libraries/CMSIS/Device/Maxim/MAX78000/Include/max78000.h \
- c:/MaximSDK/Libraries/CMSIS/Include/core_cm4.h \
- c:/MaximSDK/Libraries/CMSIS/Include/core_cmInstr.h \
- c:/MaximSDK/Libraries/CMSIS/Include/core_cmFunc.h \
- c:/MaximSDK/Libraries/CMSIS/Include/core_cm4_simd.h \
- c:/MaximSDK/Libraries/CMSIS/Device/Maxim/MAX78000/Include/system_max78000.h \
- c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/mxc_errors.h \
- c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/mxc_pins.h \
- c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/gpio.h \
- c:/MaximSDK/Libraries/CMSIS/Device/Maxim/MAX78000/Include/gpio_regs.h \
- c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/mxc_sys.h \
- c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/mxc_device.h \
- c:/MaximSDK/Libraries/CMSIS/Device/Maxim/MAX78000/Include/lpgcr_regs.h \
- c:/MaximSDK/Libraries/CMSIS/Device/Maxim/MAX78000/Include/gcr_regs.h \
- c:/MaximSDK/Libraries/Boards/MAX78000/EvKit_V1/Include/board.h \
- c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/uart.h \
- c:/MaximSDK/Libraries/CMSIS/Device/Maxim/MAX78000/Include/uart_regs.h \
- c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/mxc_sys.h
+ Libraries/PeriphDrivers/Include/MAX78000/mxc_device.h \
+ Libraries/CMSIS/Device/Maxim/MAX78000/Include/max78000.h \
+ Libraries/CMSIS/Include/core_cm4.h \
+ Libraries/CMSIS/Include/core_cmInstr.h \
+ Libraries/CMSIS/Include/core_cmFunc.h \
+ Libraries/CMSIS/Include/core_cm4_simd.h \
+ Libraries/CMSIS/Device/Maxim/MAX78000/Include/system_max78000.h \
+ Libraries/PeriphDrivers/Include/MAX78000/mxc_errors.h \
+ Libraries/PeriphDrivers/Include/MAX78000/mxc_pins.h \
+ Libraries/PeriphDrivers/Include/MAX78000/gpio.h \
+ Libraries/CMSIS/Device/Maxim/MAX78000/Include/gpio_regs.h \
+ Libraries/PeriphDrivers/Include/MAX78000/mxc_sys.h \
+ Libraries/PeriphDrivers/Include/MAX78000/mxc_device.h \
+ Libraries/CMSIS/Device/Maxim/MAX78000/Include/lpgcr_regs.h \
+ Libraries/CMSIS/Device/Maxim/MAX78000/Include/gcr_regs.h \
+ Libraries/Boards/MAX78000/EvKit_V1/Include/board.h \
+ Libraries/PeriphDrivers/Include/MAX78000/uart.h \
+ Libraries/CMSIS/Device/Maxim/MAX78000/Include/uart_regs.h \
+ Libraries/PeriphDrivers/Include/MAX78000/mxc_sys.h

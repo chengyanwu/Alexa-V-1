@@ -34,11 +34,9 @@
 #define __SSCB_H__
 
 #include <stdint.h>
-#include "tmr_regs.h"
-#include "tmr.h"
 
-int sccb_init(mxc_tmr_regs_t *tmr);
-int sccb_scan(void);
+int sccb_init();
+int sccb_scan();
 int sccb_read_byt(uint8_t slv_addr, uint8_t reg,  uint8_t* byt);
 int sccb_write_byt(uint8_t slv_addr, uint8_t reg, uint8_t byt);
 

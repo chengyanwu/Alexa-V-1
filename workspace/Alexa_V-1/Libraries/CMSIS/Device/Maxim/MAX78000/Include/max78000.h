@@ -478,7 +478,6 @@ typedef enum {
 /******************************************************************************/
 /*                                                                        DMA */
 #define MXC_DMA_CHANNELS                (16)
-#define MXC_DMA_INSTANCES               (1)
 
 #define MXC_BASE_DMA                    ((uint32_t)0x40028000UL)
 #define MXC_DMA                         ((mxc_dma_regs_t*)MXC_BASE_DMA)
@@ -671,7 +670,7 @@ typedef enum {
 /*                                                       Low-Power Comparator */
 #define MXC_CFG_LPCOMP_INSTANCES        (4)
 
-#define MXC_BASE_LPCOMP0                ((uint32_t)0x40006C08UL)
+#define MXC_BASE_LPCOMP0                ((uint32_t)0x40006C0CUL)
 #define MXC_LPCOMP0                     ((mxc_lpcomp_regs_t*)MXC_BASE_LPCOMP0)
 #define MXC_BASE_LPCOMP1                ((uint32_t)0x40088000UL)
 #define MXC_LPCOMP1                     ((mxc_lpcomp_regs_t*)MXC_BASE_LPCOMP1)

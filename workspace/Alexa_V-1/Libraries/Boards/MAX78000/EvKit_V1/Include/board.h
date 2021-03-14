@@ -54,7 +54,6 @@ extern "C" {
 
 #ifndef CONSOLE_BAUD
 #define CONSOLE_BAUD    115200  /// Console baud rate
-//#define CONSOLE_BAUD    9600
 #endif
 
 #define SCCB_SCL_PORT   MXC_GPIO0        /// SCCB clock port

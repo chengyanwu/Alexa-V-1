@@ -1,3 +1,4 @@
+
 /*******************************************************************************
 * Copyright (C) Maxim Integrated Products, Inc., All Rights Reserved.
 *
@@ -406,7 +407,7 @@ int main(void)
 	PR_DEBUG("\n\nFaceID Evkit Demo\n");
 #endif
 	// Initialize the camera driver.
-	camera_init(CAMERA_FREQ, MXC_TMR1);
+	camera_init(CAMERA_FREQ);
 
 	// Obtain the I2C slave address of the camera.
 	slaveAddress = camera_get_slave_address();

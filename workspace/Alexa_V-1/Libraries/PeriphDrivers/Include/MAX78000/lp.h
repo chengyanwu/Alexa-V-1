@@ -83,14 +83,9 @@ typedef enum {
 void MXC_LP_EnterSleepMode (void);
 
 /**
- * @brief      Places the device into Low Power mode.  This function returns once an RTC or external interrupt occur.
+ * @brief      Places the device into DEEPSLEEP mode.  This function returns once an RTC or external interrupt occur.
  */
-void MXC_LP_EnterLowPowerMode (void);
-
-/**
- * @brief      Places the device into Micro Power mode.  This function returns once an RTC or external interrupt occur.
- */
-void MXC_LP_EnterMicroPowerMode (void);
+void MXC_LP_EnterDeepSleepMode (void);
 
 /**
  * @brief      Places the device into Standby mode.  This function returns once an RTC or external interrupt occur.
@@ -107,7 +102,7 @@ void MXC_LP_EnterBackupMode (void);
  * @brief      Places the device into Shutdown mode.  CPU state is not maintained in this mode, so this function never returns.
  *             Instead, the device will restart once an RTC, USB wakeup, or external interrupt occur.
  */
-void MXC_LP_EnterPowerDownMode (void);
+void MXC_LP_EnterShutDownMode (void);
 
 /**
  * @brief      Set ovr bits to set the voltage the micro will run at.

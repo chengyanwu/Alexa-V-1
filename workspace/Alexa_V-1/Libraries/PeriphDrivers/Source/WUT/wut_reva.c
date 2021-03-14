@@ -275,7 +275,7 @@ void MXC_WUT_RevA_Delay_MS(mxc_wut_reva_regs_t* wut, uint32_t waitMs, uint32_t t
     uint32_t  tmp = wut->cnt;
     
     tmp += (waitMs * (timerClock /
-           (0x1 << ((wut->ctrl & MXC_F_WUT_REVA_CTRL_PRES) >> MXC_F_WUT_REVA_CTRL_PRES_POS)))
+                      (0x1 << ((wut->ctrl & MXC_F_WUT_REVA_CTRL_PRES) >> MXC_F_WUT_REVA_CTRL_PRES_POS)))
             + 500) / 1000 ;
             
     while (wut->cnt < tmp) {}

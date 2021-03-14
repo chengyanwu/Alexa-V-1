@@ -40,6 +40,7 @@
 #include "mxc_assert.h"
 #include "mxc_lock.h"
 
+#include "trng_regs.h"
 #include "ctb.h"
 #include "ctb_reva.h"
 #include "ctb_common.h"
@@ -233,7 +234,7 @@ uint32_t MXC_CTB_RevA_GetEnabledFeatures(void)
     return enabled_features;
 }
 
-void MXC_CTB_RevA_Handler(mxc_trng_reva_regs_t* trng)
+void MXC_CTB_RevA_Handler(void)
 {
     void* req;
     uint32_t temp;
@@ -306,10 +307,10 @@ void MXC_CTB_RevA_Handler(mxc_trng_reva_regs_t* trng)
     if(features == 0) { /* interrupt caused by TRNG */
         // if this is last block, disable interrupt before reading MXC_TRNG->data
         if(TRNG_maxLength <= TRNG_count+4) {
-            trng->ctrl &= ~MXC_F_TRNG_REVA_CTRL_RND_IE;
+            MXC_TRNG->cn &= ~MXC_F_TRNG_CN_RND_IRQ_EN;
         }
         
-        temp = trng->data;
+        temp = MXC_TRNG->data;
         
         if((TRNG_count+3) < TRNG_maxLength) {
             memcpy(& (TRNG_data[TRNG_count]),(uint8_t*)(&temp), 4);
@@ -406,11 +407,11 @@ int MXC_CTB_RevA_DMA_DoOperation(mxc_ctb_reva_dma_req_t* req)
 /* True Random Number Generator(TRNG) functions                             */
 /* ************************************************************************* */
 
-int MXC_CTB_RevA_TRNG_RandomInt(mxc_trng_reva_regs_t* trng)
+int MXC_CTB_RevA_TRNG_RandomInt(void)
 {
-    while(!(trng->status & MXC_F_TRNG_REVA_STATUS_RDY));
+    while(!(MXC_TRNG->st & MXC_F_TRNG_ST_RND_RDY));
     
-    return(int) trng->data;
+    return(int) MXC_TRNG->data;
 }
 
 int MXC_CTB_RevA_TRNG_Random(uint8_t* data, uint32_t len)
@@ -434,7 +435,7 @@ int MXC_CTB_RevA_TRNG_Random(uint8_t* data, uint32_t len)
     return E_NO_ERROR;
 }
 
-void MXC_CTB_RevA_TRNG_RandomAsync(mxc_trng_reva_regs_t* trng, uint8_t* data, uint32_t len, mxc_ctb_reva_complete_cb_t callback)
+void MXC_CTB_RevA_TRNG_RandomAsync(uint8_t* data, uint32_t len, mxc_ctb_reva_complete_cb_t callback)
 {
     MXC_ASSERT(data && callback);
     
@@ -452,7 +453,7 @@ void MXC_CTB_RevA_TRNG_RandomAsync(mxc_trng_reva_regs_t* trng, uint8_t* data, ui
     MXC_CTB_Callbacks[RNG_ID] = callback;
     
     // Enable interrupts
-    trng->ctrl |= MXC_F_TRNG_REVA_CTRL_RND_IE;
+    MXC_TRNG->cn |= MXC_F_TRNG_CN_RND_IRQ_EN;
     NVIC_EnableIRQ(TRNG_IRQn);
 }
 

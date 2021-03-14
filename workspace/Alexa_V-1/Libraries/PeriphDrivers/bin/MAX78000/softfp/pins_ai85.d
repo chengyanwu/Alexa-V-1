@@ -1,0 +1,21 @@
+Libraries/PeriphDrivers/bin/MAX78000/softfp/pins_ai85.o: \
+ c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/Libraries/PeriphDrivers/Source/SYS/pins_ai85.c \
+ Libraries/CMSIS/../PeriphDrivers/Include/MAX78000/gpio.h \
+ Libraries/CMSIS/Device/Maxim/MAX78000/Include/gpio_regs.h \
+ c:\maximsdk\tools\gnutools\lib\gcc\arm-none-eabi\9.2.1\include\stdint.h \
+ c:\maximsdk\tools\gnutools\arm-none-eabi\include\stdint.h \
+ c:\maximsdk\tools\gnutools\arm-none-eabi\include\machine\_default_types.h \
+ c:\maximsdk\tools\gnutools\arm-none-eabi\include\sys\features.h \
+ c:\maximsdk\tools\gnutools\arm-none-eabi\include\_newlib_version.h \
+ c:\maximsdk\tools\gnutools\arm-none-eabi\include\sys\_intsup.h \
+ c:\maximsdk\tools\gnutools\arm-none-eabi\include\sys\_stdint.h \
+ Libraries/CMSIS/../PeriphDrivers/Include/MAX78000/mxc_device.h \
+ Libraries/CMSIS/Device/Maxim/MAX78000/Include/max78000.h \
+ Libraries/CMSIS/Include/core_cm4.h \
+ Libraries/CMSIS/Include/core_cmInstr.h \
+ Libraries/CMSIS/Include/core_cmFunc.h \
+ Libraries/CMSIS/Include/core_cm4_simd.h \
+ Libraries/CMSIS/Device/Maxim/MAX78000/Include/system_max78000.h \
+ Libraries/CMSIS/../PeriphDrivers/Include/MAX78000/mxc_errors.h \
+ Libraries/CMSIS/../PeriphDrivers/Include/MAX78000/mxc_pins.h \
+ Libraries/CMSIS/../PeriphDrivers/Include/MAX78000/gpio.h

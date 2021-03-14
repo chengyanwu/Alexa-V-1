@@ -51,9 +51,7 @@
 /* **** Functions **** */
 int MXC_TMR_RevB_Init(mxc_tmr_revb_regs_t *tmr, mxc_tmr_cfg_t* cfg, uint8_t clk_src)
 {
-    int tmr_id = MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr);
-    (void)tmr_id;
-    MXC_ASSERT(tmr_id >= 0);
+    MXC_ASSERT(MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr) >= 0);
 
     if(cfg == NULL){
         return E_NULL_PTR;
@@ -144,9 +142,8 @@ int MXC_TMR_RevB_Init(mxc_tmr_revb_regs_t *tmr, mxc_tmr_cfg_t* cfg, uint8_t clk_
 void MXC_TMR_RevB_ConfigGeneric(mxc_tmr_revb_regs_t *tmr, mxc_tmr_cfg_t* cfg)
 {
     uint32_t timerOffset;
-    int tmr_id = MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr);
-    (void)tmr_id;
-    MXC_ASSERT(tmr_id >= 0);
+    
+    MXC_ASSERT(MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr) >= 0);
 
     if(cfg == NULL){
         return;
@@ -166,8 +163,6 @@ void MXC_TMR_RevB_ConfigGeneric(mxc_tmr_revb_regs_t *tmr, mxc_tmr_cfg_t* cfg)
     tmr->ctrl0 |= ((cfg->pol << MXC_F_TMR_REVB_CTRL0_POL_A_POS) << timerOffset);
     //enable timer interrupt if needed
     tmr->cnt = (0x1 << timerOffset);
-    while(!(tmr->intfl & (MXC_F_TMR_REVB_INTFL_WRDONE_A << timerOffset)));
-
     tmr->cmp = (cfg->cmp_cnt << timerOffset);
 #if TARGET_NUM == 32655 || TARGET_NUM == 78000
     tmr->ctrl1 &= ~(MXC_F_TMR_REVB_CTRL1_OUTEN_A << timerOffset);
@@ -186,9 +181,7 @@ void MXC_TMR_RevB_ConfigGeneric(mxc_tmr_revb_regs_t *tmr, mxc_tmr_cfg_t* cfg)
 
 void MXC_TMR_RevB_Shutdown(mxc_tmr_revb_regs_t *tmr)
 {
-    int tmr_id = MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr);
-    (void)tmr_id;
-    MXC_ASSERT(tmr_id >= 0);
+    MXC_ASSERT(MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr) >= 0);
     
     // Disable timer and clear settings
     tmr->ctrl0 = 0;
@@ -197,28 +190,20 @@ void MXC_TMR_RevB_Shutdown(mxc_tmr_revb_regs_t *tmr)
 
 void MXC_TMR_RevB_Start(mxc_tmr_revb_regs_t* tmr)
 {
-    int tmr_id = MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr);
-    (void)tmr_id;
-    MXC_ASSERT(tmr_id >= 0);
-
+    MXC_ASSERT(MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr) >= 0);
     tmr->ctrl0 |= MXC_F_TMR_REVB_CTRL0_EN_A;
     while(!(tmr->ctrl1 & MXC_F_TMR_REVB_CTRL1_CLKEN_A));
 }
 
 void MXC_TMR_RevB_Stop(mxc_tmr_revb_regs_t* tmr)
 {
-    int tmr_id = MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr);
-    (void)tmr_id;
-    MXC_ASSERT(tmr_id >= 0);
-
+    MXC_ASSERT(MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr) >= 0);
     tmr->ctrl0 &= ~MXC_F_TMR_REVB_CTRL0_EN_A;
 }
 
 int MXC_TMR_RevB_SetPWM(mxc_tmr_revb_regs_t* tmr, uint32_t pwm)
 {
-    int tmr_id = MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr);
-    (void)tmr_id;
-    MXC_ASSERT(tmr_id >= 0);
+    MXC_ASSERT(MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr) >= 0);
     
     if(pwm >(tmr->cmp)) {
         return E_BAD_PARAM;
@@ -227,52 +212,33 @@ int MXC_TMR_RevB_SetPWM(mxc_tmr_revb_regs_t* tmr, uint32_t pwm)
     while(tmr->cnt >= pwm);
     
     tmr->pwm = pwm;
-    while(!(tmr->intfl & MXC_F_TMR_REVB_INTFL_WRDONE_A));
     
     return E_NO_ERROR;
 }
 
 uint32_t MXC_TMR_RevB_GetCompare(mxc_tmr_revb_regs_t* tmr)
 {
-    int tmr_id = MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr);
-    (void)tmr_id;
-    MXC_ASSERT(tmr_id >= 0);
-
+    MXC_ASSERT(MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr) >= 0);
     return tmr->cmp;
 }
 
 uint32_t MXC_TMR_RevB_GetCapture(mxc_tmr_revb_regs_t* tmr)
 {
-    uint32_t pwm;
-    int tmr_id = MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr);
-    (void)tmr_id;
-    MXC_ASSERT(tmr_id >= 0);
-
-    // read pwm register twice
-    pwm = tmr->pwm;
-    pwm = tmr->pwm;
-    return pwm; 
+    MXC_ASSERT(MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr) >= 0);
+    return tmr->pwm;//check this
 }
 
 uint32_t MXC_TMR_RevB_GetCount(mxc_tmr_revb_regs_t* tmr)
 {
-    uint32_t cnt;
-    int tmr_id = MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr);
-    (void)tmr_id;
-    MXC_ASSERT(tmr_id >= 0);
-
-    // read cnt register twice
-    cnt = tmr->cnt;
-    cnt = tmr->cnt;
-    return cnt;
+    MXC_ASSERT(MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr) >= 0);
+    return tmr->cnt;
 }
 
 uint32_t MXC_TMR_RevB_GetPeriod(mxc_tmr_revb_regs_t* tmr, uint32_t clk_frequency, uint32_t prescalar, uint32_t frequency)
 {
     uint32_t periodTicks;
-    int tmr_id = MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr);
-    (void)tmr_id;
-    MXC_ASSERT(tmr_id >= 0);
+
+    MXC_ASSERT(MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr) >= 0);
 
     periodTicks = clk_frequency /(frequency * prescalar);
     
@@ -281,45 +247,31 @@ uint32_t MXC_TMR_RevB_GetPeriod(mxc_tmr_revb_regs_t* tmr, uint32_t clk_frequency
 
 void MXC_TMR_RevB_ClearFlags(mxc_tmr_revb_regs_t* tmr)
 {
-    int tmr_id = MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr);
-    (void)tmr_id;
-    MXC_ASSERT(tmr_id >= 0);
-
+    MXC_ASSERT(MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr) >= 0);
     tmr->intfl |= (MXC_F_TMR_REVB_INTFL_IRQ_A | MXC_F_TMR_REVB_INTFL_IRQ_B);
 }
 
 uint32_t MXC_TMR_RevB_GetFlags(mxc_tmr_revb_regs_t* tmr)
 {
-    int tmr_id = MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr);
-    (void)tmr_id;
-    MXC_ASSERT(tmr_id >= 0);
-
+    MXC_ASSERT(MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr) >= 0);
     return(tmr->intfl & (MXC_F_TMR_REVB_INTFL_IRQ_A | MXC_F_TMR_REVB_INTFL_IRQ_B));
 }
 
 void MXC_TMR_RevB_EnableInt(mxc_tmr_revb_regs_t* tmr)
 {
-    int tmr_id = MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr);
-    (void)tmr_id;
-    MXC_ASSERT(tmr_id >= 0);
-
+    MXC_ASSERT(MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr) >= 0);
     tmr->ctrl1 |= MXC_F_TMR_REVB_CTRL1_IE_A | MXC_F_TMR_REVB_CTRL1_IE_B;
 }
 
 void MXC_TMR_RevB_DisableInt(mxc_tmr_revb_regs_t* tmr)
 {
-    int tmr_id = MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr);
-    (void)tmr_id;
-    MXC_ASSERT(tmr_id >= 0);
-
+    MXC_ASSERT(MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr) >= 0);
     tmr->ctrl1 &= ~(MXC_F_TMR_REVB_CTRL1_IE_A | MXC_F_TMR_REVB_CTRL1_IE_B);
 }
 
 void MXC_TMR_RevB_EnableWakeup(mxc_tmr_revb_regs_t* tmr, mxc_tmr_cfg_t* cfg)
 {
-    int tmr_id = MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr);
-    (void)tmr_id;
-    MXC_ASSERT(tmr_id >= 0);
+    MXC_ASSERT(MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr) >= 0);
 
     // Enable Timer wake-up source
     if(cfg->bitMode == TMR_BIT_MODE_16B)
@@ -334,9 +286,7 @@ void MXC_TMR_RevB_EnableWakeup(mxc_tmr_revb_regs_t* tmr, mxc_tmr_cfg_t* cfg)
 
 void MXC_TMR_RevB_DisableWakeup(mxc_tmr_revb_regs_t* tmr, mxc_tmr_cfg_t* cfg)
 {
-    int tmr_id = MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr);
-    (void)tmr_id;
-    MXC_ASSERT(tmr_id >= 0);
+    MXC_ASSERT(MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr) >= 0);
 
     // Disable Timer wake-up source
     if(cfg->bitMode == TMR_BIT_MODE_16B)
@@ -351,21 +301,14 @@ void MXC_TMR_RevB_DisableWakeup(mxc_tmr_revb_regs_t* tmr, mxc_tmr_cfg_t* cfg)
 
 void MXC_TMR_RevB_SetCompare(mxc_tmr_revb_regs_t *tmr, uint32_t cmp_cnt)
 {
-    int tmr_id = MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr);
-    (void)tmr_id;
-    MXC_ASSERT(tmr_id >= 0);
-
+    MXC_ASSERT(MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr) >= 0);
     tmr->cmp = cmp_cnt;
 }
 
 void MXC_TMR_RevB_SetCount(mxc_tmr_revb_regs_t *tmr, uint32_t cnt)
 {
-    int tmr_id = MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr);
-    (void)tmr_id;
-    MXC_ASSERT(tmr_id >= 0);
-
+    MXC_ASSERT(MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr) >= 0);
     tmr->cnt = cnt;
-    while(!(tmr->intfl & MXC_F_TMR_REVB_INTFL_WRDONE_A));
 }
 
 void MXC_TMR_RevB_TO_Start(mxc_tmr_revb_regs_t *tmr, unsigned long us)
@@ -373,9 +316,7 @@ void MXC_TMR_RevB_TO_Start(mxc_tmr_revb_regs_t *tmr, unsigned long us)
     uint64_t ticks;
     int clk_shift = 0;
 
-    int tmr_id = MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr);
-    (void)tmr_id;
-    MXC_ASSERT(tmr_id >= 0);
+    MXC_ASSERT(MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr) >= 0);
 
     if(us == 0){
         return;
@@ -407,9 +348,7 @@ void MXC_TMR_RevB_TO_Start(mxc_tmr_revb_regs_t *tmr, unsigned long us)
 
 int MXC_TMR_RevB_GetTime(mxc_tmr_revb_regs_t *tmr, uint32_t ticks, uint32_t *time, mxc_tmr_unit_t *units)
 {
-    int tmr_id = MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr);
-    (void)tmr_id;
-    MXC_ASSERT(tmr_id >= 0);
+    MXC_ASSERT(MXC_TMR_GET_IDX((mxc_tmr_regs_t*) tmr) >= 0);
 
     uint64_t temp_time = 0;
     uint32_t timerClock = PeripheralClock;

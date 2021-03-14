@@ -37,6 +37,8 @@
 #include "mxc_delay.h"
 #include "gpio.h"
 #include "mxc_device.h"
+#include "tmr_regs.h"
+#include "tmr.h"
 
 // serial clock
 #define SCL_PORT    SCCB_SCL_PORT
@@ -66,8 +68,7 @@
 #define SDA_GET()       GPIO_GET(SDA_PORT, SDA_PIN)
 
 #define WAIT_US         1
-
-static mxc_tmr_regs_t *MXC_TMR = NULL;
+#define DELAY_US(us)    MXC_TMR_Delay(MXC_TMR1, us)
 
 static const mxc_gpio_cfg_t gpio_cfg_scl =   { SCL_PORT, SCL_PIN, MXC_GPIO_FUNC_OUT, MXC_GPIO_PAD_NONE, MXC_GPIO_VSSEL_VDDIO};
 static const mxc_gpio_cfg_t gpio_cfg_sda =   { SDA_PORT, SDA_PIN, MXC_GPIO_FUNC_OUT, MXC_GPIO_PAD_NONE, MXC_GPIO_VSSEL_VDDIO};
@@ -76,35 +77,35 @@ static const mxc_gpio_cfg_t gpio_cfg_sda =   { SDA_PORT, SDA_PIN, MXC_GPIO_FUNC_
 static void start(void)
 {
     SDA_HIGH();
-    MXC_TMR_Delay(MXC_TMR, WAIT_US);
+    DELAY_US(WAIT_US);
     SCL_HIGH();
-    MXC_TMR_Delay(MXC_TMR, WAIT_US);
+    DELAY_US(WAIT_US);
     SDA_LOW();
-    MXC_TMR_Delay(MXC_TMR, WAIT_US);
+    DELAY_US(WAIT_US);
     SCL_LOW();
-    MXC_TMR_Delay(MXC_TMR, WAIT_US);
+    DELAY_US(WAIT_US);
 }
 
 static void stop(void)
 {
     SDA_LOW();
-    MXC_TMR_Delay(MXC_TMR, WAIT_US);
+    DELAY_US(WAIT_US);
     SCL_HIGH();
-    MXC_TMR_Delay(MXC_TMR, WAIT_US);
+    DELAY_US(WAIT_US);
     SDA_HIGH();
-    MXC_TMR_Delay(MXC_TMR, WAIT_US);
+    DELAY_US(WAIT_US);
 }
 
 static void send_NACK(void)
 {
     SDA_HIGH();
-    MXC_TMR_Delay(MXC_TMR, WAIT_US);
+    DELAY_US(WAIT_US);
     SCL_HIGH();
-    MXC_TMR_Delay(MXC_TMR, WAIT_US);
+    DELAY_US(WAIT_US);
     SCL_LOW();
-    MXC_TMR_Delay(MXC_TMR, WAIT_US);
+    DELAY_US(WAIT_US);
     SDA_LOW();
-    MXC_TMR_Delay(MXC_TMR, WAIT_US);
+    DELAY_US(WAIT_US);
 }
 
 static uint8_t send_byte(uint8_t byt)
@@ -120,18 +121,18 @@ static uint8_t send_byte(uint8_t byt)
             SDA_LOW();
         }
         
-        MXC_TMR_Delay(MXC_TMR, WAIT_US);
+        DELAY_US(WAIT_US);
         
         SCL_HIGH();
-        MXC_TMR_Delay(MXC_TMR, WAIT_US);
+        DELAY_US(WAIT_US);
         SCL_LOW();
-        MXC_TMR_Delay(MXC_TMR, WAIT_US);
+        DELAY_US(WAIT_US);
     }
     
     SDA_IN();
-    MXC_TMR_Delay(MXC_TMR, WAIT_US);
+    DELAY_US(WAIT_US);
     SCL_HIGH();
-    MXC_TMR_Delay(MXC_TMR, WAIT_US);
+    DELAY_US(WAIT_US);
     
     if (SDA_GET()) {
         res = 1;    // means nack
@@ -141,7 +142,7 @@ static uint8_t send_byte(uint8_t byt)
     }
     
     SCL_LOW();
-    MXC_TMR_Delay(MXC_TMR, WAIT_US);
+    DELAY_US(WAIT_US);
     SDA_OUT();
     
     return res;
@@ -153,12 +154,12 @@ static uint8_t get_byte(void)
     uint8_t j;
     
     SDA_IN();
-    MXC_TMR_Delay(MXC_TMR, WAIT_US);
+    DELAY_US(WAIT_US);
     
     for (j = 8; j > 0; j--) {
     
         SCL_HIGH();
-        MXC_TMR_Delay(MXC_TMR, WAIT_US);
+        DELAY_US(WAIT_US);
         
         byt = byt << 1;
         
@@ -167,7 +168,7 @@ static uint8_t get_byte(void)
         }
         
         SCL_LOW();
-        MXC_TMR_Delay(MXC_TMR, WAIT_US);
+        DELAY_US(WAIT_US);
     }
     
     SDA_OUT();
@@ -176,16 +177,10 @@ static uint8_t get_byte(void)
 }
 
 /******************************** Public Functions ***************************/
-int sccb_init(mxc_tmr_regs_t *tmr)
+int sccb_init(void)
 {
     int ret = 0;
-
-    if(MXC_TMR_GET_IDX(tmr) < 0) {
-        return E_BAD_PARAM;
-    }
-
-    MXC_TMR = tmr;
-
+    
     MXC_GPIO_Config(&gpio_cfg_scl);
     MXC_GPIO_Config(&gpio_cfg_sda);
     
@@ -233,7 +228,7 @@ int sccb_read_byt(uint8_t slv_addr, uint8_t reg, uint8_t* byt)
     stop();
     
     if (ret == 0) {
-        MXC_TMR_Delay(MXC_TMR, WAIT_US);
+        DELAY_US(WAIT_US);
         
         start();
         ret = send_byte((slv_addr << 1) + 1); // +1 means read
@@ -259,19 +254,19 @@ int sccb_write_byt(uint8_t slv_addr, uint8_t reg, uint8_t val)
         ret = send_byte(slv_addr << 1);    // address
     }
     
-    MXC_TMR_Delay(MXC_TMR, 100);
+    DELAY_US(100);
     
     if (ret == 0) {
         ret = send_byte(reg);    //
     }
     
-    MXC_TMR_Delay(MXC_TMR, 100);
+    DELAY_US(100);
     
     if (ret == 0) {
         ret = send_byte(val);    //
     }
     
-    MXC_TMR_Delay(MXC_TMR, 100);
+    DELAY_US(100);
     stop();
     
     return ret;

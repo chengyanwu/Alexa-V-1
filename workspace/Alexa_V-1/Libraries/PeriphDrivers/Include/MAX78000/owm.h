@@ -1,9 +1,8 @@
 /**
  * @file    owm.h
- * @brief   Registers, Bit Masks and Bit Positions for the 1-Wire Master
- *          peripheral module.
+ * @brief      Registers, Bit Masks and Bit Positions for the 1-Wire Master
+ *             peripheral module.
  */
-
 /* ****************************************************************************
 * Copyright (C) 2016 Maxim Integrated Products, Inc., All Rights Reserved.
 *

@@ -261,16 +261,6 @@ mxc_spi_width_t MXC_SPI_GetWidth(mxc_spi_regs_t* spi)
     
 }
 
-int MXC_SPI_SetMode (mxc_spi_regs_t* spi, mxc_spi_mode_t spiMode)
-{
-    return MXC_SPI_RevA_SetMode ((mxc_spi_reva_regs_t*) spi, spiMode);
-}
-
-mxc_spi_mode_t MXC_SPI_GetMode (mxc_spi_regs_t* spi)
-{
-    return MXC_SPI_RevA_GetMode((mxc_spi_reva_regs_t*) spi);
-}
-
 int MXC_SPI_StartTransmission(mxc_spi_regs_t* spi)
 {
     return MXC_SPI_RevA_StartTransmission((mxc_spi_reva_regs_t*) spi);

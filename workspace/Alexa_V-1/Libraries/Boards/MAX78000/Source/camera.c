@@ -182,7 +182,7 @@ static void setup_dma(void)
 }
 
 /******************************** Public Functions ***************************/
-int camera_init(uint32_t freq, mxc_tmr_regs_t *tmr)
+int camera_init(uint32_t freq)
 {
     int ret = 0;
     mxc_pt_cfg_t pt_cfg;
@@ -216,7 +216,7 @@ int camera_init(uint32_t freq, mxc_tmr_regs_t *tmr)
 
     MXC_PCIF->ctrl |= 0;
     // Initialize serial camera communication bus.
-    sccb_init(tmr);
+    sccb_init();
     // Register functions
     sensor_register(&camera);
     

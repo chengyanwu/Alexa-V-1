@@ -38,7 +38,6 @@
 #include <stdint.h>
 
 #include "ov7692_regs.h"
-#include "tmr_regs.h"
 
 #define STATUS_OK               (0)
 #define STATUS_ERROR            (-1)
@@ -107,7 +106,7 @@ typedef struct _camera {
 
 /******************************** Public Functions ***************************/
 // Initialize the sensor hardware and probe the image sensor.
-int camera_init(uint32_t freq, mxc_tmr_regs_t *tmr);
+int camera_init(uint32_t freq);
 
 // Return sensor i2c slave address.
 int camera_get_slave_address();

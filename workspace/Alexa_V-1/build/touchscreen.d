@@ -1,5 +1,5 @@
-c:/Users/ian89/eclipse-workspace/Alexa_V-1/build/touchscreen.o: \
- c:\maximsdk\libraries\boards\max78000\source\touchscreen.c \
+c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/touchscreen.o: \
+ Libraries/Boards/MAX78000/EvKit_V1/../Source/touchscreen.c \
  c:\maximsdk\tools\gnutools\lib\gcc\arm-none-eabi\9.2.1\include\stddef.h \
  c:\maximsdk\tools\gnutools\lib\gcc\arm-none-eabi\9.2.1\include\stdint.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\stdint.h \
@@ -36,25 +36,25 @@ c:/Users/ian89/eclipse-workspace/Alexa_V-1/build/touchscreen.o: \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\sys\sched.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\machine\types.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\sys\stdio.h \
- c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/mxc_device.h \
- c:/MaximSDK/Libraries/CMSIS/Device/Maxim/MAX78000/Include/max78000.h \
- c:/MaximSDK/Libraries/CMSIS/Include/core_cm4.h \
- c:/MaximSDK/Libraries/CMSIS/Include/core_cmInstr.h \
- c:/MaximSDK/Libraries/CMSIS/Include/core_cmFunc.h \
- c:/MaximSDK/Libraries/CMSIS/Include/core_cm4_simd.h \
- c:/MaximSDK/Libraries/CMSIS/Device/Maxim/MAX78000/Include/system_max78000.h \
- c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/mxc_errors.h \
- c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/mxc_pins.h \
- c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/gpio.h \
- c:/MaximSDK/Libraries/CMSIS/Device/Maxim/MAX78000/Include/gpio_regs.h \
- c:\maximsdk\libraries\boards\max78000\include\touchscreen.h \
- c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/spi.h \
+ Libraries/PeriphDrivers/Include/MAX78000/mxc_device.h \
+ Libraries/CMSIS/Device/Maxim/MAX78000/Include/max78000.h \
+ Libraries/CMSIS/Include/core_cm4.h \
+ Libraries/CMSIS/Include/core_cmInstr.h \
+ Libraries/CMSIS/Include/core_cmFunc.h \
+ Libraries/CMSIS/Include/core_cm4_simd.h \
+ Libraries/CMSIS/Device/Maxim/MAX78000/Include/system_max78000.h \
+ Libraries/PeriphDrivers/Include/MAX78000/mxc_errors.h \
+ Libraries/PeriphDrivers/Include/MAX78000/mxc_pins.h \
+ Libraries/PeriphDrivers/Include/MAX78000/gpio.h \
+ Libraries/CMSIS/Device/Maxim/MAX78000/Include/gpio_regs.h \
+ Libraries/Boards/MAX78000/EvKit_V1/../Include/touchscreen.h \
+ Libraries/PeriphDrivers/Include/MAX78000/spi.h \
  c:\maximsdk\tools\gnutools\lib\gcc\arm-none-eabi\9.2.1\include\stdbool.h \
- c:/MaximSDK/Libraries/CMSIS/Device/Maxim/MAX78000/Include/spi_regs.h \
- c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/mxc_sys.h \
- c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/mxc_device.h \
- c:/MaximSDK/Libraries/CMSIS/Device/Maxim/MAX78000/Include/lpgcr_regs.h \
- c:/MaximSDK/Libraries/CMSIS/Device/Maxim/MAX78000/Include/gcr_regs.h \
- c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/mxc_assert.h \
- c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/mxc_lock.h \
- c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/gpio.h
+ Libraries/CMSIS/Device/Maxim/MAX78000/Include/spi_regs.h \
+ Libraries/PeriphDrivers/Include/MAX78000/mxc_sys.h \
+ Libraries/PeriphDrivers/Include/MAX78000/mxc_device.h \
+ Libraries/CMSIS/Device/Maxim/MAX78000/Include/lpgcr_regs.h \
+ Libraries/CMSIS/Device/Maxim/MAX78000/Include/gcr_regs.h \
+ Libraries/PeriphDrivers/Include/MAX78000/mxc_assert.h \
+ Libraries/PeriphDrivers/Include/MAX78000/mxc_lock.h \
+ Libraries/PeriphDrivers/Include/MAX78000/gpio.h

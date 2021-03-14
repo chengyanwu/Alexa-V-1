@@ -150,7 +150,7 @@ int MXC_UART_RevA_SetFrequency (mxc_uart_reva_regs_t* uart, unsigned int baud)
     }
     
     uartDiv /= prescale;
-    decimalDiv = (int)((uartDiv - (int) uartDiv) * 128);
+    decimalDiv = (int)((uartDiv - (int) uartDiv) * prescale);
     
     // Work around for Jira Bug: ME10-650
     if (decimalDiv > 3) {

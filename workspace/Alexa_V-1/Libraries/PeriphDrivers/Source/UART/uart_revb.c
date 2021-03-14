@@ -118,35 +118,77 @@ int MXC_UART_RevB_SetFrequency (mxc_uart_revb_regs_t* uart, unsigned int baud, m
     if (MXC_UART_GET_IDX ((mxc_uart_regs_t*) uart) < 0) {
         return E_BAD_PARAM;
     }
-    
+
+    // Enable baud clock and wait for it to become ready.
+    uart->ctrl |= MXC_F_UART_REVB_CTRL_BCLKEN;
+    while(((uart->ctrl & MXC_F_UART_REVB_CTRL_BCLKRDY) >> MXC_F_UART_REVB_CTRL_BCLKRDY_POS) == 0);
+
     // OSR default value
     uart->osr = 5;
 
-    switch (clock) {
-        case MXC_UART_REVB_APB_CLK:
-        uart->clkdiv = (PeripheralClock / baud);
-        break;
+    // check if the uart is LPUART
+    if(uart == (mxc_uart_revb_regs_t*) MXC_UART3) {
+        switch (clock) {
+            case MXC_UART_REVB_APB_CLK:
+            uart->clkdiv = ((IBRO_FREQ) / baud);
+            break;
 
-        case MXC_UART_REVB_EXT_CLK:
-        uart->ctrl |= MXC_S_UART_REVB_CTRL_BCLKSRC_EXTERNAL_CLOCK;
-        break;
+            case MXC_UART_REVB_EXT_CLK:
+            uart->ctrl |= MXC_S_UART_REVB_CTRL_BCLKSRC_EXTERNAL_CLOCK;
+            break;
 
-        //case MXC_UART_IBRO_CLK:
-        case MXC_UART_REVB_CLK2:
-        uart->clkdiv = (7372800 / baud);
-        uart->ctrl |= MXC_S_UART_REVB_CTRL_BCLKSRC_CLK2;
-        break;
+            //case MXC_UART_32K_CLK:
+            case MXC_UART_REVB_LPCLK2:
+            case MXC_UART_REVB_CLK2:
+            uart->ctrl |= MXC_S_UART_REVB_CTRL_BCLKSRC_CLK2;
+            uart->ctrl |= MXC_F_UART_REVB_CTRL_FDM;
+            if(baud == 9600) {
+                uart->clkdiv = 7;
+            }
+            else {
+                uart->clkdiv = ((ERTCO_FREQ * 2) / baud);
+            }
 
-        //case MXC_UART_ERFO:
-        case MXC_UART_REVB_CLK3:
-        uart->clkdiv = (16000000 / baud);
-        uart->ctrl |= MXC_S_UART_REVB_CTRL_BCLKSRC_CLK3;
-        break;
+            if (baud > 2400) {
+                uart->osr = 0;
+            }
+            else {
+                uart->osr = 1;
+            }
 
-        default:
-        return E_BAD_PARAM;
+            break;
+
+            default:
+            return E_BAD_PARAM;
+        }
     }
-        
+    else {
+        switch (clock) {
+            case MXC_UART_REVB_APB_CLK:
+            uart->clkdiv = (PeripheralClock / baud);
+            break;
+
+            case MXC_UART_REVB_EXT_CLK:
+            uart->ctrl |= MXC_S_UART_REVB_CTRL_BCLKSRC_EXTERNAL_CLOCK;
+            break;
+
+            //case MXC_UART_IBRO_CLK:
+            case MXC_UART_REVB_CLK2:
+            uart->clkdiv = (7372800 / baud);
+            uart->ctrl |= MXC_S_UART_REVB_CTRL_BCLKSRC_CLK2;
+            break;
+
+            //case MXC_UART_ERFO:
+            case MXC_UART_REVB_CLK3:
+            uart->clkdiv = (16000000 / baud);
+            uart->ctrl |= MXC_S_UART_REVB_CTRL_BCLKSRC_CLK3;
+            break;
+
+            default:
+            return E_BAD_PARAM;
+        }
+    }
+    
     return MXC_UART_GetFrequency ((mxc_uart_regs_t*) uart);
 }
 
@@ -158,20 +200,39 @@ int MXC_UART_RevB_GetFrequency (mxc_uart_revb_regs_t* uart)
         return E_BAD_PARAM;
     }
 
-    if ((uart->ctrl & MXC_F_UART_REVB_CTRL_BCLKSRC) == MXC_S_UART_REVB_CTRL_BCLKSRC_EXTERNAL_CLOCK) {
-        return E_NOT_SUPPORTED;
-    }
-    else if((uart->ctrl & MXC_F_UART_REVB_CTRL_BCLKSRC) == MXC_S_UART_REVB_CTRL_BCLKSRC_PERIPHERAL_CLOCK) {
-        periphClock = PeripheralClock;
-    }
-    else if((uart->ctrl & MXC_F_UART_REVB_CTRL_BCLKSRC) == MXC_S_UART_REVB_CTRL_BCLKSRC_CLK2) {
-        periphClock = 7372800;
-    }
-    else if((uart->ctrl & MXC_F_UART_REVB_CTRL_BCLKSRC) == MXC_S_UART_REVB_CTRL_BCLKSRC_CLK3) {
-        periphClock = 16000000;
+    if(uart == (mxc_uart_revb_regs_t*) MXC_UART3) {
+        if ((uart->ctrl & MXC_F_UART_REVB_CTRL_BCLKSRC) == MXC_S_UART_REVB_CTRL_BCLKSRC_EXTERNAL_CLOCK) {
+            return E_NOT_SUPPORTED;
+        }
+        else if((uart->ctrl & MXC_F_UART_REVB_CTRL_BCLKSRC) == MXC_S_UART_REVB_CTRL_BCLKSRC_PERIPHERAL_CLOCK) {
+            periphClock = 7372800;
+        }
+        else if((uart->ctrl & MXC_F_UART_REVB_CTRL_BCLKSRC) == MXC_S_UART_REVB_CTRL_BCLKSRC_CLK2) {
+            periphClock = 32768 * 2;
+        }
+        else if((uart->ctrl & MXC_F_UART_REVB_CTRL_BCLKSRC) == MXC_S_UART_REVB_CTRL_BCLKSRC_CLK3) {
+            periphClock = 80000 * 2;
+        }
+        else {
+            return E_BAD_PARAM;
+        }
     }
     else {
-        return E_BAD_PARAM;
+        if ((uart->ctrl & MXC_F_UART_REVB_CTRL_BCLKSRC) == MXC_S_UART_REVB_CTRL_BCLKSRC_EXTERNAL_CLOCK) {
+            return E_NOT_SUPPORTED;
+        }
+        else if((uart->ctrl & MXC_F_UART_REVB_CTRL_BCLKSRC) == MXC_S_UART_REVB_CTRL_BCLKSRC_PERIPHERAL_CLOCK) {
+            periphClock = PeripheralClock;
+        }
+        else if((uart->ctrl & MXC_F_UART_REVB_CTRL_BCLKSRC) == MXC_S_UART_REVB_CTRL_BCLKSRC_CLK2) {
+            periphClock = 7372800;
+        }
+        else if((uart->ctrl & MXC_F_UART_REVB_CTRL_BCLKSRC) == MXC_S_UART_REVB_CTRL_BCLKSRC_CLK3) {
+            periphClock = 16000000;
+        }
+        else {
+            return E_BAD_PARAM;
+        }
     }
 
     return (periphClock / uart->clkdiv);
@@ -281,7 +342,7 @@ int MXC_UART_RevB_SetFlowCtrl (mxc_uart_revb_regs_t* uart, mxc_uart_flow_t flowC
     }
 
     //FIXME: Fix missing code for CTS threshhold.
-    
+
     return E_NO_ERROR;
 }
 
