@@ -54,18 +54,7 @@
 #include "rtc.h"
 #include "cnn.h"
 
-// For KWS add-on
-#include "mxc_sys.h"
-#include "fcr_regs.h"
-#include "icc.h"
-#include "mxc_device.h"
-#include "nvic_table.h"
-#include "i2s_regs.h"
-#include "i2s.h"
-#include "tmr.h"
-#include "dma.h"
-#include "led.h"
-#include "pb.h"
+
 
 
 // For evkit
@@ -81,119 +70,6 @@
 
 
 
-// ------------KWS Set Ups start -----------------------------------------------------//
-#define VERSION   "3.0.1 (01/21/21)"
-/* Enable/Disable Features */
-#define ENABLE_PRINT_ENVELOPE            // enables printing average waveform envelope for samples
-//#define ENABLE_CLASSIFICATION_DISPLAY  // enables printing classification result
-#define ENABLE_SILENCE_DETECTION         // Starts collecting only after avg > THRESHOLD_HIGH, otherwise starts from first sample
-#undef EIGHT_BIT_SAMPLES                 // samples from Mic or Test vectors are eight bit, otherwise 16-bit
-#define ENABLE_MIC_PROCESSING            // enables capturing Mic, otherwise a header file Test vector is used as sample data
-
-#ifndef ENABLE_MIC_PROCESSING
-#include "kws_five.h"
-#else
-#undef ENABLE_PRINT_ENVELOPE  // print is slow with live mic data
-#endif
-
-/*-----------------------------*/
-/* keep following unchanged */
-#define SAMPLE_SIZE         16384   // size of input vector for CNN, keep it multiple of 128
-#define CHUNK               128     // number of data points to read at a time and average for threshold, keep multiple of 128
-#define TRANSPOSE_WIDTH     128     // width of 2d data model to be used for transpose
-#define NUM_OUTPUTS         21      // number of classes
-#define I2S_RX_BUFFER_SIZE  64      // I2S buffer size
-#define TFT_BUFF_SIZE       50      // TFT buffer size
-/*-----------------------------*/
-
-/* Adjustables */
-#ifdef ENABLE_MIC_PROCESSING
-#define SAMPLE_SCALE_FACTOR         4       // multiplies 16-bit samples by this scale factor before converting to 8-bit
-#define THRESHOLD_HIGH              350     // voice detection threshold to find beginning of a keyword
-#define THRESHOLD_LOW               100     // voice detection threshold to find end of a keyword
-#define SILENCE_COUNTER_THRESHOLD   20      // [>20] number of back to back CHUNK periods with avg < THRESHOLD_LOW to declare the end of a word
-#define PREAMBLE_SIZE               30*CHUNK// how many samples before beginning of a keyword to include
-#define INFERENCE_THRESHOLD         49      // min probability (0-100) to accept an inference
-#else
-#define SAMPLE_SCALE_FACTOR         1       // multiplies 16-bit samples by this scale factor before converting to 8-bit
-#define THRESHOLD_HIGH              130     // voice detection threshold to find beginning of a keyword
-#define THRESHOLD_LOW               70      // voice detection threshold to find end of a keyword
-#define SILENCE_COUNTER_THRESHOLD   20      // [>20] number of back to back CHUNK periods with avg < THRESHOLD_LOW to declare the end of a word
-#define PREAMBLE_SIZE               30*CHUNK// how many samples before beginning of a keyword to include
-#define INFERENCE_THRESHOLD         49      // min probability (0-100) to accept an inference
-#endif
-
-/* **** Globals **** */
-volatile uint32_t cnn_time; // Stopwatch
-
-static int32_t ml_data[NUM_OUTPUTS];
-static q15_t ml_softmax[NUM_OUTPUTS];
-uint8_t pAI85Buffer[SAMPLE_SIZE];
-uint8_t pPreambleCircBuffer[PREAMBLE_SIZE];
-int16_t Max, Min;
-uint16_t thresholdHigh = THRESHOLD_HIGH;
-uint16_t thresholdLow = THRESHOLD_LOW;
-
-volatile uint8_t i2s_flag = 0;
-int32_t i2s_rx_buffer[I2S_RX_BUFFER_SIZE];
-
-/* **** Constants **** */
-typedef enum _mic_processing_state {
-    STOP = 0,     /* No processing  */
-    SILENCE = 1,  /* Threshold not detected yet  */
-    KEYWORD = 2   /* Threshold has been detected, gathering keyword samples */
-} mic_processing_state;
-
-/* Set of detected words */
-const char keywords[NUM_OUTPUTS][10] = { "UP", "DOWN", "LEFT", "RIGHT", "STOP",
-                                         "GO", "YES", "NO", "ON", "OFF", "ONE", "TWO", "THREE", "FOUR", "FIVE",
-                                         "SIX", "SEVEN", "EIGHT", "NINE", "ZERO", "Unknown"
-                                       };
-
-#ifndef ENABLE_MIC_PROCESSING
-
-#ifndef EIGHT_BIT_SAMPLES
-const int16_t voiceVector[] = KWS20_TEST_VECTOR;
-#else
-const int8_t voiceVector[] = KWS20_TEST_VECTOR;
-#endif
-
-#else
-void i2s_isr(void)
-{
-    i2s_flag = 1;
-    /* Clear I2S interrupt flag */
-    MXC_I2S_ClearFlags(MXC_F_I2S_INTFL_RX_THD_CH0);
-}
-#endif
-
-
-/* **** Functions Prototypes **** */
-void fail(void);
-uint8_t cnn_load_data(uint8_t* pIn);
-int8_t MicReader(int16_t* sample);
-uint8_t MicReadChunk(uint8_t* pBuff, uint16_t* avg);
-uint8_t AddTranspose(uint8_t* pIn, uint8_t* pOut, uint16_t inSize,
-                     uint16_t outSize, uint16_t width);
-uint8_t check_inference(q15_t* ml_soft, int32_t* ml_data,
-                        int16_t* out_class, double* out_prob);
-void I2SInit();
-void HPF_init(void);
-int16_t HPF(int16_t input);
-#ifdef ENABLE_TFT
-void TFT_Intro(void);
-void TFT_Print(char* str, int x, int y, int font, int length);
-void TFT_End(uint16_t words);
-
-int image_bitmap = img_1_bmp;
-int font_1 = urw_gothic_12_white_bg_grey;
-int font_2 = urw_gothic_13_white_bg_grey;
-
-
-#endif
-/* **************************************************************************** */
-
-// ------------KWS Set Ups end -----------------------------------------------------//
 
 static const uint8_t camera_settings[][2] = {
 	{0x0e, 0x08}, // Sleep mode
@@ -349,35 +225,7 @@ static const uint8_t camera_settings[][2] = {
 
 int main(void)
 {
-	// --------- setting variable values for KWS start ----------//
-	uint32_t sampleCounter = 0;
-	mxc_tmr_unit_t units;
 
-	uint8_t pChunkBuff[CHUNK];
-	uint16_t avg = 0;
-	uint16_t preambleCounter = 0;
-	uint16_t ai85Counter = 0;
-	uint16_t wordCounter = 0;
-
-	uint16_t avgSilenceCounter = 0;
-
-	mic_processing_state procState = STOP;
-
-	/* Enable cache */
-	MXC_ICC_Enable(MXC_ICC0);
-
-	/* Switch to 100 MHz clock */
-	MXC_SYS_Clock_Select(MXC_SYS_CLOCK_IPO);
-	SystemCoreClockUpdate();
-
-	/* Enable peripheral, enable CNN interrupt, turn on CNN clock */
-	/* CNN clock: 50 MHz div 1 */
-	cnn_enable(MXC_S_GCR_PCLKDIV_CNNCLKSEL_PCLK, MXC_S_GCR_PCLKDIV_CNNCLKDIV_DIV1);
-
-	/* Configure P2.5, turn on the CNN Boost */
-	cnn_boost_enable(MXC_GPIO2, MXC_GPIO_PIN_5);
-
-	// --------- setting variable values for KWS end ----------//
 
 	/* TFT_Demo Example */
 	int key;

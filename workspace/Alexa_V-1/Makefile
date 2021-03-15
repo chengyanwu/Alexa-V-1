@@ -65,6 +65,7 @@ export CMSIS_ROOT
 
 # Source files for this test (add path to VPATH below)
 SRCS  = main.c
+SRCS += softmax.c
 ifeq "$(BOARD)" "EvKit_V1"
 SRCS += TFT/evkit/resources/all_imgs.c
 endif
@@ -77,6 +78,7 @@ SRCS += src/utils.c
 SRCS += src/state.c
 SRCS += src/state_home.c
 SRCS += src/state_faceID.c
+SRCS += src/state_voice_recognition.c
 SRCS += src/cnn.c
 SRCS += src/embedding_process.c
 

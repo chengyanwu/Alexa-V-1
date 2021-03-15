@@ -1,20 +1,26 @@
-c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/main.o: \
- main.c c:\maximsdk\tools\gnutools\arm-none-eabi\include\stdio.h \
+c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/state_voice_recognition.o: \
+ src/state_voice_recognition.c \
+ c:\maximsdk\tools\gnutools\arm-none-eabi\include\string.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\_ansi.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\newlib.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\_newlib_version.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\sys\config.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\machine\ieeefp.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\sys\features.h \
- c:\maximsdk\tools\gnutools\arm-none-eabi\include\sys\cdefs.h \
- c:\maximsdk\tools\gnutools\arm-none-eabi\include\machine\_default_types.h \
- c:\maximsdk\tools\gnutools\lib\gcc\arm-none-eabi\9.2.1\include\stddef.h \
- c:\maximsdk\tools\gnutools\lib\gcc\arm-none-eabi\9.2.1\include\stdarg.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\sys\reent.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\_ansi.h \
+ c:\maximsdk\tools\gnutools\lib\gcc\arm-none-eabi\9.2.1\include\stddef.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\sys\_types.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\machine\_types.h \
+ c:\maximsdk\tools\gnutools\arm-none-eabi\include\machine\_default_types.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\sys\lock.h \
+ c:\maximsdk\tools\gnutools\arm-none-eabi\include\sys\cdefs.h \
+ c:\maximsdk\tools\gnutools\arm-none-eabi\include\xlocale.h \
+ c:\maximsdk\tools\gnutools\arm-none-eabi\include\strings.h \
+ c:\maximsdk\tools\gnutools\arm-none-eabi\include\sys\string.h \
+ Libraries/Boards/MAX78000/EvKit_V1/Include/board.h \
+ c:\maximsdk\tools\gnutools\arm-none-eabi\include\stdio.h \
+ c:\maximsdk\tools\gnutools\lib\gcc\arm-none-eabi\9.2.1\include\stdarg.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\sys\types.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\sys\_stdint.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\machine\endian.h \
@@ -28,11 +34,13 @@ c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/main.o: \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\sys\sched.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\machine\types.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\sys\stdio.h \
+ include/keypad.h include/state.h include/utils.h \
  c:\maximsdk\tools\gnutools\lib\gcc\arm-none-eabi\9.2.1\include\stdint.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\stdint.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\sys\_intsup.h \
- Libraries/Boards/MAX78000/EvKit_V1/Include/board.h \
- Libraries/PeriphDrivers/Include/MAX78000/mxc.h \
+ Libraries/PeriphDrivers/Include/MAX78000/uart.h \
+ Libraries/CMSIS/Device/Maxim/MAX78000/Include/uart_regs.h \
+ Libraries/PeriphDrivers/Include/MAX78000/mxc_sys.h \
  Libraries/PeriphDrivers/Include/MAX78000/mxc_device.h \
  Libraries/CMSIS/Device/Maxim/MAX78000/Include/max78000.h \
  Libraries/CMSIS/Include/core_cm4.h \
@@ -44,22 +52,31 @@ c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/main.o: \
  Libraries/PeriphDrivers/Include/MAX78000/mxc_pins.h \
  Libraries/PeriphDrivers/Include/MAX78000/gpio.h \
  Libraries/CMSIS/Device/Maxim/MAX78000/Include/gpio_regs.h \
- Libraries/PeriphDrivers/Include/MAX78000/mxc_delay.h \
- Libraries/PeriphDrivers/Include/MAX78000/mxc_assert.h \
- Libraries/PeriphDrivers/Include/MAX78000/mxc_lock.h \
- Libraries/PeriphDrivers/Include/MAX78000/mxc_sys.h \
  Libraries/CMSIS/Device/Maxim/MAX78000/Include/lpgcr_regs.h \
  Libraries/CMSIS/Device/Maxim/MAX78000/Include/gcr_regs.h \
- Libraries/PeriphDrivers/Include/MAX78000/nvic_table.h \
- Libraries/Boards/MAX78000/EvKit_V1/../Include/led.h \
- Libraries/PeriphDrivers/Include/MAX78000/mxc_assert.h \
- Libraries/PeriphDrivers/Include/MAX78000/gpio.h \
- Libraries/Boards/MAX78000/EvKit_V1/../Include/pb.h \
  Libraries/Boards/MAX78000/EvKit_V1/../Include/tft.h \
  Libraries/PeriphDrivers/Include/MAX78000/spi.h \
  c:\maximsdk\tools\gnutools\lib\gcc\arm-none-eabi\9.2.1\include\stdbool.h \
  Libraries/CMSIS/Device/Maxim/MAX78000/Include/spi_regs.h \
+ Libraries/PeriphDrivers/Include/MAX78000/mxc_assert.h \
+ Libraries/PeriphDrivers/Include/MAX78000/mxc_lock.h \
+ Libraries/PeriphDrivers/Include/MAX78000/gpio.h \
  Libraries/Boards/MAX78000/EvKit_V1/../Include/touchscreen.h \
+ TFT/evkit/resources/bitmap.h \
+ Libraries/PeriphDrivers/Include/MAX78000/mxc_sys.h \
+ Libraries/CMSIS/Device/Maxim/MAX78000/Include/fcr_regs.h \
+ Libraries/PeriphDrivers/Include/MAX78000/icc.h \
+ Libraries/CMSIS/Device/Maxim/MAX78000/Include/icc_regs.h \
+ Libraries/PeriphDrivers/Include/MAX78000/mxc_device.h \
+ Libraries/PeriphDrivers/Include/MAX78000/mxc_delay.h \
+ Libraries/PeriphDrivers/Include/MAX78000/nvic_table.h \
+ Libraries/CMSIS/Device/Maxim/MAX78000/Include/i2s_regs.h \
+ Libraries/PeriphDrivers/Include/MAX78000/mxc.h \
+ Libraries/PeriphDrivers/Include/MAX78000/mxc_delay.h \
+ Libraries/PeriphDrivers/Include/MAX78000/nvic_table.h \
+ Libraries/Boards/MAX78000/EvKit_V1/../Include/led.h \
+ Libraries/PeriphDrivers/Include/MAX78000/mxc_assert.h \
+ Libraries/Boards/MAX78000/EvKit_V1/../Include/pb.h \
  Libraries/Boards/MAX78000/EvKit_V1/../Include/touchscreen.h \
  Libraries/PeriphDrivers/Include/MAX78000/adc.h \
  Libraries/CMSIS/Device/Maxim/MAX78000/Include/adc_regs.h \
@@ -78,9 +95,7 @@ c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/main.o: \
  Libraries/PeriphDrivers/Include/MAX78000/i2c.h \
  Libraries/CMSIS/Device/Maxim/MAX78000/Include/i2c_regs.h \
  Libraries/PeriphDrivers/Include/MAX78000/i2s.h \
- Libraries/CMSIS/Device/Maxim/MAX78000/Include/i2s_regs.h \
  Libraries/PeriphDrivers/Include/MAX78000/icc.h \
- Libraries/CMSIS/Device/Maxim/MAX78000/Include/icc_regs.h \
  Libraries/PeriphDrivers/Include/MAX78000/lp.h \
  Libraries/CMSIS/Device/Maxim/MAX78000/Include/pwrseq_regs.h \
  Libraries/PeriphDrivers/Include/MAX78000/tmr.h \
@@ -98,19 +113,10 @@ c:/Users/ian89/OneDrive/Desktop/Alexa-V-1/workspace/Alexa_V-1/build/main.o: \
  Libraries/PeriphDrivers/Include/MAX78000/trng.h \
  Libraries/CMSIS/Device/Maxim/MAX78000/Include/trng_regs.h \
  Libraries/PeriphDrivers/Include/MAX78000/uart.h \
- Libraries/CMSIS/Device/Maxim/MAX78000/Include/uart_regs.h \
  Libraries/PeriphDrivers/Include/MAX78000/wdt.h \
  Libraries/CMSIS/Device/Maxim/MAX78000/Include/wdt_regs.h \
  Libraries/PeriphDrivers/Include/MAX78000/wut.h \
  Libraries/CMSIS/Device/Maxim/MAX78000/Include/wut_regs.h \
- Libraries/PeriphDrivers/Include/MAX78000/mxc_delay.h \
- Libraries/Boards/MAX78000/EvKit_V1/../Include/camera.h \
- Libraries/Boards/MAX78000/EvKit_V1/../Include/ov7692_regs.h \
- include/state.h Libraries/PeriphDrivers/Include/MAX78000/icc.h \
- Libraries/PeriphDrivers/Include/MAX78000/rtc.h cnn.h \
- TFT/evkit/resources/bitmap.h include/MAXCAM_Debug.h \
- c:\maximsdk\tools\gnutools\arm-none-eabi\include\string.h \
- c:\maximsdk\tools\gnutools\arm-none-eabi\include\xlocale.h \
- c:\maximsdk\tools\gnutools\arm-none-eabi\include\strings.h \
- c:\maximsdk\tools\gnutools\arm-none-eabi\include\sys\string.h \
- include/faceID.h weights.h include/embedding_process.h include/keypad.h
+ Libraries/PeriphDrivers/Include/MAX78000/i2s.h \
+ Libraries/PeriphDrivers/Include/MAX78000/tmr.h \
+ Libraries/PeriphDrivers/Include/MAX78000/dma.h cnn.h

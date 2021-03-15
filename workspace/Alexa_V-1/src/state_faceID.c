@@ -61,6 +61,8 @@ typedef void (*ScreenFunc)(void);
 /************************************ VARIABLES ******************************/
 volatile uint32_t cnn_time; // Stopwatch
 
+char user[40];
+
 static void process_img(void);
 static void run_cnn(int x_offset, int y_offset);
 static int init(void);
@@ -373,6 +375,8 @@ static void run_cnn(int x_offset, int y_offset)
 				noface_count = 0;
 				PR_DEBUG("Status: %s \n", name);
 				PR_INFO("Detection: %s: %d", name, counter[id]);
+				strncpy (user, name, sizeof(user));
+				state_set_current(get_voice_recognition_state());
 				break;
 			} else if (counter[id] >= (uint8_t)(closest_sub_buffer_size*0.4)){ // >%40 adjust
 				name = "Adjust Face";

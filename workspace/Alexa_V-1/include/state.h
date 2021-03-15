@@ -42,6 +42,8 @@ typedef int (*Init_func)(void);
 typedef int (*Keypad_process)(int key);
 typedef void (*Time_Tick)(void);
 
+extern char user[40];
+
 
 typedef struct _State {
     char*            name;
