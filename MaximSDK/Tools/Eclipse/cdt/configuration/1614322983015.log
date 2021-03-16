@@ -1,0 +1,12 @@
+!SESSION 2021-02-25 23:03:02.867 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=1.8.0_232
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -plugincustomization settings.ini -product org.eclipse.epp.package.cpp.product -application org.eclipse.equinox.p2.director -repository file:C:\MaximSDK/Tools/Eclipse/maximProject_updates,http://download.eclipse.org/eclipse/updates/4.13 -installIU com.maxim.projects.feature.feature.group
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -plugincustomization settings.ini -product org.eclipse.epp.package.cpp.product -application org.eclipse.equinox.p2.director -repository file:C:\MaximSDK/Tools/Eclipse/maximProject_updates,http://download.eclipse.org/eclipse/updates/4.13 -installIU com.maxim.projects.feature.feature.group
+
+!ENTRY org.eclipse.equinox.p2.director 0 0 2021-02-25 23:03:08.427
+!MESSAGE Overall install request is satisfiable
+!SUBENTRY 1 org.eclipse.equinox.p2.director 0 0 2021-02-25 23:03:08.427
+!MESSAGE Add request for Maxim Project Wizard 1.0.5 (com.maxim.projects.feature.feature.group 1.0.5) is satisfiable

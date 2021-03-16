@@ -53,7 +53,7 @@
 #include "bitmap.h"
 #endif
 
-#define S_MODULE_NAME	"FACEID"
+#define S_MODULE_NAME	"Alexa V-1"
 
 /********************************** Type Defines  *****************************/
 typedef void (*ScreenFunc)(void);
@@ -71,11 +71,11 @@ static int key_process(int key);
 #ifdef TFT_ENABLE
 static text_t screen_msg[] = {
     // info
-    { (char*) "FACEID DEMO", strlen("FACEID DEMO")},
+    { (char*) "AlexaV-1", strlen("Alexa V-1")},
 	{ (char *) "Process Time:",  strlen("Process Time:")},
 };
-#ifdef BOARD_EVKIT_V1
-static int bitmap = logo_white_bg_darkgrey_bmp;
+#ifdef BOARD_EVSKIT_V1
+//static int bitmap = logo_white_bg_darkgrey_bmp;
 static int font = urw_gothic_12_grey_bg_white;
 #endif
 #ifdef BOARD_FTHR_REVA
@@ -94,14 +94,14 @@ static State g_state = {"faceID", init, key_process, NULL, 0 };
 static void screen_faceID(void)
 {
 
-	MXC_TFT_SetPalette(bitmap);
+//	MXC_TFT_SetPalette(bitmap);
 	MXC_TFT_SetBackGroundColor(4);
-	MXC_TFT_ShowImage(3, 5, bitmap);
+//	MXC_TFT_ShowImage(3, 5, bitmap);
 #ifdef BOARD_EVKIT_V1
 	MXC_TFT_ShowImage(BACK_X, BACK_Y, left_arrow_bmp); // back button icon
 #endif
-	MXC_TFT_PrintFont(98, 5, font, &screen_msg[0], NULL);  // FACEID DEMO
-	MXC_TFT_PrintFont(12, 240, font, &screen_msg[1], NULL);  // Process Time:
+	MXC_TFT_PrintFont(60, 5, urw_gothic_12_grey_bg_white, &screen_msg[0], NULL);  // FACEID DEMO
+	MXC_TFT_PrintFont(12, 240, urw_gothic_12_grey_bg_white, &screen_msg[1], NULL);  // Process Time:
 	// texts
 #ifdef TS_ENABLE
 	MXC_TS_RemoveAllButton();
@@ -328,7 +328,7 @@ static void run_cnn(int x_offset, int y_offset)
 	area_t area = {150, 240, 50, 30};
 	MXC_TFT_ClearArea(&area, 4);
 
-	MXC_TFT_PrintFont(150, 240, font, &cnn_load_time_string,  NULL);  // RunCNN
+	MXC_TFT_PrintFont(150, 240, urw_gothic_12_grey_bg_white, &cnn_load_time_string,  NULL);  // RunCNN
 #endif
 
 	pass_time = utils_get_time_ms();
@@ -399,6 +399,7 @@ static void run_cnn(int x_offset, int y_offset)
 				noface_count = 0;
 				PR_DEBUG("Status: %s \n", name);
 				PR_INFO("Detection: %s: %d", name, counter[id]);
+
 			}
 			else
 			{
@@ -441,7 +442,7 @@ static void run_cnn(int x_offset, int y_offset)
 
 			area_t area = {50, 290, 180, 30};
 			MXC_TFT_ClearArea(&area, 4);
-			MXC_TFT_PrintFont(CAPTURE_X, CAPTURE_Y, font, &printResult,  NULL);  // RunCNN
+			MXC_TFT_PrintFont(CAPTURE_X, CAPTURE_Y, urw_gothic_12_grey_bg_white, &printResult,  NULL);  // RunCNN
 
 		}
 #endif

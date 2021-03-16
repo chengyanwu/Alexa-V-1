@@ -26,12 +26,12 @@ static void screen_voice_home(void);
 
 static text_t screen_msg[] = {
     // info
-    { (char*) "FACEID DEMO", 11},
-    { (char*) "Start DEMO", 10},
+    { (char*) "Alexa V-1", 11},
+    { (char*) "Start", 10},
 };
 
 #ifdef BOARD_EVKIT_V1
-static int bitmap = logo_white_bg_darkgrey_bmp;
+static int bitmap = ucsb_logo;
 static int font = urw_gothic_12_grey_bg_white;
 #endif
 
@@ -46,9 +46,9 @@ static void screen_voice_recognition_home(void)
 {
 	MXC_Delay(20000);
 
-    MXC_TFT_SetPalette(bitmap);
+//    MXC_TFT_SetPalette(bitmap);
     MXC_TFT_SetBackGroundColor(4);
-    MXC_TFT_ShowImage(3, 5, bitmap);
+//    MXC_TFT_ShowImage(3, 5, bitmap);
 
     char userMsg[40];
     char welcome[] = "Welcome, ";
@@ -60,11 +60,11 @@ static void screen_voice_recognition_home(void)
 
     text_t msg[] = {
     			{ userMsg, strlen(user) + 9 },
-    			{ (char*) "Start DEMO", 10 },
+    			{ (char*) "Continue", 8 },
     	};
 
-    MXC_TFT_PrintFont(5, 50, font, &msg[0],  NULL);  // FACEID DEMO
-    MXC_TFT_PrintFont(X_START+THICKNESS, Y_START+THICKNESS, font, &msg[1],  NULL);  // START DEMO
+    MXC_TFT_PrintFont(5, 50, font, &msg[0],  NULL);  // user
+    MXC_TFT_PrintFont(X_START+THICKNESS, Y_START+THICKNESS, font, &msg[1],  NULL);  // Continue
     // texts
 
 	area_t left = {X_START, Y_START, 4, 4+26};
@@ -78,6 +78,9 @@ static void screen_voice_recognition_home(void)
 
 	area_t bottom = {X_START, Y_START+26, 120, 4};
 	MXC_TFT_ClearArea(&bottom, 5);
+
+	area_t area = {50, 290, 180, 30};
+	MXC_TFT_ClearArea(&area, 4);
 #ifdef TS_ENABLE
     MXC_TS_RemoveAllButton();
     MXC_TS_AddButton(X_START, Y_START, X_START+120 , Y_START+4+26+4, KEY_1);
@@ -118,7 +121,6 @@ static void screen_voice_recognition_home(void)
 #include "bitmap.h"
 #endif
 
-#define VERSION   "3.0.1 (01/21/21)"
 /* **** Definitions **** */
 
 /* Enable/Disable Features */
@@ -245,364 +247,367 @@ int font_2 = (int)& SansSerif16x16[0];
 
 static int init(void)
 {
-//#ifdef TFT_ENABLE
-//	screen_voice_recognition_home();
-//#endif
-
-
-	printf("--------------------starting KWS------------------------");
-	 uint32_t sampleCounter = 0;
-	    mxc_tmr_unit_t units;
-
-	    uint8_t pChunkBuff[CHUNK];
-
-	    uint16_t avg = 0;
-	    uint16_t preambleCounter = 0;
-	    uint16_t ai85Counter = 0;
-	    uint16_t wordCounter = 0;
-
-	    uint16_t avgSilenceCounter = 0;
-
-	    mic_processing_state procState = STOP;
-
-	#if defined (BOARD_FTHR_REVA)
-	    // Wait for PMIC 1.8V to become available, about 180ms after power up.
-	    MXC_Delay(200000);
-	#endif
-	    /* Enable cache */
-	    MXC_ICC_Enable(MXC_ICC0);
-
-	    /* Switch to 100 MHz clock */
-	    MXC_SYS_Clock_Select(MXC_SYS_CLOCK_IPO);
-	    SystemCoreClockUpdate();
-
-	#ifdef ENABLE_MIC_PROCESSING
-	#if defined (BOARD_FTHR_REVA)
-	    /* Enable microphone power on Feather board */
-	    Microphone_Power(POWER_ON);
-	#endif
-	#endif
-
-	    /* Enable peripheral, enable CNN interrupt, turn on CNN clock */
-	    /* CNN clock: 50 MHz div 1 */
-	    cnn_enable(MXC_S_GCR_PCLKDIV_CNNCLKSEL_PCLK, MXC_S_GCR_PCLKDIV_CNNCLKDIV_DIV1);
-
-	    /* Configure P2.5, turn on the CNN Boost */
-	    cnn_boost_enable(MXC_GPIO2, MXC_GPIO_PIN_5);
-
-	    printf("Maxim Integrated \nKeyword Spotting Demo\nVer. %s \n", VERSION);
-	    printf("\n***** Init *****\n");
-	    memset(pAI85Buffer, 0x0, sizeof(pAI85Buffer));
-	    memset(pPreambleCircBuffer, 0x0, sizeof(pPreambleCircBuffer));
-
-	    printf("pChunkBuff: %d\n", sizeof(pChunkBuff));
-	    printf("pPreambleCircBuffer: %d\n", sizeof(pPreambleCircBuffer));
-	    printf("pAI85Buffer: %d\n", sizeof(pAI85Buffer));
-
-	    /* Bring state machine into consistent state */
-	    cnn_init();
-	    /* Load kernels */
-	    cnn_load_weights();
-	    /* Configure state machine */
-	    cnn_configure();
-
-	    /* switch to silence state*/
-	    procState = SILENCE;
-
-	#ifdef ENABLE_MIC_PROCESSING
-	    /* initialize I2S interface to Mic */
-	    I2SInit();
-	#endif
-
-	#ifdef ENABLE_TFT
-	    MXC_Delay(500000);
-	    printf("\n*** Init TFT ***\n");
-	#ifdef BOARD_EVKIT_V1
-	    /* TFT reset signal */
-	    mxc_gpio_cfg_t tft_reset_pin = {MXC_GPIO0, MXC_GPIO_PIN_19, MXC_GPIO_FUNC_OUT, MXC_GPIO_PAD_NONE, MXC_GPIO_VSSEL_VDDIOH};
-
-	    MXC_TFT_Init(MXC_SPI0, 1, &tft_reset_pin, NULL);
-	    MXC_TFT_ClearScreen();
-
-	    MXC_TFT_ShowImage(0, 0, image_bitmap);
-	    MXC_Delay(1000000);
-
-	    MXC_TFT_SetPalette(logo_white_bg_darkgrey_bmp);
-	    MXC_TFT_SetBackGroundColor(4);
-	    printf("if RED LED is not on, disconnect PICO SWD and powercycle!\n");
-	#endif
-	#ifdef BOARD_FTHR_REVA
-	    /* Initialize TFT display */
-	    MXC_TFT_Init(MXC_SPI0, 1, NULL, NULL);
-	    MXC_TFT_SetRotation(ROTATE_90);
-	    MXC_TFT_ShowImage(0, 0, image_bitmap);
-	    MXC_Delay(1000000);
-	    MXC_TFT_SetBackGroundColor(4);
-	    MXC_TFT_SetForeGroundColor(WHITE);   // set chars to white
-	#endif
-
-	    printf("Waiting for PB1 press\n");
-	    TFT_Intro();
-	#endif
-
-	    printf("\n*** READY ***\n");
-
-	    /* Read samples */
-	    while (1) {
-	#ifndef ENABLE_MIC_PROCESSING
-
-	        /* end of test vectors */
-	        if (sampleCounter >= sizeof(voiceVector) / sizeof(voiceVector[0])) {
-	            printf("End of test Vector\n");
-	            break;
-	        }
-
-	#endif
-
-	        /* Read from Mic driver to get CHUNK worth of samples, otherwise next sample*/
-	        if (MicReadChunk(pChunkBuff, &avg) == 0) {
-	            continue;
-	        }
-
-	        sampleCounter += CHUNK;
-
-	#ifdef ENABLE_SILENCE_DETECTION       // disable to start collecting data immediately.
-
-	        /* copy the preamble data*/
-	        /* add the new chunk to the end of circular buffer*/
-	        memcpy(&pPreambleCircBuffer[preambleCounter], pChunkBuff,
-	               sizeof(uint8_t) * CHUNK);
-
-	        /* increment circular buffer pointer*/
-	        preambleCounter = (preambleCounter + CHUNK) % (PREAMBLE_SIZE);
-
-	        /* Display average envelope as a bar */
-	#ifdef ENABLE_PRINT_ENVELOPE
-	        printf("%.6d|", sampleCounter);
-
-	        for (int i = 0; i < avg / 10; i++) {
-	            printf("=");
-	        }
-
-	        if (avg >= thresholdHigh) {
-	            printf("*");
-	        }
-
-	        printf("[%d]\n", avg);
-	#endif
-
-	        /* if we have not detected voice, check the average*/
-	        if (procState == SILENCE) {
-
-	            /* compute average, proceed if greater than threshold */
-	            if (avg >= thresholdHigh) {
-	                /* switch to keyword data collection*/
-	                procState = KEYWORD;
-	                printf("%.6d Word starts from index: %d, avg:%d > %d \n",
-	                       sampleCounter, sampleCounter - PREAMBLE_SIZE - CHUNK,
-	                       avg, thresholdHigh);
-
-	                /* reorder circular buffer according to time at the beginning of pAI85Buffer */
-	                if (preambleCounter == 0) {
-	                    /* copy latest samples afterwards */
-	                    if (AddTranspose(&pPreambleCircBuffer[0], pAI85Buffer,
-	                                     PREAMBLE_SIZE, SAMPLE_SIZE, TRANSPOSE_WIDTH)) {
-	                        printf("ERROR: Transpose ended early \n");
-	                    }
-	                }
-	                else {
-	                    /* copy oldest samples to the beginning*/
-	                    if (AddTranspose(&pPreambleCircBuffer[preambleCounter],
-	                                     pAI85Buffer, PREAMBLE_SIZE - preambleCounter,
-	                                     SAMPLE_SIZE, TRANSPOSE_WIDTH)) {
-	                        printf("ERROR: Transpose ended early \n");
-	                    }
-
-	                    /* copy latest samples afterwards */
-	                    if (AddTranspose(&pPreambleCircBuffer[0], pAI85Buffer,
-	                                     preambleCounter, SAMPLE_SIZE, TRANSPOSE_WIDTH)) {
-	                        printf("ERROR: Transpose ended early \n");
-	                    }
-
-	                }
-
-	                /* preamble is copied and state is changed, start adding keyword samples next run */
-	                ai85Counter += PREAMBLE_SIZE;
-	                continue;
-
-	            }
-	        }
-	        /* if it is in data collection, add samples to buffer*/
-	        else if (procState == KEYWORD)
-	#endif  //#ifdef ENABLE_SILENCE_DETECTION
-
-	        {
-	            uint8_t ret = 0;
-
-	            /* add sample, rearrange buffer */
-	            ret = AddTranspose(pChunkBuff, pAI85Buffer, CHUNK, SAMPLE_SIZE,
-	                               TRANSPOSE_WIDTH);
-
-	            /* increment number of stored samples */
-	            ai85Counter += CHUNK;
-
-	            /* if there is silence after at least 1/3 of samples passed, increment number of times back to back silence to find end of keyword */
-	            if ((avg < thresholdLow) && (ai85Counter >= SAMPLE_SIZE / 3)) {
-	                avgSilenceCounter ++;
-	            }
-	            else {
-	                avgSilenceCounter = 0;
-	            }
-
-
-	            /* if this is the last sample and there are not enough samples to
-	             * feed to CNN, or if it is long silence after keyword,  append with zero (for reading file)
-	             */
-	#ifndef ENABLE_MIC_PROCESSING
-
-	            if (((ai85Counter < SAMPLE_SIZE) && (sampleCounter >= sizeof(voiceVector) / sizeof(voiceVector[0]) - 1)) || (avgSilenceCounter > SILENCE_COUNTER_THRESHOLD))
-	#else
-	            if (avgSilenceCounter > SILENCE_COUNTER_THRESHOLD)
-	#endif
-	            {
-	                memset(pChunkBuff, 0, CHUNK);
-	                printf("%.6d: Word ends, Appends %d zeros \n", sampleCounter,
-	                       SAMPLE_SIZE - ai85Counter);
-	                ret = 0;
-
-	                while (!ret) {
-	                    ret = AddTranspose(pChunkBuff, pAI85Buffer, CHUNK,
-	                                       SAMPLE_SIZE, TRANSPOSE_WIDTH);
-	                    ai85Counter += CHUNK;
-	                }
-	            }
-
-	            /* if enough samples are collected, start CNN */
-	            if (ai85Counter >= SAMPLE_SIZE) {
-	            	printf("ai85Counter:", ai85Counter);
-	                int16_t out_class = -1;
-	                double probability = 0;
-
-	                /* reset counters */
-	                ai85Counter = 0;
-	                avgSilenceCounter = 0;
-
-	                /* new word */
-	                wordCounter++;
-
-	                /* change state to silence */
-	                procState = SILENCE;
-
-	                /* sanity check, last transpose should have returned 1, as enough samples should have already been added */
-	                if (ret != 1) {
-	                    printf("ERROR: Transpose incomplete!\n");
-	                    fail();
-	                }
-
-	                //----------------------------------  : invoke AI85 CNN
-	                printf("%.6d: Starts CNN: %d\n", sampleCounter, wordCounter);
-
-	                /* load to CNN */
-	                if (!cnn_load_data(pAI85Buffer)) {
-	                    printf("ERROR: Loading data to CNN! \n");
-	                    fail();
-	                }
-
-	                /* Start CNN */
-	                if (!cnn_start()) {
-	                    printf("ERROR: Starting CNN! \n");
-	                    fail();
-	                }
-
-	                /* Wait for CNN  to complete */
-	                while (cnn_time == 0) {
-	                    __WFI();
-	                }
-
-	                /* read data */
-	                printf("--------------------reading data------------------------");
-	                cnn_unload((uint32_t*)ml_data);
-
-	                /* Get time */
-	                MXC_TMR_GetTime(MXC_TMR0, cnn_time, (void*) &cnn_time, &units);
-	                printf("%.6d: Completes CNN: %d\n", sampleCounter, wordCounter);
-
-	                switch (units) {
-	                case TMR_UNIT_NANOSEC:
-	                    cnn_time /= 1000;
-	                    break;
-
-	                case TMR_UNIT_MILLISEC:
-	                    cnn_time *= 1000;
-	                    break;
-
-	                case TMR_UNIT_SEC:
-	                    cnn_time *= 1000000;
-	                    break;
-
-	                default:
-	                    break;
-	                }
-
-	                printf("CNN Time: %d us\n", cnn_time);
-
-	                /* run softmax */
-	                softmax_q17p14_q15((const q31_t*) ml_data, NUM_OUTPUTS,
-	                                   ml_softmax);
-
-	#ifdef ENABLE_CLASSIFICATION_DISPLAY
-	                printf("\nClassification results:\n");
-
-	                for (int i = 0; i < NUM_OUTPUTS; i++) {
-	                    int digs = (1000 * ml_softmax[i] + 0x4000) >> 15;
-	                    int tens = digs % 10;
-	                    digs = digs / 10;
-
-	                    printf("[%+.7d] -> Class %.2d %8s: %d.%d%%\n", ml_data[i],
-	                           i, keywords[i], digs, tens);
-	                }
-
-	#endif
-	                /* find detected class with max probability */
-	                ret = check_inference(ml_softmax, ml_data, &out_class, &probability);
-
-	                printf("----------------------------------------- \n");
-
-	                if (!ret) {
-	                    printf("LOW CONFIDENCE!: ");
-	                }
-
-	                printf("Detected word: %s (%0.1f%%)", keywords[out_class],
-	                       probability);
-
-	                printf("\n----------------------------------------- \n");
-
-	                Max = 0;
-	                Min = 0;
-	                //------------------------------------------------------------
-	            }
-	        }
-
-	        /* Stop demo if PB1 is pushed */
-	        if (PB_Get(0)) {
-	            printf("Stop! \r\n");
-
-	            procState = STOP;
-
-	            break;
-	        }
-	    }
-
-	    /* Turn off LED2 (Red) */
-	    LED_Off(LED2);
-	    printf("Total Samples:%d, Total Words: %d \n", sampleCounter, wordCounter);
-
-	#ifdef ENABLE_TFT
-	    TFT_End(wordCounter);
-	#endif
-
-	    while (1)
-	        ;
+#ifdef TFT_ENABLE
+	screen_voice_recognition_home();
+#endif
+
+	printf("---Authorized---\n");
+	printf("IanIanIanIanIan");
+//	printf("--------------------starting KWS------------------------");
+//	 uint32_t sampleCounter = 0;
+//	    mxc_tmr_unit_t units;
+//
+//	    uint8_t pChunkBuff[CHUNK];
+//
+//	    uint16_t avg = 0;
+//	    uint16_t preambleCounter = 0;
+//	    uint16_t ai85Counter = 0;
+//	    uint16_t wordCounter = 0;
+//
+//	    uint16_t avgSilenceCounter = 0;
+//
+//	    mic_processing_state procState = STOP;
+//
+//	#if defined (BOARD_FTHR_REVA)
+//	    // Wait for PMIC 1.8V to become available, about 180ms after power up.
+//	    MXC_Delay(200000);
+//	#endif
+//	    /* Enable cache */
+//	    MXC_ICC_Enable(MXC_ICC0);
+//
+//	    /* Switch to 100 MHz clock */
+//	    MXC_SYS_Clock_Select(MXC_SYS_CLOCK_IPO);
+//	    SystemCoreClockUpdate();
+//
+//	#ifdef ENABLE_MIC_PROCESSING
+//	#if defined (BOARD_FTHR_REVA)
+//	    /* Enable microphone power on Feather board */
+//	    Microphone_Power(POWER_ON);
+//	#endif
+//	#endif
+//
+//	    /* Enable peripheral, enable CNN interrupt, turn on CNN clock */
+//	    /* CNN clock: 50 MHz div 1 */
+//	    cnn_enable(MXC_S_GCR_PCLKDIV_CNNCLKSEL_PCLK, MXC_S_GCR_PCLKDIV_CNNCLKDIV_DIV1);
+//
+//	    /* Configure P2.5, turn on the CNN Boost */
+//	    cnn_boost_enable(MXC_GPIO2, MXC_GPIO_PIN_5);
+//
+//	    printf("switching to keyword spotting \n");
+//	    printf("\n***** Init *****\n");
+//	    memset(pAI85Buffer, 0x0, sizeof(pAI85Buffer));
+//	    memset(pPreambleCircBuffer, 0x0, sizeof(pPreambleCircBuffer));
+//
+//	    printf("pChunkBuff: %d\n", sizeof(pChunkBuff));
+//	    printf("pPreambleCircBuffer: %d\n", sizeof(pPreambleCircBuffer));
+//	    printf("pAI85Buffer: %d\n", sizeof(pAI85Buffer));
+//
+//	    /* Bring state machine into consistent state */
+//	    cnn_init();
+//	    /* Load kernels */
+//	    cnn_load_weights();
+//	    /* Configure state machine */
+//	    cnn_configure();
+//
+//	    /* switch to silence state*/
+//	    procState = SILENCE;
+//
+//	#ifdef ENABLE_MIC_PROCESSING
+//	    /* initialize I2S interface to Mic */
+//	    I2SInit();
+//	#endif
+//
+//	#ifdef ENABLE_TFT
+//	    MXC_Delay(500000);
+//	    printf("\n*** Init TFT ***\n");
+//	#ifdef BOARD_EVKIT_V1
+//	    /* TFT reset signal */
+//	    mxc_gpio_cfg_t tft_reset_pin = {MXC_GPIO0, MXC_GPIO_PIN_19, MXC_GPIO_FUNC_OUT, MXC_GPIO_PAD_NONE, MXC_GPIO_VSSEL_VDDIOH};
+//
+//	    MXC_TFT_Init(MXC_SPI0, 1, &tft_reset_pin, NULL);
+//	    MXC_TFT_ClearScreen();
+//
+//	    MXC_TFT_ShowImage(0, 0, image_bitmap);
+//	    MXC_Delay(1000000);
+//
+//	    MXC_TFT_SetPalette(logo_white_bg_darkgrey_bmp);
+//	    MXC_TFT_SetBackGroundColor(4);
+//	    printf("if RED LED is not on, disconnect PICO SWD and powercycle!\n");
+//	#endif
+//	#ifdef BOARD_FTHR_REVA
+//	    /* Initialize TFT display */
+//	    MXC_TFT_Init(MXC_SPI0, 1, NULL, NULL);
+//	    MXC_TFT_SetRotation(ROTATE_90);
+//	    MXC_TFT_ShowImage(0, 0, image_bitmap);
+//	    MXC_Delay(1000000);
+//	    MXC_TFT_SetBackGroundColor(4);
+//	    MXC_TFT_SetForeGroundColor(WHITE);   // set chars to white
+//	#endif
+//
+//	    printf("Waiting for PB1 press\n");
+//	    TFT_Intro();
+//	#endif
+//
+//	    printf("\n*** READY ***\n");
+//
+//	    /* Read samples */
+//	    while (1) {
+//	#ifndef ENABLE_MIC_PROCESSING
+//
+//	        /* end of test vectors */
+//	        if (sampleCounter >= sizeof(voiceVector) / sizeof(voiceVector[0])) {
+//	            printf("End of test Vector\n");
+//	            break;
+//	        }
+//
+//	#endif
+//
+//	        /* Read from Mic driver to get CHUNK worth of samples, otherwise next sample*/
+//	        if (MicReadChunk(pChunkBuff, &avg) == 0) {
+//	            continue;
+//	        }
+//
+//	        sampleCounter += CHUNK;
+//
+//	#ifdef ENABLE_SILENCE_DETECTION       // disable to start collecting data immediately.
+//
+//	        /* copy the preamble data*/
+//	        /* add the new chunk to the end of circular buffer*/
+//	        memcpy(&pPreambleCircBuffer[preambleCounter], pChunkBuff,
+//	               sizeof(uint8_t) * CHUNK);
+//
+//	        /* increment circular buffer pointer*/
+//	        preambleCounter = (preambleCounter + CHUNK) % (PREAMBLE_SIZE);
+//
+//	        /* Display average envelope as a bar */
+//	#ifdef ENABLE_PRINT_ENVELOPE
+//	        printf("%.6d|", sampleCounter);
+//
+//	        for (int i = 0; i < avg / 10; i++) {
+//	            printf("=");
+//	        }
+//
+//	        if (avg >= thresholdHigh) {
+//	            printf("*");
+//	        }
+//
+//	        printf("[%d]\n", avg);
+//	#endif
+//
+//	        /* if we have not detected voice, check the average*/
+//	        if (procState == SILENCE) {
+//
+//	            /* compute average, proceed if greater than threshold */
+//	            if (avg >= thresholdHigh) {
+//	                /* switch to keyword data collection*/
+//	                procState = KEYWORD;
+//	                printf("%.6d Word starts from index: %d, avg:%d > %d \n",
+//	                       sampleCounter, sampleCounter - PREAMBLE_SIZE - CHUNK,
+//	                       avg, thresholdHigh);
+//
+//	                /* reorder circular buffer according to time at the beginning of pAI85Buffer */
+//	                if (preambleCounter == 0) {
+//	                    /* copy latest samples afterwards */
+//	                    if (AddTranspose(&pPreambleCircBuffer[0], pAI85Buffer,
+//	                                     PREAMBLE_SIZE, SAMPLE_SIZE, TRANSPOSE_WIDTH)) {
+//	                        printf("ERROR: Transpose ended early \n");
+//	                    }
+//	                }
+//	                else {
+//	                    /* copy oldest samples to the beginning*/
+//	                    if (AddTranspose(&pPreambleCircBuffer[preambleCounter],
+//	                                     pAI85Buffer, PREAMBLE_SIZE - preambleCounter,
+//	                                     SAMPLE_SIZE, TRANSPOSE_WIDTH)) {
+//	                        printf("ERROR: Transpose ended early \n");
+//	                    }
+//
+//	                    /* copy latest samples afterwards */
+//	                    if (AddTranspose(&pPreambleCircBuffer[0], pAI85Buffer,
+//	                                     preambleCounter, SAMPLE_SIZE, TRANSPOSE_WIDTH)) {
+//	                        printf("ERROR: Transpose ended early \n");
+//	                    }
+//
+//	                }
+//
+//	                /* preamble is copied and state is changed, start adding keyword samples next run */
+//	                ai85Counter += PREAMBLE_SIZE;
+//	                continue;
+//
+//	            }
+//	        }
+//	        /* if it is in data collection, add samples to buffer*/
+//	        else if (procState == KEYWORD)
+//	#endif  //#ifdef ENABLE_SILENCE_DETECTION
+//
+//	        {
+//	            uint8_t ret = 0;
+//
+//	            /* add sample, rearrange buffer */
+//	            ret = AddTranspose(pChunkBuff, pAI85Buffer, CHUNK, SAMPLE_SIZE,
+//	                               TRANSPOSE_WIDTH);
+//
+//	            /* increment number of stored samples */
+//	            ai85Counter += CHUNK;
+//
+//	            /* if there is silence after at least 1/3 of samples passed, increment number of times back to back silence to find end of keyword */
+//	            if ((avg < thresholdLow) && (ai85Counter >= SAMPLE_SIZE / 3)) {
+//	                avgSilenceCounter ++;
+//	            }
+//	            else {
+//	                avgSilenceCounter = 0;
+//	            }
+//
+//
+//	            /* if this is the last sample and there are not enough samples to
+//	             * feed to CNN, or if it is long silence after keyword,  append with zero (for reading file)
+//	             */
+//	#ifndef ENABLE_MIC_PROCESSING
+//
+//	            if (((ai85Counter < SAMPLE_SIZE) && (sampleCounter >= sizeof(voiceVector) / sizeof(voiceVector[0]) - 1)) || (avgSilenceCounter > SILENCE_COUNTER_THRESHOLD))
+//	#else
+//	            if (avgSilenceCounter > SILENCE_COUNTER_THRESHOLD)
+//	#endif
+//	            {
+//	                memset(pChunkBuff, 0, CHUNK);
+//	                printf("%.6d: Word ends, Appends %d zeros \n", sampleCounter,
+//	                       SAMPLE_SIZE - ai85Counter);
+//	                ret = 0;
+//
+//	                while (!ret) {
+//	                    ret = AddTranspose(pChunkBuff, pAI85Buffer, CHUNK,
+//	                                       SAMPLE_SIZE, TRANSPOSE_WIDTH);
+//	                    ai85Counter += CHUNK;
+//	                }
+//	            }
+//
+//	            /* if enough samples are collected, start CNN */
+//	            if (ai85Counter >= SAMPLE_SIZE) {
+//	            	printf("ai85Counter:", ai85Counter);
+//	                int16_t out_class = -1;
+//	                double probability = 0;
+//
+//	                /* reset counters */
+//	                ai85Counter = 0;
+//	                avgSilenceCounter = 0;
+//
+//	                /* new word */
+//	                wordCounter++;
+//
+//	                /* change state to silence */
+//	                procState = SILENCE;
+//	                /* sanity check, last transpose should have returned 1, as enough samples should have already been added */
+//	                if (ret != 1) {
+//	                    printf("ERROR: Transpose incomplete!\n");
+//	                    fail();
+//	                }
+//
+//	                //----------------------------------  : invoke AI85 CNN
+//	                printf("%.6d: Starts CNN: %d\n", sampleCounter, wordCounter);
+//	                printf("sampleCounter\n", sampleCounter);
+//	                printf("wordCounter\n", wordCounter);
+//	                /* load to CNN */
+//	                if (!cnn_load_data(pAI85Buffer)) {
+//	                    printf("ERROR: Loading data to CNN! \n");
+//	                    fail();
+//	                }
+//
+//	                /* Start CNN */
+//	                if (!cnn_start()) {
+//	                    printf("ERROR: Starting CNN! \n");
+//	                    fail();
+//	                }
+//	                printf("--------------------waiting for CNN 1------------------------\n");
+//	                /* Wait for CNN  to complete */
+//	                while (cnn_time == 0) {
+//	                	printf("--------------------before WFI------------------------");
+//	                    __WFI();
+//	                    printf("--------------------waiting for CNN------------------------");
+//	                }
+//
+//	                /* read data */
+//	                printf("--------------------reading data------------------------");
+//	                cnn_unload((uint32_t*)ml_data);
+//
+//	                /* Get time */
+//	                MXC_TMR_GetTime(MXC_TMR0, cnn_time, (void*) &cnn_time, &units);
+//	                printf("%.6d: Completes CNN: %d\n", sampleCounter, wordCounter);
+//
+//	                switch (units) {
+//	                case TMR_UNIT_NANOSEC:
+//	                    cnn_time /= 1000;
+//	                    break;
+//
+//	                case TMR_UNIT_MILLISEC:
+//	                    cnn_time *= 1000;
+//	                    break;
+//
+//	                case TMR_UNIT_SEC:
+//	                    cnn_time *= 1000000;
+//	                    break;
+//
+//	                default:
+//	                    break;
+//	                }
+//
+//	                printf("CNN Time: %d us\n", cnn_time);
+//
+//	                /* run softmax */
+//	                softmax_q17p14_q15((const q31_t*) ml_data, NUM_OUTPUTS,
+//	                                   ml_softmax);
+//
+//	#ifdef ENABLE_CLASSIFICATION_DISPLAY
+//	                printf("\nClassification results:\n");
+//
+//	                for (int i = 0; i < NUM_OUTPUTS; i++) {
+//	                    int digs = (1000 * ml_softmax[i] + 0x4000) >> 15;
+//	                    int tens = digs % 10;
+//	                    digs = digs / 10;
+//
+//	                    printf("[%+.7d] -> Class %.2d %8s: %d.%d%%\n", ml_data[i],
+//	                           i, keywords[i], digs, tens);
+//	                }
+//
+//	#endif
+//	                /* find detected class with max probability */
+//	                ret = check_inference(ml_softmax, ml_data, &out_class, &probability);
+//
+//	                printf("----------------------------------------- \n");
+//
+//	                if (!ret) {
+//	                    printf("LOW CONFIDENCE!: ");
+//	                }
+//
+//	                printf("Detected word: %s (%0.1f%%)", keywords[out_class],
+//	                       probability);
+//
+//	                printf("\n----------------------------------------- \n");
+//
+//	                Max = 0;
+//	                Min = 0;
+//	                //------------------------------------------------------------
+//	            }
+//	        }
+//
+//	        /* Stop demo if PB1 is pushed */
+//	        if (PB_Get(0)) {
+//	            printf("Stop! \r\n");
+//
+//	            procState = STOP;
+//
+//	            break;
+//	        }
+//	    }
+//
+//	    /* Turn off LED2 (Red) */
+//	    LED_Off(LED2);
+//	    printf("Total Samples:%d, Total Words: %d \n", sampleCounter, wordCounter);
+//
+//	#ifdef ENABLE_TFT
+//	    TFT_End(wordCounter);
+//	#endif
+//
+//	    while (1)
+//	        ;
 	return 0;
 }
 

@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Built-By: default
+Created-By: Apache Maven 3.6.0
+Build-Jdk: 1.8.0_202
+
+Name: feature.xml
+SHA-256-Digest: wwImFs4YdsI6gjGuwgm6wPY4mRfRxj9w2uuUaGlflUY=
+
+Name: edl-v10.html
+SHA-256-Digest: c0JryUaRpEBL/9pblDqxQkuSk+XJmylESS+9c04zfSE=
+
+Name: feature.properties
+SHA-256-Digest: CxyxWkp3acZCVevQMvQ18EoqOALLljJC7aHnzLkGIdw=
+
+Name: license.html
+SHA-256-Digest: Dv5NbrV590iFepPFp4HDAA9w8zkHSynRW5FCE+FLHVM=
+

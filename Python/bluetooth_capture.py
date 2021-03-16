@@ -2,9 +2,12 @@ from time import *
 import serial
 import requests
 
+import os
+
+
 # constants
-SERIALPORT = "COM4"
-TOKEN = "c5a36fae88b8defe5b6d8ced9de943b579dda47996f6006550f5079a3d7b3ef2"
+SERIALPORT = "COM9"
+TOKEN = "c1024d1ddb83511773d83060d1b43d2d4bc9c59a338f4f3d778725dd4931f5c2"
 
 def increaseBrightness(brightness):
     return brightness + 0.3 if brightness <= 0.7 else 1

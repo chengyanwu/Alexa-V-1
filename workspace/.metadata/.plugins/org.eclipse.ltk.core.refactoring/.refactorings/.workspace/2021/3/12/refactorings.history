@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;Alexa_V-1/include/state_voice_recognition.h&apos;" deleteContents="false" description="Delete resource &apos;Alexa_V-1/include/state_voice_recognition.h&apos;" element1="/Alexa_V-1/include/state_voice_recognition.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1615692081266"/>&#x0A;<refactoring comment="Delete resource &apos;Alexa_V-1/db/New folder&apos;" deleteContents="false" description="Delete resource &apos;Alexa_V-1/db/New folder&apos;" element1="/Alexa_V-1/db/New folder" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1615797356768"/>
+</session>

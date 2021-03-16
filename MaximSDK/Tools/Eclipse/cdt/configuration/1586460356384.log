@@ -1,0 +1,32 @@
+!SESSION 2020-04-09 21:25:56.136 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=1.8.0_232
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -application org.eclipse.equinox.p2.director -repository file:gnumcueclipse_updates -installIU ilg.gnumcueclipse.managedbuild.cross.arm.feature.feature.group,ilg.gnumcueclipse.managedbuild.cross.riscv.feature.feature.group,ilg.gnumcueclipse.debug.gdbjtag.openocd.feature.feature.group,ilg.gnumcueclipse.debug.gdbjtag.jlink.feature.feature.group,ilg.gnumcueclipse.debug.gdbjtag.jumper.feature.feature.group,ilg.gnumcueclipse.debug.gdbjtag.pyocd.feature.feature.group,ilg.gnumcueclipse.debug.gdbjtag.qemu.feature.feature.group,ilg.gnumcueclipse.templates.cortexm.feature.feature.group,ilg.gnumcueclipse.codered.feature.feature.group,ilg.gnumcueclipse.doc.user.feature.feature.group,ilg.gnumcueclipse.packs.feature.feature.group
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -application org.eclipse.equinox.p2.director -repository file:gnumcueclipse_updates -installIU ilg.gnumcueclipse.managedbuild.cross.arm.feature.feature.group,ilg.gnumcueclipse.managedbuild.cross.riscv.feature.feature.group,ilg.gnumcueclipse.debug.gdbjtag.openocd.feature.feature.group,ilg.gnumcueclipse.debug.gdbjtag.jlink.feature.feature.group,ilg.gnumcueclipse.debug.gdbjtag.jumper.feature.feature.group,ilg.gnumcueclipse.debug.gdbjtag.pyocd.feature.feature.group,ilg.gnumcueclipse.debug.gdbjtag.qemu.feature.feature.group,ilg.gnumcueclipse.templates.cortexm.feature.feature.group,ilg.gnumcueclipse.codered.feature.feature.group,ilg.gnumcueclipse.doc.user.feature.feature.group,ilg.gnumcueclipse.packs.feature.feature.group
+
+!ENTRY org.eclipse.equinox.p2.director 0 0 2020-04-09 21:26:22.790
+!MESSAGE Overall install request is satisfiable
+!SUBENTRY 1 org.eclipse.equinox.p2.director 0 0 2020-04-09 21:26:22.790
+!MESSAGE Add request for GNU MCU C/C++ ARM Cross Compiler 2.7.1.201909231407 (ilg.gnumcueclipse.managedbuild.cross.arm.feature.feature.group 2.7.1.201909231407) is satisfiable
+!SUBENTRY 1 org.eclipse.equinox.p2.director 0 0 2020-04-09 21:26:22.790
+!MESSAGE Add request for GNU MCU C/C++ OpenOCD Debugging 4.4.1.201909231407 (ilg.gnumcueclipse.debug.gdbjtag.openocd.feature.feature.group 4.4.1.201909231407) is satisfiable
+!SUBENTRY 1 org.eclipse.equinox.p2.director 0 0 2020-04-09 21:26:22.790
+!MESSAGE Add request for GNU MCU C/C++ Generic Cortex-M Project Template 1.5.1.201909231407 (ilg.gnumcueclipse.templates.cortexm.feature.feature.group 1.5.1.201909231407) is satisfiable
+!SUBENTRY 1 org.eclipse.equinox.p2.director 0 0 2020-04-09 21:26:22.790
+!MESSAGE Add request for GNU MCU C/C++ CodeRed Debug Perspective 1.1.2.201909231407 (ilg.gnumcueclipse.codered.feature.feature.group 1.1.2.201909231407) is satisfiable
+!SUBENTRY 1 org.eclipse.equinox.p2.director 0 0 2020-04-09 21:26:22.790
+!MESSAGE Add request for GNU MCU C/C++ RISC-V Cross Compiler 2.9.1.201909231407 (ilg.gnumcueclipse.managedbuild.cross.riscv.feature.feature.group 2.9.1.201909231407) is satisfiable
+!SUBENTRY 1 org.eclipse.equinox.p2.director 0 0 2020-04-09 21:26:22.790
+!MESSAGE Add request for GNU MCU C/C++ PyOCD Debugging 1.4.1.201909231407 (ilg.gnumcueclipse.debug.gdbjtag.pyocd.feature.feature.group 1.4.1.201909231407) is satisfiable
+!SUBENTRY 1 org.eclipse.equinox.p2.director 0 0 2020-04-09 21:26:22.790
+!MESSAGE Add request for GNU MCU C/C++ Jumper Virtual Lab Debugging 1.2.1.201909231407 (ilg.gnumcueclipse.debug.gdbjtag.jumper.feature.feature.group 1.2.1.201909231407) is satisfiable
+!SUBENTRY 1 org.eclipse.equinox.p2.director 0 0 2020-04-09 21:26:22.790
+!MESSAGE Add request for GNU MCU C/C++ Documentation (Placeholder) 1.1.2.201909231407 (ilg.gnumcueclipse.doc.user.feature.feature.group 1.1.2.201909231407) is satisfiable
+!SUBENTRY 1 org.eclipse.equinox.p2.director 0 0 2020-04-09 21:26:22.790
+!MESSAGE Add request for GNU MCU C/C++ QEMU Debugging 3.4.1.201909231407 (ilg.gnumcueclipse.debug.gdbjtag.qemu.feature.feature.group 3.4.1.201909231407) is satisfiable
+!SUBENTRY 1 org.eclipse.equinox.p2.director 0 0 2020-04-09 21:26:22.790
+!MESSAGE Add request for GNU MCU C/C++ Packs (Experimental) 2.3.1.201909231407 (ilg.gnumcueclipse.packs.feature.feature.group 2.3.1.201909231407) is satisfiable
+!SUBENTRY 1 org.eclipse.equinox.p2.director 0 0 2020-04-09 21:26:22.790
+!MESSAGE Add request for GNU MCU C/C++ J-Link Debugging 4.4.1.201909231407 (ilg.gnumcueclipse.debug.gdbjtag.jlink.feature.feature.group 4.4.1.201909231407) is satisfiable

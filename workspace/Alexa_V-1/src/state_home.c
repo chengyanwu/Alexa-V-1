@@ -46,7 +46,7 @@
 #include "bitmap.h"
 #endif
 
-#define X_START	56
+#define X_START	65
 #define Y_START	156
 #define THICKNESS 4
 
@@ -59,12 +59,12 @@ static void screen_faceID_home(void);
 
 static text_t screen_msg[] = {
     // info
-    { (char*) "FACEID DEMO", 11},
-    { (char*) "Start DEMO", 10},
+    { (char*) "Alexa V-1", 11},
+    { (char*) "Start", 5},
 };
 
 #ifdef BOARD_EVKIT_V1
-static int bitmap = logo_white_bg_darkgrey_bmp;
+static int bitmap = ucsb_logo;
 static int font = urw_gothic_12_grey_bg_white;
 #endif
 
@@ -76,24 +76,24 @@ static int font = (int)&SansSerif16x16[0];
 /********************************* Static Functions **************************/
 static void screen_faceID_home(void)
 {
-    MXC_TFT_SetPalette(bitmap);
+//    MXC_TFT_SetPalette(bitmap);
     MXC_TFT_SetBackGroundColor(4);
-    MXC_TFT_ShowImage(3, 5, bitmap);
+//    MXC_TFT_ShowImage(3, 5, bitmap);
 
-    MXC_TFT_PrintFont(98, 5, font, &screen_msg[0],  NULL);  // FACEID DEMO
-    MXC_TFT_PrintFont(X_START+THICKNESS, Y_START+THICKNESS, font, &screen_msg[1],  NULL);  // START DEMO
+    MXC_TFT_PrintFont(60, 5, font, &screen_msg[0],  NULL);  // Alexa V-1
+    MXC_TFT_PrintFont(X_START+THICKNESS, Y_START+THICKNESS, font, &screen_msg[1],  NULL);  // START
     // texts
 
 	area_t left = {X_START, Y_START, 4, 4+26};
 	MXC_TFT_ClearArea(&left, 5);
 
-	area_t right = {X_START+120, Y_START, 4, 4+26};
+	area_t right = {X_START+60, Y_START, 4, 4+26};
 	MXC_TFT_ClearArea(&right, 5);
 
-	area_t top = {X_START, Y_START, 120, 4};
+	area_t top = {X_START, Y_START, 60, 4};
 	MXC_TFT_ClearArea(&top, 5);
 
-	area_t bottom = {X_START, Y_START+26, 120, 4};
+	area_t bottom = {X_START, Y_START+26, 60, 4};
 	MXC_TFT_ClearArea(&bottom, 5);
 #ifdef TS_ENABLE
     MXC_TS_RemoveAllButton();
