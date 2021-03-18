@@ -1,1 +1,0 @@
-error: Project logo './MI_Logo_Small_Pos_RGB_150dpi.png' specified by PROJECT_LOGO does not exist!

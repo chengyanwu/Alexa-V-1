@@ -264,7 +264,7 @@ int main(void)
 	dma_channel = MXC_DMA_AcquireChannel();
 
 
-	PR_DEBUG("\n\nAleaxa V-1\n");
+	PR_DEBUG("\nAlexa V-1\n");
 
 	// Initialize the camera driver.
 	camera_init(CAMERA_FREQ);

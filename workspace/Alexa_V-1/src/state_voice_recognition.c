@@ -59,25 +59,27 @@ static void screen_voice_recognition_home(void)
     printf("%s\n", userMsg);
 
     text_t msg[] = {
-    			{ userMsg, strlen(user) + 9 },
-    			{ (char*) "Continue", 8 },
+    			{ userMsg, strlen(user) +9 },
+    			{ (char*) "Switching to", 12 },
+				{ (char*) "voice recognition", 17 },
     	};
 
     MXC_TFT_PrintFont(5, 50, font, &msg[0],  NULL);  // user
     MXC_TFT_PrintFont(X_START+THICKNESS, Y_START+THICKNESS, font, &msg[1],  NULL);  // Continue
+    MXC_TFT_PrintFont(X_START+THICKNESS, Y_START+THICKNESS + 30, font, &msg[2],  NULL);  // switching to ...
     // texts
 
-	area_t left = {X_START, Y_START, 4, 4+26};
-	MXC_TFT_ClearArea(&left, 5);
-
-	area_t right = {X_START+120, Y_START, 4, 4+26};
-	MXC_TFT_ClearArea(&right, 5);
-
-	area_t top = {X_START, Y_START, 120, 4};
-	MXC_TFT_ClearArea(&top, 5);
-
-	area_t bottom = {X_START, Y_START+26, 120, 4};
-	MXC_TFT_ClearArea(&bottom, 5);
+//	area_t left = {X_START, Y_START, 4, 4+26};
+//	MXC_TFT_ClearArea(&left, 5);
+//
+//	area_t right = {X_START+120, Y_START, 4, 4+26};
+//	MXC_TFT_ClearArea(&right, 5);
+//
+//	area_t top = {X_START, Y_START, 120, 4};
+//	MXC_TFT_ClearArea(&top, 5);
+//
+//	area_t bottom = {X_START, Y_START+26, 120, 4};
+//	MXC_TFT_ClearArea(&bottom, 5);
 
 	area_t area = {50, 290, 180, 30};
 	MXC_TFT_ClearArea(&area, 4);
@@ -88,6 +90,22 @@ static void screen_voice_recognition_home(void)
 }
 #endif
 
+static int key_process(int key)
+{
+    switch (key) {
+    case KEY_1:
+    	state_set_current(get_faceID_state());
+    	printf("Switch to Voice Recognition");
+        break;
+    case KEY_2:
+    	printf("Switch to Voice Recognition");
+    	break;
+    default:
+        break;
+    }
+
+    return 0;
+}
 
 
 
@@ -1113,24 +1131,15 @@ static int init(void)
 
 
 
-static int key_process(int key)
-{
-    switch (key) {
-    case KEY_1:
-    	 state_set_current(get_faceID_state());
-        break;
-    default:
-        break;
-    }
 
-    return 0;
-}
 
-static State g_state = {"voice_home", init, key_process, NULL, 0 };
+	static State g_state = {"voice_home", init, key_process, NULL, 0 };
 
-/********************************* Public Functions **************************/
-State* get_voice_recognition_state(void)
-{
-    return &g_state;
-}
+	/********************************* Public Functions **************************/
+	State* get_voice_recognition_state(void)
+	{
+	    return &g_state;
+	}
+
+
 
